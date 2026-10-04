@@ -1,0 +1,475 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-04T17:29:40+00:00",
+  "title": "Design System: The Smashery",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Hoarding Ink",
+        "canonical": "#1E130C",
+        "oklch": "oklch(19.9% 0.023 53.5)",
+        "tonalRamp": [
+          "#130804",
+          "#2D211A",
+          "#4A3D35",
+          "#685A52",
+          "#8C7D74",
+          "#B1A198",
+          "#D7C7BD",
+          "#FBEBE1"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Faded Ink",
+        "canonical": "#56463B",
+        "oklch": "oklch(40.8% 0.028 56.3)",
+        "tonalRamp": [
+          "#140802",
+          "#2F2116",
+          "#4C3C31",
+          "#6B5A4E",
+          "#8E7C70",
+          "#B3A194",
+          "#DAC6B9",
+          "#FEEADD"
+        ]
+      },
+      "flex-white": {
+        "role": "neutral",
+        "displayName": "Flex White",
+        "canonical": "#FAF8F2",
+        "oklch": "oklch(97.9% 0.008 91.5)",
+        "tonalRamp": [
+          "#0C0B07",
+          "#252420",
+          "#41403B",
+          "#5F5D58",
+          "#82807B",
+          "#A6A49F",
+          "#CCCAC5",
+          "#F0EEE8"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#FFFFFF",
+        "oklch": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#242424",
+          "#404040",
+          "#5D5D5D",
+          "#808080",
+          "#A4A4A4",
+          "#CACACA",
+          "#EEEEEE"
+        ]
+      },
+      "cheese": {
+        "role": "primary",
+        "displayName": "Melted Cheese",
+        "canonical": "#FFC21A",
+        "oklch": "oklch(84.6% 0.169 84.9)",
+        "tonalRamp": [
+          "#270000",
+          "#470E00",
+          "#673000",
+          "#885000",
+          "#AE7400",
+          "#D59900",
+          "#FDC014",
+          "#FFE451"
+        ]
+      },
+      "cheese-hi": {
+        "role": "primary",
+        "displayName": "Melted Cheese, lit",
+        "canonical": "#FFD24D",
+        "oklch": "oklch(88.0% 0.154 89.8)",
+        "tonalRamp": [
+          "#220000",
+          "#401700",
+          "#5F3600",
+          "#7F5600",
+          "#A47900",
+          "#CA9E00",
+          "#F2C53D",
+          "#FFE967"
+        ]
+      },
+      "chilli": {
+        "role": "secondary",
+        "displayName": "Chilli Red",
+        "canonical": "#D9301C",
+        "oklch": "oklch(57.8% 0.207 30.7)",
+        "tonalRamp": [
+          "#410000",
+          "#680000",
+          "#8F0000",
+          "#B60000",
+          "#E13925",
+          "#FF644D",
+          "#FF8D73",
+          "#FFB296"
+        ]
+      },
+      "chilli-plate": {
+        "role": "secondary",
+        "displayName": "Sign-off Red",
+        "canonical": "#C42816",
+        "oklch": "oklch(53.3% 0.194 30.6)",
+        "tonalRamp": [
+          "#3E0000",
+          "#640000",
+          "#8A0000",
+          "#B10900",
+          "#DC422E",
+          "#FF6B54",
+          "#FF937A",
+          "#FFB89D"
+        ]
+      },
+      "sodium": {
+        "role": "tertiary",
+        "displayName": "Sodium Lamp",
+        "canonical": "#FF8A1F",
+        "oklch": "oklch(74.8% 0.176 55.4)",
+        "tonalRamp": [
+          "#360000",
+          "#5A0000",
+          "#7E0500",
+          "#A33400",
+          "#CB5B00",
+          "#F58108",
+          "#FFA848",
+          "#FFCC70"
+        ]
+      },
+      "veg-green": {
+        "role": "neutral",
+        "displayName": "Veg Mark Green",
+        "canonical": "#0F7B36",
+        "oklch": "oklch(51.1% 0.138 149.1)",
+        "tonalRamp": [
+          "#001600",
+          "#003300",
+          "#00520A",
+          "#00722D",
+          "#369650",
+          "#5FBC73",
+          "#86E498",
+          "#AAFFBB"
+        ]
+      },
+      "nonveg-brown": {
+        "role": "neutral",
+        "displayName": "Non-veg Mark Brown",
+        "canonical": "#8B3A12",
+        "oklch": "oklch(45.3% 0.121 43.2)",
+        "tonalRamp": [
+          "#2D0000",
+          "#4E0000",
+          "#712100",
+          "#94421C",
+          "#BB6541",
+          "#E48A65",
+          "#FFB089",
+          "#FFD4AC"
+        ]
+      },
+      "night": {
+        "role": "primary",
+        "displayName": "Dusk Ultramarine",
+        "canonical": "#0F1546",
+        "oklch": "oklch(22.8% 0.091 271.6)",
+        "tonalRamp": [
+          "#040130",
+          "#161E4F",
+          "#2F3B6F",
+          "#4B5A91",
+          "#6D7DB7",
+          "#90A1DE",
+          "#B5C8FF",
+          "#D8ECFF"
+        ]
+      },
+      "night-raised": {
+        "role": "primary",
+        "displayName": "Dusk Ultramarine, raised",
+        "canonical": "#151C58",
+        "oklch": "oklch(26.5% 0.107 271.7)",
+        "tonalRamp": [
+          "#050037",
+          "#141B57",
+          "#2D3978",
+          "#48589A",
+          "#697CC0",
+          "#8DA0E8",
+          "#B1C7FF",
+          "#D5EBFF"
+        ]
+      },
+      "steel": {
+        "role": "neutral",
+        "displayName": "Galvanised Steel",
+        "canonical": "#6B7594",
+        "oklch": "oklch(56.6% 0.050 270.8)",
+        "tonalRamp": [
+          "#050820",
+          "#1B223C",
+          "#363E5A",
+          "#535C7A",
+          "#757F9F",
+          "#99A4C5",
+          "#BECAEC",
+          "#E2EEFF"
+        ]
+      },
+      "steel-dark": {
+        "role": "neutral",
+        "displayName": "Galvanised Steel, shade",
+        "canonical": "#3B4160",
+        "oklch": "oklch(38.4% 0.054 275.2)",
+        "tonalRamp": [
+          "#060721",
+          "#1D213E",
+          "#373D5C",
+          "#555B7C",
+          "#777EA1",
+          "#9AA3C7",
+          "#C0C8EE",
+          "#E4ECFF"
+        ]
+      },
+      "on-night": {
+        "role": "neutral",
+        "displayName": "Moonlight",
+        "canonical": "#F5F3FF",
+        "oklch": "oklch(96.9% 0.016 293.8)",
+        "tonalRamp": [
+          "#0B0A11",
+          "#24232B",
+          "#403E48",
+          "#5E5C66",
+          "#807F89",
+          "#A5A3AE",
+          "#CBC9D4",
+          "#EFEDF9"
+        ]
+      },
+      "on-night-soft": {
+        "role": "neutral",
+        "displayName": "Moonlight, soft",
+        "canonical": "#BAC0E8",
+        "oklch": "oklch(81.6% 0.057 278.4)",
+        "tonalRamp": [
+          "#070722",
+          "#1E203F",
+          "#393D5D",
+          "#565B7E",
+          "#787DA2",
+          "#9CA2C8",
+          "#C2C8F0",
+          "#E5ECFF"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Section titles on the night sky; the hero pun scales with its board in container units."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Category titles, outlet names, the tray title."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Menu item names (signature items switch to Shrikhand 1.55rem)."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Descriptions and running copy, capped at 62ch."
+      },
+      "price": {
+        "displayName": "Price",
+        "purpose": "Every rupee figure; tabular lining numerals."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Small uppercase furniture such as Est. 2024."
+      }
+    },
+    "shadows": [
+      {
+        "name": "board-rim",
+        "value": "0 0 0 10px #3B4160, 0 0 0 13px #1E130C, 0 30px 60px -24px rgba(3,5,25,.85)",
+        "purpose": "Steel and ink rim plus drop shadow for every printed panel and the menu sheet."
+      },
+      {
+        "name": "plate-lift",
+        "value": "0 8px 18px -10px rgba(0,0,0,.6)",
+        "purpose": "Primary buttons at rest."
+      },
+      {
+        "name": "plate-lift-hover",
+        "value": "0 14px 24px -12px rgba(0,0,0,.65)",
+        "purpose": "Primary buttons on hover, with a 2px lift."
+      },
+      {
+        "name": "tray-float",
+        "value": "0 20px 40px -16px rgba(3,5,25,.85)",
+        "purpose": "Order tray and floating dock."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Default for state changes, the patty spread and the count stamp."
+      },
+      {
+        "name": "press-drop",
+        "value": "cubic-bezier(.55,0,1,.45) 340ms",
+        "purpose": "The press accelerating onto the ball in the hero."
+      },
+      {
+        "name": "lamps-on",
+        "value": "800ms flicker, 150ms delay",
+        "purpose": "Hoarding lamps switching on; the board un-dims in sync."
+      },
+      {
+        "name": "count-stamp",
+        "value": "320ms scale(1.4) rotate(-10deg) to rest",
+        "purpose": "The ticked count stamping in when quantity changes."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "portrait-board",
+        "value": "759px"
+      },
+      {
+        "name": "dock",
+        "value": "899px"
+      },
+      {
+        "name": "two-column-menu",
+        "value": "1000px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Melted-cheese sign plate. Always an ordering action.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 18.5l1.3-3.6A8 8 0 1 1 8.6 18z\"/><path d=\"M9 10.5h6M9 13.5h4\"/></svg>Order on WhatsApp</a>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font:750 1.0625rem/1.1 'Anek Latin',system-ui,sans-serif;font-stretch:94%;min-height:48px;padding:.8rem 1.25rem;border-radius:8px;border:3px solid #1E130C;cursor:pointer;transition:transform .2s cubic-bezier(.16,1,.3,1),background-color .2s,box-shadow .2s;background:#FFC21A;color:#1E130C;text-decoration:none;box-shadow:0 8px 18px -10px rgba(0,0,0,.6)}.ds-btn-primary:hover{background:#FFD24D;transform:translateY(-2px);box-shadow:0 14px 24px -12px rgba(0,0,0,.65)}.ds-btn-primary:active{transform:translateY(1px)}.ds-btn-primary:focus-visible{outline:3px solid #FFC21A;outline-offset:3px}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action set directly on the night sky.",
+      "html": "<div class=\"ds-night\"><a class=\"ds-btn-ghost\" href=\"#\">See the menu</a></div>",
+      "css": ".ds-night{background:#0F1546;padding:16px}.ds-btn-ghost{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font:750 1.0625rem/1.1 'Anek Latin',system-ui,sans-serif;font-stretch:94%;min-height:48px;padding:.8rem 1.25rem;border-radius:8px;border:3px solid #1E130C;cursor:pointer;transition:transform .2s cubic-bezier(.16,1,.3,1),background-color .2s,box-shadow .2s;background:transparent;color:#F5F3FF;border-color:rgba(245,243,255,.85);text-decoration:none}.ds-btn-ghost:hover{background:rgba(245,243,255,.1)}.ds-btn-ghost:focus-visible{outline:3px solid #FFC21A;outline-offset:3px}"
+    },
+    {
+      "name": "Ink Button",
+      "kind": "button",
+      "refersTo": "button-ink",
+      "description": "Solid ink plate for outlet actions on flex panels.",
+      "html": "<a class=\"ds-btn-ink\" href=\"#\">Get directions</a>",
+      "css": ".ds-btn-ink{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font:750 1.0625rem/1.1 'Anek Latin',system-ui,sans-serif;font-stretch:94%;min-height:48px;padding:.8rem 1.25rem;border-radius:8px;border:3px solid #1E130C;cursor:pointer;transition:transform .2s cubic-bezier(.16,1,.3,1),background-color .2s,box-shadow .2s;background:#1E130C;color:#FAF8F2;text-decoration:none}.ds-btn-ink:hover{background:#3A2618}.ds-btn-ink:focus-visible{outline:3px solid #1E130C;outline-offset:3px}"
+    },
+    {
+      "name": "Add and In-order Control",
+      "kind": "custom",
+      "refersTo": "in-order-control",
+      "description": "White round add button; once added it becomes a sodium pill with a ticked count.",
+      "html": "<div class=\"ds-row\"><button class=\"ds-add\" aria-label=\"Add\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg></button><span class=\"ds-qty\"><button aria-label=\"Remove one\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/></svg></button><span class=\"ds-count\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12.5l4.5 4.5L19 7.5\"/></svg>2</span><button aria-label=\"Add another\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg></button></span></div>",
+      "css": ".ds-row{display:flex;gap:16px;align-items:center;background:#FAF8F2;padding:16px}.ds-add{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:3px solid #1E130C;background:#fff;color:#1E130C;cursor:pointer;transition:background-color .15s}.ds-add:hover{background:#FFC21A}.ds-add:focus-visible,.ds-qty button:focus-visible{outline:3px solid #1E130C;outline-offset:3px}.ds-qty{display:inline-flex;align-items:center;height:44px;padding:0 1px;border:3px solid #1E130C;border-radius:999px;background:#FF8A1F}.ds-qty button{display:grid;place-items:center;width:38px;height:38px;border:0;border-radius:50%;background:transparent;color:#1E130C;cursor:pointer}.ds-qty button:hover{background:rgba(30,19,12,.14)}.ds-count{display:inline-flex;align-items:center;gap:1px;min-width:2.3rem;justify-content:center;font:800 1.05rem 'Anek Latin',system-ui,sans-serif;font-variant-numeric:tabular-nums;color:#1E130C}"
+    },
+    {
+      "name": "Section Tags",
+      "kind": "nav",
+      "refersTo": "section-tag",
+      "description": "Sticky menu navigation on the night bar; the current section fills with cheese.",
+      "html": "<nav class=\"ds-tags\"><a href=\"#\">OG Smashery</a><a href=\"#\" aria-current=\"true\">Chicken burgers</a><a href=\"#\">Momos</a></nav>",
+      "css": ".ds-tags{display:flex;gap:8px;padding:10px 16px;background:#0F1546;border-block:3px solid #3B4160}.ds-tags a{font:650 .95rem 'Anek Latin',system-ui,sans-serif;color:#F5F3FF;text-decoration:none;padding:.45rem .85rem;border-radius:6px;border:2px solid rgba(186,192,232,.38);white-space:nowrap}.ds-tags a:hover{border-color:#F5F3FF}.ds-tags a[aria-current=true]{background:#FFC21A;border-color:#FFC21A;color:#1E130C}.ds-tags a:focus-visible{outline:3px solid #FFC21A;outline-offset:3px}"
+    },
+    {
+      "name": "Diet Filter",
+      "kind": "chip",
+      "refersTo": "section-tag",
+      "description": "Three-way segmented plate with the Indian veg and non-veg marks.",
+      "html": "<div class=\"ds-night\"><div class=\"ds-diet\"><button aria-pressed=\"true\">All</button><button aria-pressed=\"false\"><i class=\"ds-mark ds-veg\"></i>Veg</button><button aria-pressed=\"false\"><i class=\"ds-mark ds-nonveg\"></i>Non-veg</button></div></div>",
+      "css": ".ds-night{background:#0F1546;padding:16px}.ds-diet{display:inline-flex;border:3px solid #F5F3FF;border-radius:10px;overflow:hidden;background:#151C58}.ds-diet button{display:inline-flex;align-items:center;gap:.5rem;min-height:46px;padding:.55rem 1.05rem;border:0;background:transparent;color:#F5F3FF;font:700 1rem 'Anek Latin',system-ui,sans-serif;cursor:pointer}.ds-diet button+button{border-left:3px solid #F5F3FF}.ds-diet button:hover{background:rgba(245,243,255,.1)}.ds-diet button[aria-pressed=true]{background:#F5F3FF;color:#1E130C}.ds-mark{width:1.05rem;height:1.05rem;border:2px solid var(--c);border-radius:3px;background:#fff;display:grid;place-items:center}.ds-veg{--c:#0F7B36}.ds-nonveg{--c:#8B3A12}.ds-veg::after{content:'';width:.48rem;height:.48rem;border-radius:50%;background:var(--c)}.ds-nonveg::after{content:'';border-inline:.27rem solid transparent;border-bottom:.46rem solid var(--c)}"
+    },
+    {
+      "name": "Printed Panel",
+      "kind": "card",
+      "refersTo": "sign-off-plate",
+      "description": "Flex-white board in a steel and ink rim, with a Shrikhand headline and the sign-off plate.",
+      "html": "<div class=\"ds-night\"><div class=\"ds-panel\"><h3>Indirapuram</h3><p>Lotus Pond Market, Vaibhav Khand</p><p class=\"ds-signoff\"><b>The Smashery</b><span>Burgers from <em>₹89</em></span></p></div></div>",
+      "css": ".ds-night{background:#0F1546;padding:28px}.ds-panel{background:#FAF8F2;color:#1E130C;border:4px solid #1E130C;border-radius:6px;box-shadow:0 0 0 10px #3B4160,0 0 0 13px #1E130C,0 30px 60px -24px rgba(3,5,25,.85);padding:28px;font:450 1.0625rem/1.5 'Anek Latin',system-ui,sans-serif}.ds-panel h3{margin:0;font:400 2.2rem/1.05 Shrikhand,Georgia,serif;color:#D9301C}.ds-panel p{margin:.4rem 0 0}.ds-signoff{display:inline-grid;gap:2px;margin-top:16px!important;padding:10px 18px 12px;background:#C42816;color:#fff;border:3px solid #1E130C;border-radius:3px}.ds-signoff b{font:400 1.6rem/1.05 Shrikhand,Georgia,serif}.ds-signoff span{font-weight:650;font-size:.95rem}.ds-signoff em{font-style:normal;font-family:Shrikhand,Georgia,serif;color:#FFC21A;font-size:1.2rem}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Roadside Hoarding at Dusk",
+    "overview": "The Smashery is drawn as the NCR roadside hoarding: a printed board on a steel frame, lit by lamps against an ultramarine evening sky, with a high-rise skyline at its foot. Each hoarding carries one hand-drawn cartoon, one hand-lettered pun and a sign-off plate in the corner. The menu, outlets and order tray are printed from the same flex stock in the same ink. They never pretend to be billboards themselves.\n\nDensity follows the job. The hero and the closing board are big and quiet, with one joke each. The menu is a long, dense, scannable printed sheet: every price is visible, veg and non-veg are marked, and every item has a one-tap add. Motion is spent once, on arrival. The lamps flicker on, then the press smashes the patty.\n\nAll imagery is drawn in code as flat ink-outlined vector: no photography, no stock, no imitation textures beyond a faint print grain. That is the honest material of a printed cartoon hoarding.",
+    "keyCharacteristics": [
+      "Dusk-ultramarine sky owns the page; white flex boards and panels sit on it.",
+      "Thick brown-black ink outlines and flat poster fills, never gradients on objects.",
+      "Shrikhand, a hand-painted signage face, for every pun and heading; Anek Latin for reading and prices.",
+      "Food drawings share one scale: a double really stands taller than a single, and a momo really is small.",
+      "Sodium-lamp orange means \"in your order\" and nothing else."
+    ],
+    "rules": [
+      {
+        "name": "The Sodium Rule",
+        "body": "Sodium orange appears only on items in the order, and always beside a tick and a count. It never decorates and never stands alone as a state.",
+        "section": "colors"
+      },
+      {
+        "name": "The Night Owns the Page Rule",
+        "body": "White appears as printed boards on the night ground, never as the page ground itself.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Joke Rule",
+        "body": "Shrikhand sets puns and headings only, never body text, buttons or prices.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Price Rule",
+        "body": "Prices are always Anek 800 with tabular lining figures, so columns of ₹ line up.",
+        "section": "typography"
+      },
+      {
+        "name": "The Steel Rim Rule",
+        "body": "A printed surface is always framed by steel and ink. Floating white rectangles without a rim do not exist in this world.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do draw food in flat ink-outlined vector at one shared scale (one unit per millimetre, 130-unit-tall viewBox, baseline at 124).",
+      "Do keep every price visible as Anek 800 tabular figures beside its item.",
+      "Do mark veg and non-veg with both shape and colour.",
+      "Do spend motion once, on the hero: lamps flicker on, then the smash. Respect reduced motion by showing the finished frame.",
+      "Do reserve sodium orange for the order state, always with a tick and a count."
+    ],
+    "donts": [
+      "Don't use food photography or stock imagery until the restaurant supplies real photos. Never present a drawing as a photo.",
+      "Don't put white or cream behind the whole page. The night is the ground.",
+      "Don't set body copy, buttons or prices in Shrikhand.",
+      "Don't add a third hoarding. More content goes on the printed sheet, not on more billboards.",
+      "Don't use hard offset shadows, gradient text, or eyebrow labels above headings."
+    ]
+  }
+}

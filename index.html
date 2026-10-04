@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>The Smashery | Smash burgers, loaded fries and momos in Indirapuram and Noida</title>
-<meta name="description" content="The Smashery serves smash burgers (chicken, mutton, paneer and veg), loaded fries, onion rings and momos. Outlets in Vaibhav Khand, Indirapuram and Sector 76, Noida.">
-<meta name="theme-color" content="#F8C629">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+<meta name="description" content="The Smashery serves smash burgers (chicken, mutton, paneer and veg), loaded fries, onion rings and momos. Burgers from ₹89. Outlets in Vaibhav Khand, Indirapuram and Sector 76, Noida. Order on WhatsApp.">
+<meta name="theme-color" content="#0F1546">
+<link rel="preload" href="fonts/shrikhand-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/anek-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -27,560 +26,1157 @@
 }
 </script>
 <style>
+@font-face{font-family:'Shrikhand';src:url(fonts/shrikhand-latin.woff2) format('woff2');font-weight:400;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Shrikhand';src:url(fonts/shrikhand-rupee.woff2) format('woff2');font-weight:400;font-display:swap;unicode-range:U+20B9}
+@font-face{font-family:'Anek Latin';src:url(fonts/anek-latin.woff2) format('woff2');font-weight:100 800;font-stretch:75% 125%;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Anek Latin';src:url(fonts/anek-rupee.woff2) format('woff2');font-weight:100 800;font-stretch:75% 125%;font-display:swap;unicode-range:U+20B9}
+
 :root{
-  --yellow:#F8C629;
-  --yellow-deep:#E9B410;
-  --ink:#2A170B;
-  --red:#D2271D;
-  --red-dark:#A81B13;
-  --paper:#FFFDF7;
-  --line:#E4D6B0;
-  --muted:#6B5640;
-  --on-dark:#FFF3C8;
-  --veg:#13803B;
-  --nonveg:#A8321C;
-  --display:'Bricolage Grotesque','Arial Narrow','Helvetica Neue',Arial,sans-serif;
-  --radius:14px;
+  /* ink and print */
+  --ink:#1E130C;
+  --ink-2:#56463B;
+  --flex:#FAF8F2;
+  --paper:#FFFFFF;
+  /* poster fills */
+  --cheese:#FFC21A;
+  --cheese-hi:#FFD24D;
+  --chilli:#D9301C;
+  --chilli-d:#B4220F;
+  --chilli-plate:#C42816;
+  /* reserved: "in your order", never used for anything else */
+  --sodium:#FF8A1F;
+  /* food marks */
+  --veg:#0F7B36;
+  --nonveg:#8B3A12;
+  /* sky and steel */
+  --night:#0F1546;
+  --night-2:#151C58;
+  --steel:#6B7594;
+  --steel-d:#3B4160;
+  --steel-dd:#262C4A;
+  --steel-l:#A6B0CC;
+  --on-night:#F5F3FF;
+  --on-night-2:#BAC0E8;
+
+  --display:'Shrikhand',Georgia,serif;
+  --text:'Anek Latin',system-ui,-apple-system,'Segoe UI',sans-serif;
+
+  --gutter:clamp(16px,4vw,40px);
+  --wrap:1180px;
+  --radius:6px;
+  --ring:0 0 0 10px var(--steel-d),0 0 0 13px var(--ink),0 30px 60px -24px rgba(3,5,25,.85);
+  --ease-out:cubic-bezier(.16,1,.3,1);
 }
+
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scrollbar-color:var(--steel) var(--night);color-scheme:dark}
 body{
-  margin:0;
-  font-family:var(--display);
-  font-size:1.0625rem;
-  line-height:1.5;
-  color:var(--ink);
-  background:var(--yellow);
-  color-scheme:light;
+  margin:0;background:var(--night);color:var(--on-night);
+  font-family:var(--text);font-size:1.0625rem;line-height:1.5;font-weight:450;font-stretch:100%;
+  font-synthesis:none;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
 }
-img,svg{max-width:100%;display:block}
-a{color:inherit}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:2px}
+button{font:inherit;color:inherit}
+h1,h2,h3,h4{text-wrap:balance}
+p{text-wrap:pretty}
 [hidden]{display:none!important}
-:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:4px}
-.sig :focus-visible,.outlets :focus-visible,.foot :focus-visible{outline-color:var(--yellow)}
-.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
-.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--on-dark);padding:8px 14px;border-radius:8px;z-index:50}
+::selection{background:var(--cheese);color:var(--ink)}
+:focus-visible{outline:3px solid var(--cheese);outline-offset:3px;border-radius:6px}
+.panel :focus-visible,.sheet :focus-visible,.tray-sheet :focus-visible{outline-color:var(--ink)}
+.dock:not([data-count="0"]) .dock-bar :focus-visible{outline-color:var(--ink)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.wrap{width:min(var(--wrap),100% - 2*var(--gutter));margin-inline:auto}
+.skip{position:absolute;left:-999px;top:10px;z-index:100;background:var(--cheese);color:var(--ink);padding:10px 16px;border-radius:8px;font-weight:700}
 .skip:focus{left:12px}
+.ico{width:1.25em;height:1.25em;flex:none}
 
-/* Buttons */
+/* ---------- Buttons: painted sign plates ---------- */
 .btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
-  font:inherit;font-weight:700;font-size:1.0625rem;text-decoration:none;cursor:pointer;
-  padding:.8rem 1.4rem;border-radius:999px;border:3px solid var(--ink);
-  transition:transform .12s ease, background-color .12s ease;
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  font:750 1.0625rem/1.1 var(--text);font-stretch:94%;letter-spacing:.005em;
+  min-height:48px;padding:.8rem 1.25rem;border-radius:8px;border:3px solid var(--ink);
+  text-decoration:none;cursor:pointer;white-space:nowrap;
+  transition:transform .2s var(--ease-out),background-color .2s,box-shadow .2s var(--ease-out);
 }
-.btn:active{transform:translateY(2px)}
-.btn-ink{background:var(--ink);color:var(--on-dark)}
-.btn-ink:hover{background:#43260F}
-.btn-red{background:var(--red);color:#fff;border-color:var(--ink)}
-.btn-red:hover{background:var(--red-dark)}
+.btn:active{transform:translateY(1px)}
+.btn-cheese{background:var(--cheese);color:var(--ink);box-shadow:0 8px 18px -10px rgba(0,0,0,.6)}
+.btn-cheese:hover{background:var(--cheese-hi);transform:translateY(-2px);box-shadow:0 14px 24px -12px rgba(0,0,0,.65)}
+.btn-ghost{background:transparent;color:var(--on-night);border-color:rgba(245,243,255,.85)}
+.btn-ghost:hover{background:rgba(245,243,255,.1)}
+.btn-ink{background:var(--ink);color:var(--flex)}
+.btn-ink:hover{background:#3A2618}
 .btn-line{background:transparent;color:var(--ink)}
-.btn-line:hover{background:rgba(42,23,11,.08)}
-.btn-yellow{background:var(--yellow);color:var(--ink);border-color:var(--yellow)}
-.btn-yellow:hover{background:#FFD54A;border-color:#FFD54A}
-.btn-ghost-dark{background:transparent;color:var(--on-dark);border-color:var(--on-dark)}
-.btn-ghost-dark:hover{background:rgba(255,243,200,.12)}
+.btn-line:hover{background:rgba(30,19,12,.07)}
+.btn-lg{min-height:56px;font-size:1.125rem;padding:.95rem 1.5rem}
+.btn-sm{min-height:44px;font-size:1rem;padding:.6rem 1rem}
 
-/* Header */
-.top{padding:18px 0}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+/* ---------- Dusk: header, stage, skyline ---------- */
+.dusk{
+  position:relative;overflow:clip;
+  background:
+    radial-gradient(1.5px 1.5px at 12% 14%,#fff8 50%,transparent 51%),
+    radial-gradient(1.5px 1.5px at 27% 6%,#fff6 50%,transparent 51%),
+    radial-gradient(2px 2px at 43% 18%,#fff9 50%,transparent 51%),
+    radial-gradient(1.5px 1.5px at 61% 9%,#fff7 50%,transparent 51%),
+    radial-gradient(1.5px 1.5px at 74% 22%,#fff5 50%,transparent 51%),
+    radial-gradient(2px 2px at 91% 12%,#fff8 50%,transparent 51%),
+    radial-gradient(1.5px 1.5px at 6% 34%,#fff4 50%,transparent 51%),
+    radial-gradient(1.5px 1.5px at 96% 38%,#fff4 50%,transparent 51%),
+    linear-gradient(180deg,#0C1140 0%,#151D62 38%,#25297A 66%,#43317F 82%,#93496D 93%,#D9714E 100%);
+}
+.top{
+  position:relative;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:18px var(--gutter);max-width:calc(var(--wrap) + 2*var(--gutter));margin-inline:auto;
+}
 .brand{
-  font-weight:800;font-stretch:75%;font-size:1.65rem;letter-spacing:-.01em;text-decoration:none;line-height:1;
-  display:flex;align-items:baseline;gap:.5rem;
+  font-family:var(--display);font-size:1.65rem;line-height:1;color:var(--cheese);text-decoration:none;
+  display:flex;align-items:baseline;gap:.6rem;
 }
-.brand small{font-size:.8rem;font-weight:600;font-stretch:100%;color:var(--muted);letter-spacing:0}
-.top nav{display:flex;align-items:center;gap:22px}
-.top nav a:not(.btn){font-weight:600;text-decoration:none;padding:6px 2px;border-bottom:3px solid transparent}
-.top nav a:not(.btn):hover{border-bottom-color:var(--ink)}
-.top .btn{padding:.55rem 1.1rem;font-size:1rem}
+.brand small{font:700 .78rem/1 var(--text);font-stretch:85%;letter-spacing:.08em;text-transform:uppercase;color:var(--on-night-2)}
+.top nav{display:flex;align-items:center;gap:clamp(12px,2.4vw,28px)}
+.navlink{font-weight:650;text-decoration:none;padding:10px 2px}
+.navlink:hover{text-decoration:underline;text-decoration-color:var(--cheese);text-decoration-thickness:3px}
 
-/* Hero */
-.hero{padding:clamp(24px,5vw,56px) 0 clamp(48px,7vw,88px)}
-.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,5vw,64px);align-items:center}
-.hero h1{
-  margin:0;font-weight:800;font-stretch:75%;
-  font-size:clamp(3.4rem,10.5vw,8.6rem);line-height:.88;letter-spacing:-.03em;
+.stage{
+  --bw:min(1120px, 100vw - 2*var(--gutter), (100vh - 300px) * 2);
+  position:relative;padding:clamp(52px,5.6vw,72px) var(--gutter) clamp(120px,11vw,160px);
 }
-.hero h1 span{display:block}
-.hero .lede{max-width:30rem;font-size:clamp(1.1rem,2vw,1.3rem);margin:1.4rem 0 1.8rem}
-.hero .actions{display:flex;flex-wrap:wrap;gap:12px}
-.facts{
-  list-style:none;margin:2.2rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px 22px;
-  font-weight:600;font-size:.98rem;
-}
-.facts li{display:flex;align-items:center;gap:.5rem}
-.facts li::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--red);flex:none}
-.hero-art{position:relative;justify-self:center;width:min(100%,520px)}
-.hero-art svg{width:100%;height:auto;overflow:visible}
-.badge{
-  position:absolute;right:2%;top:2%;width:128px;height:128px;border-radius:50%;
-  background:var(--yellow);border:4px solid var(--ink);display:grid;place-content:center;text-align:center;
-  transform:rotate(10deg);line-height:1.05;box-shadow:4px 5px 0 var(--ink);
-}
-.badge b{display:block;font-size:2.1rem;font-weight:800;font-stretch:75%}
-.badge span{font-size:.82rem;font-weight:700}
+@supports (height:100svh){.stage{--bw:min(1120px, 100vw - 2*var(--gutter), (100svh - 300px) * 2)}}
+.moon{position:absolute;width:clamp(26px,3vw,40px);right:clamp(24px,9vw,140px);top:clamp(8px,2vw,24px);opacity:.9}
+.skyline{position:absolute;left:0;bottom:0;width:100%;height:clamp(150px,17vw,240px);z-index:1}
 
-/* Hero burger: one drop, one smash */
-.b-top{animation:drop .75s cubic-bezier(.55,0,.9,.55) .25s both}
-.b-patty{transform-box:fill-box;transform-origin:50% 60%;animation:smash .55s cubic-bezier(.2,.8,.3,1) .95s both}
-@keyframes drop{from{transform:translateY(-150px)}to{transform:translateY(0)}}
-@keyframes smash{0%{transform:scale(.88,1.55)}55%{transform:scale(1.1,.8)}100%{transform:scale(1,1)}}
-@media (prefers-reduced-motion:reduce){
-  .b-top,.b-patty{animation:none}
-  html{scroll-behavior:auto}
+/* ---------- The hoarding ---------- */
+.hoarding{position:relative;z-index:2;width:var(--bw);margin-inline:auto;container-type:inline-size}
+.board{
+  position:relative;aspect-ratio:2/1;overflow:hidden;isolation:isolate;
+  background:var(--flex);color:var(--ink);
+  border:max(3px,.4cqw) solid var(--ink);border-radius:3px;
+  box-shadow:0 0 0 1.1cqw var(--steel-d),0 0 0 calc(1.1cqw + 3px) var(--ink),0 4cqw 7cqw -2cqw rgba(3,5,25,.8);
+}
+.board::after{
+  content:"";position:absolute;inset:0;z-index:4;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .12 0 0 0 0 .07 0 0 0 0 .05 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.07;mix-blend-mode:multiply;
+}
+.scene{position:absolute;inset:0;width:100%;height:100%}
+.copy{position:absolute;z-index:1;left:4.4cqw;top:4.4cqw;width:48cqw}
+.copy h1{
+  margin:0;font-family:var(--display);font-weight:400;font-size:5.15cqw;line-height:1.06;letter-spacing:-.005em;color:var(--ink);
+}
+.copy h1 span{display:block}
+.copy h1 .hot{color:var(--chilli)}
+.copy .sub{margin:1.7cqw 0 0;max-width:31cqw;font-size:1.72cqw;line-height:1.36;font-weight:560;color:var(--ink-2)}
+.signoff{
+  position:absolute;z-index:1;left:4.4cqw;bottom:3.6cqw;margin:0;
+  display:grid;gap:.25cqw;padding:1.1cqw 1.9cqw 1.3cqw;
+  background:var(--chilli-plate);color:#fff;border:max(3px,.35cqw) solid var(--ink);border-radius:4px;
+  box-shadow:0 1.2cqw 1.8cqw -1cqw rgba(30,19,12,.5);
+}
+.signoff b{font-family:var(--display);font-weight:400;font-size:3cqw;line-height:1.05}
+.signoff span{font-size:1.6cqw;font-weight:650;line-height:1.25}
+.signoff em{font-style:normal;font-family:var(--display);color:var(--cheese);font-size:2.25cqw;line-height:1}
+.glow{
+  position:absolute;inset:0;z-index:2;pointer-events:none;mix-blend-mode:multiply;
+  background:
+    radial-gradient(30cqw 17cqw at 27% 0%,rgba(255,206,110,.42),transparent 72%),
+    radial-gradient(30cqw 17cqw at 79% 0%,rgba(255,206,110,.42),transparent 72%);
+}
+.dim{position:absolute;inset:0;z-index:3;pointer-events:none;background:#1B2266;mix-blend-mode:multiply;opacity:0}
+
+.lamps{position:absolute;inset:0;z-index:5;pointer-events:none}
+.lamp{position:absolute;top:-6cqw;width:6.4cqw;transform:translateX(-25%)}
+.lamp svg{position:relative;width:100%;height:auto}
+.lamp::before{
+  content:"";position:absolute;left:75%;top:66%;width:10cqw;height:10cqw;transform:translate(-50%,-50%);border-radius:50%;
+  background:radial-gradient(closest-side,rgba(255,240,190,.9),rgba(255,196,90,.32) 45%,transparent);
+}
+.lamp.l1{left:23%}.lamp.l3{left:75%}
+.catwalk{
+  position:absolute;left:-2.4cqw;right:-2.4cqw;top:calc(100% + 1.1cqw + 3px);height:2.1cqw;
+  border:3px solid var(--ink);border-radius:2px;
+  background:repeating-linear-gradient(90deg,#2F3660 0 .55cqw,#454D7C .55cqw .8cqw);
+}
+.legs{position:absolute;left:0;right:0;top:calc(100% + 3.2cqw + 6px);height:120vh;z-index:-1}
+.legs i{
+  position:absolute;top:0;bottom:0;width:3.2cqw;transform:translateX(-50%);
+  border-inline:3px solid var(--ink);
+  background:linear-gradient(90deg,#2C335C 0 24%,#4B5384 24% 34%,#323A68 34%);
+}
+.legs i:first-child{left:22%}
+.legs i:last-child{left:78%}
+.legs::after{
+  content:"";position:absolute;left:22%;right:22%;top:7cqw;height:1.4cqw;
+  border-block:3px solid var(--ink);background:#2C335C;
+}
+.actions{
+  position:relative;z-index:3;display:flex;flex-wrap:wrap;justify-content:center;gap:12px 14px;
+  margin-top:calc(var(--bw) * .055 + 22px);
 }
 
-/* Menu */
-#menu{background:var(--paper);border-top:4px solid var(--ink)}
-.menu-head{padding:clamp(36px,6vw,72px) 0 28px}
-.menu-head .wrap{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px 40px}
-.menu-head h2{
-  margin:0;font-weight:800;font-stretch:75%;font-size:clamp(2.8rem,8vw,5.6rem);line-height:.9;letter-spacing:-.025em;
+/* ---------- Signature moment: lamps on, then the smash ---------- */
+.scene .ball{opacity:0}
+@media (prefers-reduced-motion:no-preference){
+  .stage .lamp .lens{animation:lens .8s linear .15s both}
+  .stage .lamp::before{animation:halo .8s linear .15s both}
+  .stage .lamp.l3 .lens,.stage .lamp.l3::before{animation-delay:.24s}
+  .stage .dim{animation:dim .9s linear .15s both}
+  .scene .press{animation:press .34s cubic-bezier(.55,0,1,.45) .95s both}
+  .scene .speed{animation:speed .34s ease-out .95s both}
+  .scene .ball{animation:ball .34s linear .95s both;transform-box:fill-box;transform-origin:50% 100%}
+  .scene .patty{animation:spread .7s var(--ease-out) 1.27s both;transform-box:fill-box;transform-origin:50% 50%}
+  .scene .impact{animation:pop .5s var(--ease-out) 1.27s both;transform-box:fill-box;transform-origin:50% 60%}
+  .scene .steam{animation:rise 1.1s var(--ease-out) 1.4s both}
+  .scene .sfx{animation:sfx .5s var(--ease-out) 1.3s both;transform-box:fill-box;transform-origin:50% 50%}
+  .stage .board{animation:jolt .28s ease-out 1.27s both}
+  .count{animation:stamp .32s var(--ease-out)}
 }
-.menu-tools{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
-.legend{display:flex;gap:18px;font-size:.95rem;color:var(--muted);align-items:center;flex-wrap:wrap}
-.legend span{display:inline-flex;align-items:center;gap:.45rem}
-.seg{display:inline-flex;border:3px solid var(--ink);border-radius:999px;overflow:hidden;background:var(--paper)}
-.seg button{
-  font:inherit;font-weight:700;font-size:.98rem;padding:.5rem 1.05rem;border:0;background:transparent;color:var(--ink);cursor:pointer;
-}
-.seg button+button{border-left:3px solid var(--ink)}
-.seg button[aria-pressed="true"]{background:var(--ink);color:var(--on-dark)}
+@keyframes lens{0%{fill:#3B4160}14%{fill:#FFF4CF}22%{fill:#3B4160}38%{fill:#FFF4CF}48%{fill:#8D8A78}100%{fill:#FFF4CF}}
+@keyframes halo{0%{opacity:0}14%{opacity:.9}22%{opacity:0}38%{opacity:1}48%{opacity:.35}100%{opacity:1}}
+@keyframes dim{0%{opacity:.62}14%{opacity:.3}22%{opacity:.6}38%{opacity:.12}48%{opacity:.34}100%{opacity:0}}
+@keyframes press{from{transform:translateY(-150px)}to{transform:none}}
+@keyframes speed{from{opacity:0;transform:translateY(-40px)}to{opacity:1;transform:none}}
+@keyframes ball{0%,60%{transform:none;opacity:1}97%{transform:scale(1.9,.15);opacity:1}100%{transform:scale(1.9,.15);opacity:0}}
+@keyframes spread{from{transform:scale(.42,.45);opacity:0}8%{opacity:1}to{transform:none;opacity:1}}
+@keyframes pop{from{transform:scale(.55);opacity:0}to{transform:none;opacity:1}}
+@keyframes rise{from{transform:translateY(26px);opacity:0}to{transform:none;opacity:1}}
+@keyframes sfx{from{transform:scale(.3) rotate(-12deg);opacity:0}to{transform:none;opacity:1}}
+@keyframes jolt{0%{transform:none}35%{transform:translateY(.45cqw)}70%{transform:translateY(-.12cqw)}100%{transform:none}}
+@keyframes stamp{from{transform:scale(1.4) rotate(-10deg)}to{transform:none}}
 
-.catnav{
-  position:sticky;top:0;z-index:20;background:var(--paper);border-block:3px solid var(--ink);
+/* ---------- Printed panels ---------- */
+.panel{background:var(--flex);color:var(--ink);border:4px solid var(--ink);border-radius:var(--radius);box-shadow:var(--ring)}
+
+/* How the edges get crispy */
+.how{padding-block:clamp(64px,8vw,112px) clamp(40px,5vw,72px)}
+.how-panel{
+  display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:clamp(20px,3vw,40px) clamp(28px,4vw,56px);
+  padding:clamp(24px,4vw,52px);
 }
+.how-intro h2{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(2.1rem,1.4rem + 2.4vw,3.25rem);line-height:1.04;color:var(--chilli)}
+.how-intro p{margin:.9rem 0 0;color:var(--ink-2);max-width:30ch}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,2.4vw,32px);counter-reset:step}
+.step figure{margin:0}
+.step svg{width:100%;height:auto}
+.step h3{
+  counter-increment:step;display:flex;align-items:center;gap:.55rem;margin:.5rem 0 0;
+  font-family:var(--display);font-weight:400;font-size:1.6rem;line-height:1.1;
+}
+.step h3::before{
+  content:counter(step);display:grid;place-items:center;width:1.9rem;height:1.9rem;border-radius:50%;
+  background:var(--ink);color:var(--flex);font:800 1rem/1 var(--text);font-stretch:90%;
+}
+.step p{margin:.35rem 0 0;color:var(--ink-2)}
+.how-foot{grid-column:2;margin:0;font-weight:650;font-size:1.1rem}
+
+/* ---------- Menu ---------- */
+.menu{padding-bottom:clamp(72px,9vw,128px)}
+.menu-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 40px;padding-block:clamp(32px,4vw,56px) clamp(22px,3vw,34px)}
+.menu-head h2{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(3rem,1.6rem + 6vw,6rem);line-height:.95;color:var(--cheese)}
+.menu-tools{display:grid;gap:14px;justify-items:start}
+.hint{margin:0;color:var(--on-night-2);max-width:34ch}
+.plus-chip{display:inline-grid;place-items:center;width:1.6em;height:1.6em;border-radius:50%;background:var(--paper);color:var(--ink);border:2px solid var(--ink);vertical-align:-.4em}
+.plus-chip .ico{width:1em;height:1em}
+.diet{display:inline-flex;border:3px solid var(--on-night);border-radius:10px;overflow:hidden;background:var(--night-2)}
+.diet button{
+  display:inline-flex;align-items:center;gap:.5rem;min-height:46px;padding:.55rem 1.05rem;border:0;background:transparent;
+  font-weight:700;font-size:1rem;cursor:pointer;transition:background-color .15s;
+}
+.diet button+button{border-left:3px solid var(--on-night)}
+.diet button:hover{background:rgba(245,243,255,.1)}
+.diet button[aria-pressed="true"]{background:var(--on-night);color:var(--ink)}
+
+.mark{--c:var(--ink);width:1.05rem;height:1.05rem;margin-top:.28rem;border:2px solid var(--c);border-radius:3px;background:#fff;display:grid;place-items:center;flex:none}
+.mark.veg{--c:var(--veg)}
+.mark.nonveg{--c:var(--nonveg)}
+.mark.veg::after{content:"";width:.48rem;height:.48rem;border-radius:50%;background:var(--c)}
+.mark.nonveg::after{content:"";width:0;height:0;border-inline:.27rem solid transparent;border-bottom:.46rem solid var(--c);margin-top:-.08rem}
+.diet .mark{margin-top:0}
+
+.catnav{position:sticky;top:0;z-index:20;background:var(--night);border-block:3px solid var(--steel-d)}
 .catnav ul{
-  list-style:none;margin:0 auto;padding:10px 0;width:min(1120px,100% - 40px);
+  list-style:none;margin:0 auto;padding:10px 0;width:min(var(--wrap),100% - 2*var(--gutter));
   display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;
 }
 .catnav ul::-webkit-scrollbar{display:none}
 .catnav a{
-  display:block;white-space:nowrap;text-decoration:none;font-weight:700;font-size:.95rem;
-  padding:.4rem .95rem;border-radius:999px;border:2px solid var(--line);background:var(--paper);
+  display:block;white-space:nowrap;text-decoration:none;font-weight:650;font-size:.95rem;
+  padding:.45rem .85rem;border-radius:6px;border:2px solid rgba(186,192,232,.38);
+  transition:border-color .15s,background-color .15s;
 }
-.catnav a:hover{border-color:var(--ink)}
-.catnav a[aria-current="true"]{background:var(--yellow);border-color:var(--ink)}
+.catnav a:hover{border-color:var(--on-night)}
+.catnav a[aria-current="true"]{background:var(--cheese);border-color:var(--cheese);color:var(--ink)}
 
-.cat{scroll-margin-top:64px;padding:clamp(32px,5vw,56px) 0}
-.cat+.cat:not(.sig){border-top:2px dashed var(--line)}
-.cat-grid{display:grid;grid-template-columns:minmax(190px,280px) 1fr;gap:clamp(20px,4vw,56px);align-items:start}
-.cat h2{
-  margin:0;font-weight:800;font-stretch:75%;color:var(--red);
-  font-size:clamp(2rem,4.4vw,3rem);line-height:.95;letter-spacing:-.02em;
-}
-.cat .note{margin:.7rem 0 0;color:var(--muted);font-size:.98rem;max-width:20rem}
-.items{list-style:none;margin:0;padding:0}
+.sheet{margin-top:clamp(28px,3.4vw,44px);background:var(--flex);color:var(--ink);border:4px solid var(--ink);border-radius:var(--radius);box-shadow:var(--ring);overflow:clip}
+.cat{padding:clamp(24px,3.4vw,44px) clamp(18px,4vw,52px) clamp(28px,3.8vw,48px);scroll-margin-top:64px}
+.cat+.cat{border-top:2px dashed rgba(30,19,12,.3)}
+.cat-og{background:var(--cheese)}
+.cat-og+.cat{border-top:4px solid var(--ink)}
+.cat-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px 24px;margin-bottom:clamp(10px,1.6vw,18px)}
+.cat-head h3{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(1.85rem,1.2rem + 2.5vw,3.05rem);line-height:1.02;color:var(--chilli)}
+.cat-og .cat-head h3{color:var(--ink);font-size:clamp(2.2rem,1.4rem + 3vw,3.6rem)}
+.note{margin:.45rem 0 0;color:var(--ink-2);font-weight:560}
+.cat-og .note{color:#4A3008}
+.fig{height:clamp(96px,10vw,144px);width:auto;flex:none;overflow:visible}
+
+.items{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);column-gap:clamp(32px,5vw,64px)}
 .item{
-  display:grid;grid-template-columns:22px 1fr auto;gap:0 14px;align-items:start;
-  padding:15px 0;border-bottom:1px dotted #B9A67A;
+  display:grid;grid-template-columns:1.05rem minmax(0,1fr) auto;column-gap:.85rem;align-items:start;
+  padding:1rem 0;border-top:2px dotted rgba(30,19,12,.3);
 }
-.item:first-child{padding-top:0}
-.item:last-child{border-bottom:0;padding-bottom:0}
-.item h3{margin:0;font-size:1.18rem;font-weight:700;line-height:1.25}
-.item p{margin:.2rem 0 0;color:var(--muted);font-size:.98rem;max-width:44rem}
-.price{font-weight:800;font-size:1.25rem;font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right;line-height:1.25}
-.price small{font-size:.82rem;font-weight:600;color:var(--muted)}
-.price.ask{font-size:.95rem;font-weight:700;color:var(--muted)}
-.price.multi{display:flex;flex-direction:column;gap:2px}
-.price.multi span small{margin-right:.4rem}
-.mark{
-  width:18px;height:18px;margin-top:4px;border:2px solid var(--c);border-radius:3px;display:grid;place-items:center;
-}
-.mark::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
-.mark.veg{--c:var(--veg)}
-.mark.nonveg{--c:var(--nonveg)}
-.item.plain{grid-template-columns:22px 1fr auto}
-.item.nomark{grid-template-columns:1fr auto}
+.item.multi{grid-column:1/-1}
+.nomark-gap{width:1.05rem}
+.item-main{display:contents}
+.item>.mark,.item>.nomark-gap{grid-row:1}
+.item h4{grid-column:2;grid-row:1;align-self:center}
+.item>.buy{grid-column:3;grid-row:1}
+.item-main>p,.variants{grid-column:2/-1}
+.item h4{margin:0;font-size:1.1875rem;font-weight:680;line-height:1.25;font-stretch:96%}
+.item-main>p{margin:.25rem 0 0;color:var(--ink-2);font-size:.98rem;line-height:1.45;max-width:62ch}
+.cat-og .item-main>p{color:#4A3008}
+.cat-og .item{border-top-color:rgba(30,19,12,.35)}
+.cat-og .item h4{font-family:var(--display);font-weight:400;font-size:1.55rem;line-height:1.1}
+.cat-og .price{font-size:1.6rem}
+.buy{display:flex;align-items:center;gap:.7rem;justify-self:end;min-height:44px}
+.item>.mark{align-self:center;margin-top:0}
+.price{font-weight:800;font-size:1.3rem;font-stretch:84%;font-variant-numeric:tabular-nums lining-nums;white-space:nowrap;line-height:1.2}
+.price.ask{font-size:.95rem;font-weight:700;color:var(--ink-2);font-stretch:90%}
 
-.mprices{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:.7rem 0 0;max-width:30rem}
-.mprices div{border:2px solid var(--line);border-radius:10px;padding:.35rem .6rem;background:#FFF9E4}
-.mprices dt{font-size:.78rem;font-weight:600;color:var(--muted);line-height:1.2}
-.mprices dd{margin:0;font-weight:800;font-size:1.1rem;font-variant-numeric:tabular-nums}
-.mprices.one{grid-template-columns:minmax(0,7.5rem)}
-.item.momo{grid-template-columns:22px 1fr}
-
-/* Signatures */
-.sig{background:var(--ink);color:var(--on-dark);padding:clamp(40px,6vw,76px) 0;border-top:0}
-.sig h2{color:var(--yellow)}
-.sig .note{color:#DCC896}
-.sig .items{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.sig .item{
-  grid-template-columns:22px 1fr;padding:22px;border:3px solid var(--yellow);border-radius:var(--radius);border-bottom:3px solid var(--yellow);
-  background:#3A2112;position:relative;
+.variants{list-style:none;margin:.85rem 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;max-width:54rem}
+.variants .buy{
+  justify-self:stretch;display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:8px;align-items:center;
+  padding:.45rem .45rem .45rem .75rem;border:2px solid rgba(30,19,12,.24);border-radius:10px;background:var(--paper);
+  transition:border-color .15s;
 }
-.sig .item:first-child,.sig .item:last-child{padding:22px}
-.sig .item h3{font-size:1.5rem;font-stretch:75%;font-weight:800}
-.sig .item p{color:#E8D6A6;grid-column:2}
-.sig .item .price{grid-column:2;text-align:left;font-size:2rem;font-weight:800;font-stretch:75%;color:var(--yellow);margin-top:.9rem}
-.sig .mark{background:var(--paper);border-color:var(--c);outline:3px solid var(--paper);outline-offset:0}
-.sig .mark{outline:none;border-width:2px;box-shadow:0 0 0 3px var(--paper);margin:6px 0 0 3px;width:16px;height:16px}
+.variants .buy.in{border-color:var(--ink)}
+.vlabel{grid-column:1;font-size:.86rem;font-weight:650;line-height:1.2;color:var(--ink-2)}
+.variants .price{grid-column:1;font-size:1.15rem}
+.variants .qty{grid-column:2;grid-row:1/span 2}
 
-/* Outlets + footer */
-.outlets{background:var(--ink);color:var(--on-dark);padding:clamp(40px,6vw,80px) 0;border-top:4px solid var(--yellow)}
-.outlets h2{
-  margin:0 0 28px;font-weight:800;font-stretch:75%;font-size:clamp(2.8rem,8vw,5.6rem);line-height:.9;letter-spacing:-.025em;color:var(--yellow);
-}
-.outlet-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.outlet{border:3px solid var(--on-dark);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:6px}
-.outlet h3{margin:0;font-size:1.5rem;font-weight:800;font-stretch:75%}
-.outlet address{font-style:normal;color:#E8D6A6}
-.outlet .when{margin:.4rem 0 0;font-weight:600}
-.outlet .row{margin-top:auto;padding-top:18px;display:flex;flex-wrap:wrap;gap:10px}
-.outlets .order{margin-top:36px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-.outlets .order p{margin:0 6px 0 0;font-weight:600;color:#E8D6A6}
-.foot{background:var(--ink);color:#DCC896;padding:0 0 34px;font-size:.95rem}
-.foot .wrap{border-top:2px solid #5A3A22;padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px}
-.foot q{font-weight:700;font-style:normal;color:var(--on-dark);quotes:none}
-.foot p{margin:0}
+/* order controls (added by script) */
+.qty{display:inline-flex;align-items:center}
+.qty button{display:grid;place-items:center;cursor:pointer;border:0;background:transparent;color:var(--ink);padding:0}
+.qty .add{width:44px;height:44px;border-radius:50%;border:3px solid var(--ink);background:var(--paper);transition:background-color .15s,transform .2s var(--ease-out)}
+.qty .add:hover{background:var(--cheese)}
+.qty .add:active{transform:scale(.92)}
+.qty .ico{width:22px;height:22px}
+.qty.on{height:44px;padding:0 1px;border:3px solid var(--ink);border-radius:999px;background:var(--sodium)}
+.qty.on button{width:38px;height:38px;border-radius:50%}
+.qty.on button:hover{background:rgba(30,19,12,.14)}
+.count{display:inline-flex;align-items:center;justify-content:center;gap:1px;min-width:2.3rem;font-weight:800;font-size:1.05rem;font-variant-numeric:tabular-nums}
+.count .ico{width:15px;height:15px;stroke-width:3.2}
+.variants .qty .add{width:40px;height:40px}
+.variants .qty.on{height:40px}
+.variants .qty.on button{width:34px;height:34px}
 
-/* Mobile order bar */
-.dock{display:none}
+.fine{margin:1.4rem 0 0;color:var(--on-night-2);font-size:.95rem}
 
-@media (max-width:900px){
-  .hero .wrap{grid-template-columns:1fr}
-  .hero-art{width:min(100%,400px);order:-1;margin-bottom:-8px}
-  .badge{width:104px;height:104px}
-  .badge b{font-size:1.7rem}
-  .cat-grid{grid-template-columns:1fr;gap:18px}
-  .cat .note{max-width:none}
-  .sig .items{grid-template-columns:1fr}
-  .outlet-grid{grid-template-columns:1fr}
+/* ---------- Find us ---------- */
+.find{padding-block:clamp(56px,7vw,104px) clamp(72px,9vw,128px);border-top:3px solid var(--steel-d)}
+.find h2{margin:0 0 clamp(28px,3.4vw,44px);font-family:var(--display);font-weight:400;font-size:clamp(3rem,1.6rem + 6vw,6rem);line-height:.95;color:var(--cheese)}
+.outlets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(36px,4vw,52px)}
+.outlet{display:flex;flex-direction:column;gap:.45rem;padding:clamp(22px,3vw,36px)}
+.outlet h3{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(1.8rem,1.3rem + 1.6vw,2.5rem);line-height:1.05;color:var(--chilli)}
+.outlet address{font-style:normal;font-size:1.125rem;font-weight:550;line-height:1.4}
+.when{display:flex;align-items:center;gap:.55rem;margin:.35rem 0 0;font-weight:700}
+.bulb{width:.95rem;height:.95rem;border-radius:50%;border:2.5px solid var(--ink);background:transparent}
+.bulb.on{background:var(--cheese);box-shadow:0 0 0 4px rgba(255,194,26,.3)}
+.outlet .row{margin-top:auto;padding-top:1.2rem;display:flex;flex-wrap:wrap;gap:10px}
+.order-ahead{margin-top:clamp(40px,5vw,60px);display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px}
+.order-ahead p{margin:0 .4rem 0 0;font-family:var(--display);font-size:1.6rem;color:var(--on-night)}
+
+/* ---------- Closing hoarding ---------- */
+.close{position:relative;overflow:clip;padding-top:clamp(64px,8vw,104px);background:linear-gradient(180deg,var(--night) 0%,#121A52 70%,#1A1E5E 100%)}
+.hoarding-close{--cw:min(920px,100vw - 2*var(--gutter));width:var(--cw)}
+.board-close{aspect-ratio:2.2/1}
+.board-close .quote{
+  position:absolute;z-index:1;left:5cqw;top:5.6cqw;width:54cqw;margin:0;
+  font-family:var(--display);font-size:4.2cqw;line-height:1.16;color:var(--ink);
 }
-@media (max-width:640px){
-  body{padding-bottom:78px}
-  .top nav a:not(.btn){display:none}
-  .brand small{display:none}
-  .top .btn{display:none}
-  .menu-head .wrap{align-items:start}
-  .mprices{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .dock{
-    display:grid;grid-template-columns:1fr 1.4fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:30;
-    padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:var(--yellow);border-top:3px solid var(--ink);
-  }
-  .dock .btn{padding:.7rem 1rem}
+.thought{position:absolute;right:3cqw;top:4cqw;width:36cqw}
+.board-close .signoff{left:5cqw;bottom:4.6cqw}
+.board-close .signoff b{font-size:3.2cqw}
+.board-close .signoff span{font-size:1.75cqw}
+.hoarding-close .glow{display:none}
+.hoarding-close .lamp.l1{left:22%}
+.hoarding-close .lamp.l3{left:78%}
+.close .skyline{position:relative;display:block;margin-top:clamp(48px,7vw,96px)}
+.close .legs{height:400px}
+.foot-base{position:relative;z-index:3;background:#0A0E35;padding:22px var(--gutter) calc(26px + env(safe-area-inset-bottom));display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;color:var(--on-night-2);font-size:.95rem}
+.foot-base p{margin:0}
+.foot-base a{color:var(--on-night)}
+
+/* ---------- Dock and order tray ---------- */
+.dock{position:fixed;z-index:40;right:24px;bottom:24px;width:min(400px,100vw - 48px);color:var(--ink)}
+.dock[data-count="0"]{display:none}
+.dock-empty{display:none}
+.dock-bar{display:flex;gap:10px;align-items:stretch;padding:10px;background:var(--flex);border:4px solid var(--ink);border-radius:12px;box-shadow:0 20px 40px -16px rgba(3,5,25,.85)}
+.dock-order{display:flex;gap:10px;flex:1;min-width:0}
+.tray-toggle{
+  flex:1;min-width:0;display:flex;align-items:center;gap:10px;padding:4px 8px 4px 4px;border:0;background:transparent;cursor:pointer;text-align:left;border-radius:8px;
 }
+.tray-toggle:hover{background:rgba(30,19,12,.07)}
+.tray-toggle>.ico{width:20px;height:20px;transition:transform .25s var(--ease-out)}
+.tray-toggle[aria-expanded="true"]>.ico{transform:rotate(180deg)}
+.tray-badge{color:var(--ink);display:inline-flex;align-items:center;gap:1px;height:36px;padding:0 10px 0 8px;border:3px solid var(--ink);border-radius:999px;background:var(--sodium);font-weight:800;font-variant-numeric:tabular-nums}
+.tray-badge .ico{width:15px;height:15px;stroke-width:3.2}
+.tray-sum{display:grid;line-height:1.15;min-width:0}
+.tray-sum span{font-size:.82rem;font-weight:650;color:var(--ink-2);white-space:nowrap}
+.tray-sum strong{font-size:1.2rem;font-weight:800;font-stretch:88%;font-variant-numeric:tabular-nums}
+.tray-send{flex:none}
+.tray-sheet{
+  position:absolute;left:0;right:0;bottom:calc(100% + 10px);max-height:min(62vh,560px);overflow:auto;overscroll-behavior:contain;
+  padding:18px 18px 16px;background:var(--flex);border:4px solid var(--ink);border-radius:12px;box-shadow:0 20px 40px -16px rgba(3,5,25,.85);
+}
+.tray-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.tray-head h2{margin:0;font-family:var(--display);font-weight:400;font-size:1.6rem;color:var(--chilli)}
+.tray-clear{border:0;background:none;padding:6px 2px;font-weight:650;font-size:.95rem;color:var(--ink-2);text-decoration:underline;cursor:pointer}
+.tray-lines{list-style:none;margin:10px 0 0;padding:0}
+.tray-lines li{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:10px;padding:8px 0;border-top:2px dotted rgba(30,19,12,.3)}
+.tray-lines .ln{font-weight:620;line-height:1.25}
+.tray-lines .lp{font-weight:800;font-stretch:86%;font-variant-numeric:tabular-nums;min-width:3.6rem;text-align:right}
+.tray-lines .qty.on{height:38px}
+.tray-lines .qty.on button{width:32px;height:32px}
+.tray-total{display:flex;justify-content:space-between;align-items:baseline;padding-top:10px;border-top:2px solid var(--ink);font-weight:700}
+.tray-total strong{font-size:1.35rem;font-weight:800;font-stretch:86%;font-variant-numeric:tabular-nums}
+.tray-note{margin:6px 0 0;font-size:.92rem;color:var(--ink-2)}
+.outlet-pick{margin:14px 0 0;padding:0;border:0;display:flex;flex-wrap:wrap;gap:8px}
+.outlet-pick legend{padding:0;margin-bottom:8px;font-weight:700}
+.outlet-pick label{position:relative;cursor:pointer}
+.outlet-pick input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.outlet-pick span{display:inline-flex;align-items:center;min-height:44px;padding:.5rem .9rem;border:2.5px solid var(--ink);border-radius:8px;font-weight:650;background:var(--paper)}
+.outlet-pick input:checked+span{background:var(--ink);color:var(--flex)}
+.outlet-pick input:focus-visible+span{outline:3px solid var(--ink);outline-offset:3px}
+
+/* ---------- Narrow screens ---------- */
+@media (max-width:999px){
+  .how-panel{grid-template-columns:1fr}
+  .how-foot{grid-column:1}
+}
+@media (min-width:1000px){
+  .items{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cat-og .items{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:899px){
+  body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+  .dock,.dock[data-count="0"]{display:block;left:0;right:0;bottom:0;width:auto}
+  .dock-bar{border-radius:0;border-width:3px 0 0;border-color:var(--ink);padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--flex)}
+  .dock[data-count="0"] .dock-bar{background:var(--night-2);border-color:var(--steel-d);color:var(--on-night)}
+  .dock[data-count="0"] .dock-empty{display:grid;grid-template-columns:1fr 1.7fr;gap:10px;flex:1}
+  .dock[data-count="0"] .dock-order{display:none}
+  .tray-sheet{bottom:100%;border-radius:14px 14px 0 0;border-bottom:0;box-shadow:0 -20px 40px -10px rgba(3,5,25,.7)}
+  .tray-send{padding-inline:1rem}
+  .actions .btn-cheese{display:none}
+  .outlets{grid-template-columns:1fr}
+}
+@media (max-width:759px){
+  .top{padding-block:14px}
+  .brand{font-size:1.4rem}
+  .brand small,.navlink,.top .btn{display:none}
+  .stage{--bw:calc(100vw - 2*var(--gutter));padding-top:clamp(44px,13vw,64px)}
+  .board{aspect-ratio:auto;display:flex;flex-direction:column}
+  .copy{position:static;order:-1;width:auto;padding:6.4cqw 6cqw 0}
+  .copy h1{font-size:10.4cqw}
+  .copy .sub{max-width:none;font-size:4.3cqw;margin-top:2.6cqw}
+  .scene{position:static;height:auto;aspect-ratio:640/440;margin-top:1cqw}
+  .signoff{position:static;border-width:3px 0 0;border-radius:0;padding:3.6cqw 6cqw 4.2cqw;gap:.8cqw;box-shadow:none}
+  .signoff b{font-size:6.6cqw}
+  .signoff span{font-size:3.9cqw}
+  .signoff em{font-size:5.4cqw}
+  .glow{background:radial-gradient(46cqw 30cqw at 26% 0%,rgba(255,206,110,.42),transparent 72%),radial-gradient(46cqw 30cqw at 82% 0%,rgba(255,206,110,.42),transparent 72%)}
+  .lamp{width:12cqw;top:-11cqw}
+  .lamp::before{width:18cqw;height:18cqw}
+  .lamp.l1{left:20%}.lamp.l3{left:76%}
+  .catwalk{height:3.4cqw;top:calc(100% + 1.1cqw + 3px)}
+  .legs{top:calc(100% + 4.5cqw + 6px)}
+  .legs i:first-child{left:50%;width:11cqw}
+  .legs i:last-child,.legs::after{display:none}
+  .actions{margin-top:calc(var(--bw) * .06 + 18px)}
+  .actions .btn{flex:1 1 auto}
+  .steps{grid-template-columns:1fr;gap:18px}
+  .step{display:grid;grid-template-columns:minmax(96px,32%) 1fr;gap:16px;align-items:center}
+  .step h3{margin-top:0}
+  .cat-head{align-items:flex-start}
+  .fig{height:68px}
+  .cat-head h3{font-size:1.75rem}
+  .variants{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .item h4{font-size:1.125rem}
+  .board-close{aspect-ratio:auto;padding-bottom:0}
+  .board-close .quote{position:static;width:auto;padding:7cqw 6cqw 0;font-size:7.6cqw}
+  .thought{position:static;width:60cqw;margin:2cqw auto 0}
+  .board-close .signoff b{font-size:6.6cqw}
+  .board-close .signoff span{font-size:3.9cqw}
+  .hoarding-close .lamp.l1{left:20%}
+  .hoarding-close .lamp.l3{left:76%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+}
+
 </style>
 </head>
 <body>
 <a class="skip" href="#menu">Skip to the menu</a>
 
-<header class="top">
-  <div class="wrap">
+<div class="dusk">
+  <header class="top">
     <a class="brand" href="#top">The Smashery <small>Est. 2024</small></a>
     <nav aria-label="Main">
-      <a href="#menu">Menu</a>
-      <a href="#find-us">Find us</a>
-      <a class="btn btn-ink" href="https://wa.me/917895099420?text=Hi%20The%20Smashery%2C%20I%27d%20like%20to%20place%20an%20order.">Order on WhatsApp</a>
+      <a class="navlink" href="#menu">Menu</a>
+      <a class="navlink" href="#find-us">Find us</a>
+      <a class="btn btn-cheese btn-sm" href="https://wa.me/917895099420?text=Hi%20The%20Smashery%2C%20I%27d%20like%20to%20place%20an%20order."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18.5l1.3-3.6A8 8 0 1 1 8.6 18z"/><path d="M9 10.5h6M9 13.5h4"/></svg>Order on WhatsApp</a>
     </nav>
-  </div>
-</header>
+  </header>
 
-<main id="top">
-  <section class="hero" aria-labelledby="hero-title">
+  <main id="top">
+  <section class="stage" aria-labelledby="hero-title">
+    <svg class="moon" viewBox="0 0 40 40" aria-hidden="true"><defs><mask id="moonbite"><rect width="40" height="40" fill="#fff"/><circle cx="27" cy="15" r="15" fill="#000"/></mask></defs><circle cx="20" cy="20" r="16" fill="#FFF1C8" mask="url(#moonbite)"/></svg>
+    <div class="hoarding">
+      <div class="lamps" aria-hidden="true"><span class="lamp l1"><svg viewBox="0 0 80 80" aria-hidden="true"><path d="M24 80 L24 24 Q24 10 38 10 L48 10 Q60 10 60 22 L60 34" fill="none" stroke="#1E130C" stroke-width="10" stroke-linecap="round"/><path d="M24 80 L24 24 Q24 10 38 10 L48 10 Q60 10 60 22 L60 34" fill="none" stroke="#3B4160" stroke-width="5" stroke-linecap="round"/><path d="M42 32 L78 32 L72 49 L48 49 Z" fill="#3B4160" stroke="#1E130C" stroke-width="3.5" stroke-linejoin="round"/><path d="M46 36 L62 36" stroke="#6B7594" stroke-width="3" stroke-linecap="round"/><path class="lens" d="M48 49 L72 49 L69 55 L51 55 Z" fill="#FFF4CF" stroke="#1E130C" stroke-width="3" stroke-linejoin="round"/></svg></span><span class="lamp l3"><svg viewBox="0 0 80 80" aria-hidden="true"><path d="M24 80 L24 24 Q24 10 38 10 L48 10 Q60 10 60 22 L60 34" fill="none" stroke="#1E130C" stroke-width="10" stroke-linecap="round"/><path d="M24 80 L24 24 Q24 10 38 10 L48 10 Q60 10 60 22 L60 34" fill="none" stroke="#3B4160" stroke-width="5" stroke-linecap="round"/><path d="M42 32 L78 32 L72 49 L48 49 Z" fill="#3B4160" stroke="#1E130C" stroke-width="3.5" stroke-linejoin="round"/><path d="M46 36 L62 36" stroke="#6B7594" stroke-width="3" stroke-linecap="round"/><path class="lens" d="M48 49 L72 49 L69 55 L51 55 Z" fill="#FFF4CF" stroke="#1E130C" stroke-width="3" stroke-linejoin="round"/></svg></span></div>
+      <div class="board">
+        <svg class="scene" viewBox="0 0 1200 600" role="img" aria-label="Cartoon: a gloved hand drives a steel press down on a ball of meat on a hot griddle, squashing it into a thin patty with lacy, crispy edges. Tsssss!"><defs><radialGradient id="rayfade" cx="830" cy="440" r="540" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient><mask id="raymask" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="600"><rect width="1200" height="600" fill="url(#rayfade)"/></mask></defs><g mask="url(#raymask)" fill="#FFE6A1"><path d="M830 440 L1730 440 L1693.5 693.6 Z"/><path d="M830 440 L1587.1 926.6 L1419.4 1120.2 Z"/><path d="M830 440 L1203.9 1258.7 L958.1 1330.8 Z"/><path d="M830 440 L701.9 1330.8 L456.1 1258.7 Z"/><path d="M830 440 L240.6 1120.2 L72.9 926.6 Z"/><path d="M830 440 L-33.5 693.6 L-70 440 Z"/><path d="M830 440 L-33.5 186.4 L72.9 -46.6 Z"/><path d="M830 440 L240.6 -240.2 L456.1 -378.7 Z"/><path d="M830 440 L701.9 -450.8 L958.1 -450.8 Z"/><path d="M830 440 L1203.9 -378.7 L1419.4 -240.2 Z"/><path d="M830 440 L1587.1 -46.6 L1693.5 186.4 Z"/></g><g class="griddle" stroke="#1E130C" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"><rect x="480" y="358" width="680" height="34" fill="#6B7594"/><path d="M482 362 L1158 362" stroke="#C9D0E3" stroke-width="4"/><path d="M480 390 L1160 390 L1212 500 L428 500 Z" fill="#2C3048"/><path d="M520 404 L600 404" stroke="#3B4160" stroke-width="5"/><path d="M1050 404 L1130 404" stroke="#3B4160" stroke-width="5"/><path d="M470 486 L560 486" stroke="#3B4160" stroke-width="5"/><path d="M1090 486 L1190 486" stroke="#3B4160" stroke-width="5"/><path d="M428 500 L1212 500 L1212 516 L428 516 Z" fill="#A6B0CC"/><rect x="434" y="516" width="772" height="140" fill="#6B7594"/><path d="M434 536 L1206 536" stroke="#7F89A8" stroke-width="4"/><circle cx="510" cy="572" r="19" fill="#1E130C"/><path d="M510 572 L510 557" stroke="#D9301C" stroke-width="5"/><circle cx="600" cy="572" r="19" fill="#1E130C"/><path d="M600 572 L600 557" stroke="#D9301C" stroke-width="5"/><circle cx="1060" cy="572" r="19" fill="#1E130C"/><path d="M1060 572 L1060 557" stroke="#D9301C" stroke-width="5"/><circle cx="1150" cy="572" r="19" fill="#1E130C"/><path d="M1150 572 L1150 557" stroke="#D9301C" stroke-width="5"/></g><g class="onions" stroke-linecap="round"><path d="M538 451.7 q10 -9 20 -2 t20 0" fill="none" stroke="#8A4E1A" stroke-width="6"/><path d="M553.3 436.3 q10 -9 20 -2 t20 0" fill="none" stroke="#B4702C" stroke-width="6"/><path d="M500.9 443.2 q10 -9 20 -2 t20 0" fill="none" stroke="#B4702C" stroke-width="6"/><path d="M521.9 456.3 q10 -9 20 -2 t20 0" fill="none" stroke="#8A4E1A" stroke-width="6"/><path d="M555.2 450 q10 -9 20 -2 t20 0" fill="none" stroke="#B4702C" stroke-width="6"/><path d="M544.7 451.8 q10 -9 20 -2 t20 0" fill="none" stroke="#B4702C" stroke-width="6"/><path d="M511.6 445.2 q10 -9 20 -2 t20 0" fill="none" stroke="#8A4E1A" stroke-width="6"/><path d="M513 459.2 q10 -9 20 -2 t20 0" fill="none" stroke="#B4702C" stroke-width="6"/><path d="M504.7 456.6 q10 -9 20 -2 t20 0" fill="none" stroke="#B4702C" stroke-width="6"/><path d="M506 452.6 q10 -9 20 -2 t20 0" fill="none" stroke="#8A4E1A" stroke-width="6"/><path d="M527 444.1 q10 -9 20 -2 t20 0" fill="none" stroke="#B4702C" stroke-width="6"/><path d="M567.4 432.6 q10 -9 20 -2 t20 0" fill="none" stroke="#B4702C" stroke-width="6"/></g><g stroke="#1E130C" stroke-width="5" stroke-linejoin="round"><path d="M1068 452 L1146 446 L1162 474 L1078 482 Z" fill="#E9A100"/><path d="M1064 442 L1142 436 L1156 464 L1074 472 Z" fill="#FFC21A"/></g><g class="ball"><circle cx="828" cy="390" r="56" fill="#D25569" stroke="#1E130C" stroke-width="5"/><ellipse cx="829.7" cy="412.8" rx="4.1" ry="3.2" fill="#F08E9B"/><ellipse cx="828.5" cy="390.2" rx="5.5" ry="2.5" fill="#A33A50"/><ellipse cx="847.7" cy="389.5" rx="5.5" ry="3" fill="#F08E9B"/><ellipse cx="843.6" cy="411.6" rx="5.6" ry="3" fill="#F08E9B"/><ellipse cx="826.7" cy="387.6" rx="5.3" ry="3.2" fill="#A33A50"/><ellipse cx="863.7" cy="397" rx="4.4" ry="3.4" fill="#F08E9B"/><ellipse cx="819.4" cy="352.3" rx="4.2" ry="3.6" fill="#F08E9B"/><ellipse cx="861.9" cy="375.5" rx="3.3" ry="2.3" fill="#A33A50"/><ellipse cx="845.9" cy="386.1" rx="4.9" ry="2.6" fill="#F08E9B"/><ellipse cx="816.9" cy="399.7" rx="4.8" ry="3.2" fill="#F08E9B"/><ellipse cx="811.8" cy="354.5" rx="5.6" ry="4" fill="#F08E9B"/><ellipse cx="846.8" cy="420.9" rx="5.9" ry="3.8" fill="#F08E9B"/><ellipse cx="826" cy="381.4" rx="5.5" ry="3.1" fill="#A33A50"/><ellipse cx="861.1" cy="403.9" rx="6" ry="2.2" fill="#F08E9B"/><ellipse cx="822.6" cy="393.4" rx="3.9" ry="3.5" fill="#F08E9B"/><ellipse cx="852.8" cy="397.1" rx="3.1" ry="3.4" fill="#A33A50"/><path d="M790 364 Q800 344 822 340" fill="none" stroke="#F7B9C2" stroke-width="6" stroke-linecap="round"/></g><g class="patty"><path d="M1046.1 450 L1038.9 454.6 L1040.3 459.3 L1035.2 463.9 L1043.1 469.7 L1011.8 471.7 L998.4 475.1 L986.4 478.7 L981.4 483.8 L966.1 487 L945.4 488.6 L920.9 488 L922.3 499.8 L892.9 496.3 L871.8 496.9 L849.7 494.7 L830 497.5 L808.5 498.7 L789.1 496 L767.5 496 L745.7 495.5 L733.5 490.3 L708.1 490.7 L699.6 485.5 L687.2 481.9 L662.6 480.7 L646.9 477.3 L655.7 470.8 L604.7 470.8 L625.8 463.8 L603.6 460.1 L618.4 454.7 L620 450 L615.6 445.3 L611.9 440.3 L622.2 435.9 L630.6 431.6 L649.6 428.5 L639.3 421.5 L673.3 421.3 L689.6 418.6 L695.3 413.4 L699.1 406.3 L733 409.5 L742.5 402.9 L772.5 407.7 L785.9 400.5 L809.5 403.4 L830 404.3 L849.8 405.2 L874.9 399.6 L890.6 405.4 L909.2 407.3 L921.2 411.9 L961.5 406 L958.4 415.1 L993.1 413.6 L998.1 419.2 L1023.4 421.1 L1024.1 426.8 L1048.8 429.8 L1037.7 435.9 L1044.2 440.5 L1027.8 445.7 Z" fill="#45200A" stroke="#1E130C" stroke-width="5" stroke-linejoin="round"/><ellipse cx="830" cy="448" rx="182" ry="36" fill="#7E3F18" stroke="#1E130C" stroke-width="4"/><path d="M664 458 Q830 500 996 458" fill="none" stroke="#45200A" stroke-width="6" stroke-linecap="round" opacity=".7"/><ellipse cx="748" cy="475.5" rx="4.6" ry="2.6" fill="#C9894E"/><ellipse cx="891.4" cy="463.2" rx="5.2" ry="2.6" fill="#C9894E"/><ellipse cx="979.7" cy="464.9" rx="7.2" ry="2.6" fill="#C9894E"/><ellipse cx="817.7" cy="468.3" rx="6.5" ry="2.6" fill="#C9894E"/><ellipse cx="737.7" cy="473.6" rx="4.4" ry="2.6" fill="#C9894E"/><ellipse cx="750.3" cy="462.3" rx="5.3" ry="2.6" fill="#C9894E"/><ellipse cx="802.3" cy="474.6" rx="5.9" ry="2.6" fill="#C9894E"/><ellipse cx="714.1" cy="465.6" rx="9" ry="2.6" fill="#C9894E"/><ellipse cx="698.9" cy="470.7" rx="5.9" ry="2.6" fill="#C9894E"/><ellipse cx="878.3" cy="466.7" rx="7.5" ry="2.6" fill="#C9894E"/><ellipse cx="829.3" cy="471.1" rx="8.5" ry="2.6" fill="#C9894E"/><ellipse cx="854.5" cy="464" rx="4.3" ry="2.6" fill="#C9894E"/><ellipse cx="648" cy="446" rx="6" ry="3" fill="#2C3048"/><ellipse cx="1014" cy="452" rx="6" ry="3" fill="#2C3048"/><ellipse cx="690" cy="478" rx="6" ry="3" fill="#2C3048"/><ellipse cx="972" cy="482" rx="6" ry="3" fill="#2C3048"/><ellipse cx="830" cy="491" rx="6" ry="3" fill="#2C3048"/></g><g class="speed" stroke="#1E130C" stroke-width="5" stroke-linecap="round"><path d="M700 228 L700 296"/><path d="M676 262 L676 318"/><path d="M652 290 L652 330"/></g><g class="press" stroke="#1E130C" stroke-width="5" stroke-linejoin="round"><path d="M796 222 L874 268 L1060 -40 L962 -88 Z" fill="#1A1520"/><path d="M878 122 L966 174 L1080 -10 L1084 -60 L980 -100 Z" fill="#D9301C"/><path d="M876 124 L968 176" stroke="#1E130C" stroke-width="5"/><path d="M892 98 L980 150" stroke="#FFFFFF" stroke-width="10"/><path d="M766 266 C756 238 790 214 830 214 C870 214 900 232 898 262 L894 296 L770 296 Z" fill="#1A1520"/><path d="M790 238 q12 -10 24 0 M820 232 q12 -10 24 0 M850 236 q12 -10 24 0" fill="none" stroke="#4B4F72" stroke-width="4"/><rect x="815" y="306" width="26" height="86" fill="#3B4160"/><rect x="806" y="380" width="44" height="12" rx="3" fill="#6B7594"/><rect x="732" y="284" width="190" height="30" rx="15" fill="#241B22"/><path d="M748 292 L776 292" stroke="#5A5262" stroke-width="4" stroke-linecap="round"/><rect x="772" y="270" width="30" height="58" rx="14" fill="#1A1520"/><path d="M780 282 q7 -5 14 0" fill="none" stroke="#4B4F72" stroke-width="3.5"/><rect x="802" y="270" width="30" height="58" rx="14" fill="#1A1520"/><path d="M810 282 q7 -5 14 0" fill="none" stroke="#4B4F72" stroke-width="3.5"/><rect x="832" y="270" width="30" height="58" rx="14" fill="#1A1520"/><path d="M840 282 q7 -5 14 0" fill="none" stroke="#4B4F72" stroke-width="3.5"/><rect x="862" y="270" width="30" height="58" rx="14" fill="#1A1520"/><path d="M870 282 q7 -5 14 0" fill="none" stroke="#4B4F72" stroke-width="3.5"/><path d="M752 284 C746 266 762 252 786 256 C800 259 804 276 792 284 C780 292 758 296 752 284 Z" fill="#1A1520"/><path d="M728 384 L928 384 L944 414 L712 414 Z" fill="#A6B0CC"/><path d="M712 414 L944 414 L944 430 L712 430 Z" fill="#6B7594"/><path d="M742 394 L812 394" stroke="#C9D0E3" stroke-width="5" stroke-linecap="round"/></g><g class="impact"><path d="M612 444 l-40 -6" stroke="#1E130C" stroke-width="5" stroke-linecap="round"/><path d="M620 420 l-32 -24" stroke="#1E130C" stroke-width="5" stroke-linecap="round"/><path d="M626 466 l-32 14" stroke="#1E130C" stroke-width="5" stroke-linecap="round"/><path d="M1050 444 l40 -4" stroke="#1E130C" stroke-width="5" stroke-linecap="round"/><path d="M1042 420 l32 -24" stroke="#1E130C" stroke-width="5" stroke-linecap="round"/><path d="M1044 466 l34 14" stroke="#1E130C" stroke-width="5" stroke-linecap="round"/><path d="M590 379.4 Q597 390.6 590 399 Q583 390.6 590 379.4 Z" fill="#F3B64A" stroke="#1E130C" stroke-width="3"/><path d="M606 357 Q611 365 606 371 Q601 365 606 357 Z" fill="#F3B64A" stroke="#1E130C" stroke-width="3"/><path d="M1072 377.4 Q1079 388.6 1072 397 Q1065 388.6 1072 377.4 Z" fill="#F3B64A" stroke="#1E130C" stroke-width="3"/><path d="M1096 359 Q1101 367 1096 373 Q1091 367 1096 359 Z" fill="#F3B64A" stroke="#1E130C" stroke-width="3"/><path d="M1056 352.8 Q1060 359.2 1056 364 Q1052 359.2 1056 352.8 Z" fill="#F3B64A" stroke="#1E130C" stroke-width="3"/><path d="M642 370.8 Q646 377.2 642 382 Q638 377.2 642 370.8 Z" fill="#F3B64A" stroke="#1E130C" stroke-width="3"/></g><g class="steam" fill="none" stroke="#9AA3C2" stroke-width="6" stroke-linecap="round"><path d="M660 398 c-12 -8.8 12 -17.5 0 -26.2 s12 -17.5 0 -26.2 s12 -10.5 0 -17.5"/><path d="M694 392 c-12 -11.5 12 -23 0 -34.5 s12 -23 0 -34.5 s12 -13.8 0 -23"/><path d="M964 392 c-12 -11.5 12 -23 0 -34.5 s12 -23 0 -34.5 s12 -13.8 0 -23"/><path d="M1000 398 c-12 -8.8 12 -17.5 0 -26.2 s12 -17.5 0 -26.2 s12 -10.5 0 -17.5"/></g><g class="sfx"><text x="1076" y="262" transform="rotate(-9 1076 262)" font-family="Shrikhand, serif" font-size="44" fill="#D9301C" stroke="#1E130C" stroke-width="3" paint-order="stroke" text-anchor="middle">tsssss!</text></g></svg>
+        <div class="copy">
+          <h1 id="hero-title"><span>Under pressure</span> <span class="hot">since 2024.</span></h1>
+          <p class="sub">Smash burgers, pressed thin on a hot griddle till the edges go crispy.</p>
+        </div>
+        <p class="signoff"><b>The Smashery</b><span>Burgers from <em>₹89</em> · Indirapuram &amp; Noida</span></p>
+        <div class="glow" aria-hidden="true"></div>
+        <div class="dim" aria-hidden="true"></div>
+      </div>
+      <div class="catwalk" aria-hidden="true"></div>
+      <div class="legs" aria-hidden="true"><i></i><i></i></div>
+    </div>
+    <div class="actions">
+      <a class="btn btn-cheese btn-lg" href="https://wa.me/917895099420?text=Hi%20The%20Smashery%2C%20I%27d%20like%20to%20place%20an%20order."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18.5l1.3-3.6A8 8 0 1 1 8.6 18z"/><path d="M9 10.5h6M9 13.5h4"/></svg>Order on WhatsApp</a>
+      <a class="btn btn-ghost btn-lg" href="#menu">See the menu<svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <svg class="skyline" viewBox="0 0 1600 220" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><g fill="#222B72"><rect x="-20" y="71.7" width="98.2" height="148.3"/><rect x="80.4" y="97.2" width="123.2" height="122.8"/><rect x="222.3" y="110.4" width="85.9" height="109.6"/><rect x="330.7" y="96.7" width="99.9" height="123.3"/><rect x="449.7" y="105.2" width="127.8" height="114.8"/><rect x="595.6" y="71.5" width="101.2" height="148.5"/><rect x="726.8" y="69.8" width="82.4" height="150.2"/><rect x="817.9" y="60.2" width="112.5" height="159.8"/><rect x="926.4" y="97" width="82.8" height="123"/><rect x="1001.5" y="96.7" width="91" height="123.3"/><rect x="1087.4" y="69" width="114.6" height="151"/><rect x="1207.6" y="113.9" width="90.7" height="106.1"/><rect x="1305.4" y="112.9" width="89" height="107.1"/><rect x="1419.1" y="126.8" width="83.7" height="93.2"/><rect x="1501.9" y="60.8" width="71.2" height="159.2"/><rect x="1596.8" y="53.2" width="89.2" height="166.8"/></g><g fill="#131A4C"><rect x="-10" y="149.9" width="85.3" height="70.1"/><rect x="8.3" y="140.9" width="20.1" height="9"/><rect x="87.8" y="139.9" width="90.9" height="80.1"/><rect x="140.1" y="130.9" width="21" height="9"/><rect x="202.1" y="124.2" width="69.6" height="95.8"/><rect x="235.6" y="115.2" width="17.6" height="9"/><rect x="295.8" y="139.2" width="116.4" height="80.8"/><rect x="420.4" y="73.9" width="106" height="146.1"/><rect x="488.9" y="64.9" width="16.5" height="9"/><rect x="535.9" y="105.1" width="80.6" height="114.9"/><rect x="626" y="87" width="60.8" height="133"/><rect x="645.1" y="78" width="19.4" height="9"/><rect x="705.4" y="115.6" width="64.9" height="104.4"/><rect x="716.7" y="106.6" width="15.3" height="9"/><rect x="785.4" y="151.8" width="80.5" height="68.2"/><rect x="870.2" y="70.2" width="66.2" height="149.8"/><rect x="958.4" y="95.6" width="105.3" height="124.4"/><rect x="1027.8" y="86.6" width="23.1" height="9"/><rect x="1088.2" y="82.5" width="86.8" height="137.5"/><rect x="1193.4" y="144.3" width="113.2" height="75.7"/><rect x="1328.7" y="125.1" width="116.5" height="94.9"/><rect x="1410.9" y="116.1" width="20.6" height="9"/><rect x="1454.5" y="98.5" width="99" height="121.5"/><rect x="1501.6" y="89.5" width="21.7" height="9"/><rect x="1574.5" y="120.7" width="99.6" height="99.3"/><rect x="1588.1" y="111.7" width="15.4" height="9"/></g><g opacity=".85"><rect x="41" y="157.9" width="4" height="5" fill="#CFDBFF"/><rect x="5" y="179.9" width="4" height="5" fill="#FFD36B"/><rect x="23" y="179.9" width="4" height="5" fill="#FFD36B"/><rect x="32" y="179.9" width="4" height="5" fill="#CFDBFF"/><rect x="59" y="179.9" width="4" height="5" fill="#FFD36B"/><rect x="-4" y="201.9" width="4" height="5" fill="#FFD36B"/><rect x="14" y="201.9" width="4" height="5" fill="#CFDBFF"/><rect x="41" y="201.9" width="4" height="5" fill="#FFD36B"/><rect x="147.8" y="147.9" width="4" height="5" fill="#FFD36B"/><rect x="156.8" y="147.9" width="4" height="5" fill="#FFD36B"/><rect x="93.8" y="158.9" width="4" height="5" fill="#CFDBFF"/><rect x="129.8" y="158.9" width="4" height="5" fill="#FFD36B"/><rect x="111.8" y="169.9" width="4" height="5" fill="#CFDBFF"/><rect x="120.8" y="169.9" width="4" height="5" fill="#FFD36B"/><rect x="129.8" y="180.9" width="4" height="5" fill="#CFDBFF"/><rect x="138.8" y="180.9" width="4" height="5" fill="#FFD36B"/><rect x="147.8" y="180.9" width="4" height="5" fill="#FFD36B"/><rect x="208.1" y="132.2" width="4" height="5" fill="#FFD36B"/><rect x="253.1" y="143.2" width="4" height="5" fill="#FFD36B"/><rect x="235.1" y="165.2" width="4" height="5" fill="#FFD36B"/><rect x="235.1" y="187.2" width="4" height="5" fill="#FFD36B"/><rect x="244.1" y="187.2" width="4" height="5" fill="#CFDBFF"/><rect x="235.1" y="198.2" width="4" height="5" fill="#FFD36B"/><rect x="253.1" y="198.2" width="4" height="5" fill="#FFD36B"/><rect x="310.8" y="147.2" width="4" height="5" fill="#CFDBFF"/><rect x="328.8" y="147.2" width="4" height="5" fill="#FFD36B"/><rect x="337.8" y="147.2" width="4" height="5" fill="#FFD36B"/><rect x="373.8" y="147.2" width="4" height="5" fill="#CFDBFF"/><rect x="391.8" y="147.2" width="4" height="5" fill="#FFD36B"/><rect x="301.8" y="158.2" width="4" height="5" fill="#CFDBFF"/><rect x="346.8" y="180.2" width="4" height="5" fill="#FFD36B"/><rect x="337.8" y="202.2" width="4" height="5" fill="#FFD36B"/><rect x="382.8" y="202.2" width="4" height="5" fill="#FFD36B"/><rect x="498.4" y="81.9" width="4" height="5" fill="#FFD36B"/><rect x="507.4" y="81.9" width="4" height="5" fill="#CFDBFF"/><rect x="435.4" y="92.9" width="4" height="5" fill="#CFDBFF"/><rect x="471.4" y="92.9" width="4" height="5" fill="#FFD36B"/><rect x="453.4" y="103.9" width="4" height="5" fill="#FFD36B"/><rect x="462.4" y="103.9" width="4" height="5" fill="#CFDBFF"/><rect x="462.4" y="125.9" width="4" height="5" fill="#FFD36B"/><rect x="480.4" y="125.9" width="4" height="5" fill="#FFD36B"/><rect x="489.4" y="136.9" width="4" height="5" fill="#FFD36B"/><rect x="471.4" y="147.9" width="4" height="5" fill="#FFD36B"/><rect x="444.4" y="158.9" width="4" height="5" fill="#CFDBFF"/><rect x="453.4" y="158.9" width="4" height="5" fill="#FFD36B"/><rect x="462.4" y="158.9" width="4" height="5" fill="#FFD36B"/><rect x="498.4" y="158.9" width="4" height="5" fill="#FFD36B"/><rect x="489.4" y="180.9" width="4" height="5" fill="#FFD36B"/><rect x="444.4" y="191.9" width="4" height="5" fill="#FFD36B"/><rect x="453.4" y="191.9" width="4" height="5" fill="#FFD36B"/><rect x="507.4" y="191.9" width="4" height="5" fill="#FFD36B"/><rect x="426.4" y="202.9" width="4" height="5" fill="#CFDBFF"/><rect x="480.4" y="202.9" width="4" height="5" fill="#CFDBFF"/><rect x="489.4" y="202.9" width="4" height="5" fill="#FFD36B"/><rect x="595.9" y="113.1" width="4" height="5" fill="#CFDBFF"/><rect x="541.9" y="124.1" width="4" height="5" fill="#FFD36B"/><rect x="586.9" y="146.1" width="4" height="5" fill="#FFD36B"/><rect x="577.9" y="168.1" width="4" height="5" fill="#FFD36B"/><rect x="568.9" y="179.1" width="4" height="5" fill="#CFDBFF"/><rect x="577.9" y="179.1" width="4" height="5" fill="#FFD36B"/><rect x="586.9" y="179.1" width="4" height="5" fill="#FFD36B"/><rect x="595.9" y="179.1" width="4" height="5" fill="#FFD36B"/><rect x="586.9" y="190.1" width="4" height="5" fill="#CFDBFF"/><rect x="541.9" y="201.1" width="4" height="5" fill="#FFD36B"/><rect x="595.9" y="201.1" width="4" height="5" fill="#FFD36B"/><rect x="659" y="95" width="4" height="5" fill="#CFDBFF"/><rect x="641" y="106" width="4" height="5" fill="#FFD36B"/><rect x="632" y="117" width="4" height="5" fill="#CFDBFF"/><rect x="659" y="117" width="4" height="5" fill="#CFDBFF"/><rect x="668" y="117" width="4" height="5" fill="#FFD36B"/><rect x="641" y="150" width="4" height="5" fill="#FFD36B"/><rect x="650" y="172" width="4" height="5" fill="#CFDBFF"/><rect x="659" y="172" width="4" height="5" fill="#FFD36B"/><rect x="632" y="205" width="4" height="5" fill="#FFD36B"/><rect x="659" y="205" width="4" height="5" fill="#CFDBFF"/><rect x="668" y="205" width="4" height="5" fill="#FFD36B"/><rect x="738.4" y="178.6" width="4" height="5" fill="#FFD36B"/><rect x="720.4" y="189.6" width="4" height="5" fill="#FFD36B"/><rect x="729.4" y="200.6" width="4" height="5" fill="#FFD36B"/><rect x="809.4" y="159.8" width="4" height="5" fill="#FFD36B"/><rect x="800.4" y="170.8" width="4" height="5" fill="#FFD36B"/><rect x="809.4" y="192.8" width="4" height="5" fill="#FFD36B"/><rect x="791.4" y="203.8" width="4" height="5" fill="#FFD36B"/><rect x="800.4" y="203.8" width="4" height="5" fill="#CFDBFF"/><rect x="818.4" y="203.8" width="4" height="5" fill="#FFD36B"/><rect x="845.4" y="203.8" width="4" height="5" fill="#FFD36B"/><rect x="912.2" y="89.2" width="4" height="5" fill="#FFD36B"/><rect x="885.2" y="111.2" width="4" height="5" fill="#FFD36B"/><rect x="876.2" y="144.2" width="4" height="5" fill="#FFD36B"/><rect x="894.2" y="155.2" width="4" height="5" fill="#FFD36B"/><rect x="921.2" y="166.2" width="4" height="5" fill="#FFD36B"/><rect x="876.2" y="188.2" width="4" height="5" fill="#FFD36B"/><rect x="921.2" y="188.2" width="4" height="5" fill="#FFD36B"/><rect x="1009.4" y="103.6" width="4" height="5" fill="#CFDBFF"/><rect x="991.4" y="114.6" width="4" height="5" fill="#FFD36B"/><rect x="1027.4" y="114.6" width="4" height="5" fill="#CFDBFF"/><rect x="982.4" y="125.6" width="4" height="5" fill="#FFD36B"/><rect x="1009.4" y="136.6" width="4" height="5" fill="#FFD36B"/><rect x="1018.4" y="136.6" width="4" height="5" fill="#FFD36B"/><rect x="1036.4" y="136.6" width="4" height="5" fill="#FFD36B"/><rect x="1000.4" y="147.6" width="4" height="5" fill="#FFD36B"/><rect x="973.4" y="158.6" width="4" height="5" fill="#FFD36B"/><rect x="991.4" y="158.6" width="4" height="5" fill="#FFD36B"/><rect x="1000.4" y="158.6" width="4" height="5" fill="#FFD36B"/><rect x="973.4" y="191.6" width="4" height="5" fill="#FFD36B"/><rect x="1027.4" y="191.6" width="4" height="5" fill="#FFD36B"/><rect x="982.4" y="202.6" width="4" height="5" fill="#CFDBFF"/><rect x="1000.4" y="202.6" width="4" height="5" fill="#FFD36B"/><rect x="1103.2" y="90.5" width="4" height="5" fill="#FFD36B"/><rect x="1121.2" y="90.5" width="4" height="5" fill="#FFD36B"/><rect x="1139.2" y="90.5" width="4" height="5" fill="#FFD36B"/><rect x="1148.2" y="90.5" width="4" height="5" fill="#FFD36B"/><rect x="1121.2" y="123.5" width="4" height="5" fill="#FFD36B"/><rect x="1121.2" y="145.5" width="4" height="5" fill="#FFD36B"/><rect x="1157.2" y="145.5" width="4" height="5" fill="#FFD36B"/><rect x="1130.2" y="156.5" width="4" height="5" fill="#FFD36B"/><rect x="1139.2" y="156.5" width="4" height="5" fill="#FFD36B"/><rect x="1148.2" y="156.5" width="4" height="5" fill="#FFD36B"/><rect x="1130.2" y="167.5" width="4" height="5" fill="#FFD36B"/><rect x="1094.2" y="178.5" width="4" height="5" fill="#FFD36B"/><rect x="1148.2" y="178.5" width="4" height="5" fill="#FFD36B"/><rect x="1103.2" y="189.5" width="4" height="5" fill="#FFD36B"/><rect x="1103.2" y="200.5" width="4" height="5" fill="#FFD36B"/><rect x="1112.2" y="200.5" width="4" height="5" fill="#FFD36B"/><rect x="1139.2" y="200.5" width="4" height="5" fill="#FFD36B"/><rect x="1148.2" y="200.5" width="4" height="5" fill="#FFD36B"/><rect x="1199.4" y="152.3" width="4" height="5" fill="#FFD36B"/><rect x="1244.4" y="152.3" width="4" height="5" fill="#FFD36B"/><rect x="1226.4" y="163.3" width="4" height="5" fill="#CFDBFF"/><rect x="1253.4" y="163.3" width="4" height="5" fill="#CFDBFF"/><rect x="1271.4" y="174.3" width="4" height="5" fill="#FFD36B"/><rect x="1217.4" y="185.3" width="4" height="5" fill="#FFD36B"/><rect x="1244.4" y="185.3" width="4" height="5" fill="#FFD36B"/><rect x="1289.4" y="185.3" width="4" height="5" fill="#CFDBFF"/><rect x="1208.4" y="196.3" width="4" height="5" fill="#FFD36B"/><rect x="1226.4" y="196.3" width="4" height="5" fill="#FFD36B"/><rect x="1280.4" y="196.3" width="4" height="5" fill="#CFDBFF"/><rect x="1334.7" y="133.1" width="4" height="5" fill="#FFD36B"/><rect x="1343.7" y="155.1" width="4" height="5" fill="#FFD36B"/><rect x="1379.7" y="155.1" width="4" height="5" fill="#FFD36B"/><rect x="1415.7" y="155.1" width="4" height="5" fill="#FFD36B"/><rect x="1343.7" y="166.1" width="4" height="5" fill="#FFD36B"/><rect x="1424.7" y="166.1" width="4" height="5" fill="#CFDBFF"/><rect x="1352.7" y="177.1" width="4" height="5" fill="#FFD36B"/><rect x="1370.7" y="177.1" width="4" height="5" fill="#FFD36B"/><rect x="1415.7" y="177.1" width="4" height="5" fill="#CFDBFF"/><rect x="1334.7" y="188.1" width="4" height="5" fill="#CFDBFF"/><rect x="1361.7" y="188.1" width="4" height="5" fill="#FFD36B"/><rect x="1388.7" y="188.1" width="4" height="5" fill="#FFD36B"/><rect x="1352.7" y="199.1" width="4" height="5" fill="#FFD36B"/><rect x="1370.7" y="199.1" width="4" height="5" fill="#CFDBFF"/><rect x="1415.7" y="199.1" width="4" height="5" fill="#FFD36B"/><rect x="1469.5" y="106.5" width="4" height="5" fill="#FFD36B"/><rect x="1478.5" y="106.5" width="4" height="5" fill="#FFD36B"/><rect x="1505.5" y="106.5" width="4" height="5" fill="#FFD36B"/><rect x="1514.5" y="106.5" width="4" height="5" fill="#FFD36B"/><rect x="1496.5" y="117.5" width="4" height="5" fill="#CFDBFF"/><rect x="1505.5" y="117.5" width="4" height="5" fill="#FFD36B"/><rect x="1487.5" y="128.5" width="4" height="5" fill="#FFD36B"/><rect x="1496.5" y="128.5" width="4" height="5" fill="#FFD36B"/><rect x="1523.5" y="128.5" width="4" height="5" fill="#FFD36B"/><rect x="1532.5" y="139.5" width="4" height="5" fill="#FFD36B"/><rect x="1532.5" y="150.5" width="4" height="5" fill="#FFD36B"/><rect x="1496.5" y="161.5" width="4" height="5" fill="#FFD36B"/><rect x="1460.5" y="172.5" width="4" height="5" fill="#CFDBFF"/><rect x="1505.5" y="172.5" width="4" height="5" fill="#CFDBFF"/><rect x="1514.5" y="172.5" width="4" height="5" fill="#FFD36B"/><rect x="1469.5" y="183.5" width="4" height="5" fill="#FFD36B"/><rect x="1523.5" y="183.5" width="4" height="5" fill="#FFD36B"/><rect x="1532.5" y="183.5" width="4" height="5" fill="#CFDBFF"/><rect x="1580.5" y="139.7" width="4" height="5" fill="#FFD36B"/><rect x="1607.5" y="150.7" width="4" height="5" fill="#FFD36B"/><rect x="1598.5" y="161.7" width="4" height="5" fill="#FFD36B"/><rect x="1607.5" y="161.7" width="4" height="5" fill="#FFD36B"/><rect x="1634.5" y="161.7" width="4" height="5" fill="#FFD36B"/><rect x="1643.5" y="161.7" width="4" height="5" fill="#CFDBFF"/><rect x="1643.5" y="172.7" width="4" height="5" fill="#CFDBFF"/><rect x="1580.5" y="194.7" width="4" height="5" fill="#FFD36B"/><rect x="1607.5" y="194.7" width="4" height="5" fill="#FFD36B"/><rect x="1634.5" y="194.7" width="4" height="5" fill="#FFD36B"/></g><rect x="0" y="214" width="1600" height="6" fill="#0C1140"/></svg>
+  </section>
+</div>
+
+  <section class="how" aria-labelledby="how-title">
     <div class="wrap">
-      <div>
-        <h1 id="hero-title"><span>Smashed flat.</span><span>Stacked high.</span></h1>
-        <p class="lede">Smash burgers, loaded fries and momos from our two outlets in Indirapuram and Sector 76, Noida.</p>
-        <div class="actions">
-          <a class="btn btn-ink" href="#menu">See the menu</a>
-          <a class="btn btn-line" href="https://wa.me/917895099420?text=Hi%20The%20Smashery%2C%20I%27d%20like%20to%20place%20an%20order.">Order on WhatsApp</a>
+      <div class="panel how-panel">
+        <div class="how-intro">
+          <h2 id="how-title">How the edges get crispy</h2>
+          <p>Side view on top, seen from above underneath. All three drawn to the same scale.</p>
         </div>
-        <ul class="facts">
-          <li>Chicken, mutton, paneer and veg patties</li>
-          <li>Momos four ways</li>
-          <li>Two outlets</li>
-        </ul>
-      </div>
-      <div class="hero-art">
-        <svg viewBox="0 0 520 480" role="img" aria-label="Illustration of a smash burger with a wide, crispy-edged patty">
-          <circle cx="260" cy="236" r="226" fill="#D2271D" stroke="#2A170B" stroke-width="5"/>
-          <ellipse cx="260" cy="402" rx="176" ry="14" fill="#2A170B" opacity=".28"/>
-          <g stroke="#2A170B" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
-            <!-- bottom bun -->
-            <path d="M108 348 H412 Q412 394 368 394 H152 Q108 394 108 348 Z" fill="#E39A33"/>
-            <!-- smashed patty: wider than the bun, ragged crisp edges -->
-            <g class="b-patty">
-              <path d="M78 322 Q92 308 116 318 Q140 306 166 316 Q192 304 218 314 Q244 305 264 314 Q292 304 316 314 Q342 306 364 316 Q390 306 408 318 Q432 308 444 322 Q456 338 440 348 Q410 356 260 356 Q112 356 80 348 Q64 338 78 322 Z" fill="#6B3418"/>
-            </g>
-            <g class="b-top">
-              <!-- melted cheese -->
-              <path d="M112 310 H408 L436 342 L406 334 L394 360 L376 332 H152 L138 354 L120 330 L86 342 Z" fill="#FFD23F"/>
-              <!-- lettuce -->
-              <path d="M92 298 Q108 280 128 298 T164 298 T200 298 T236 298 T272 298 T308 298 T344 298 T380 298 T424 298 L430 316 H88 Z" fill="#5FAE3E"/>
-              <!-- tomato -->
-              <rect x="124" y="274" width="272" height="26" rx="13" fill="#F0503F"/>
-              <!-- top bun -->
-              <path d="M90 270 Q90 150 260 150 Q430 150 430 270 Q430 286 410 286 H110 Q90 286 90 270 Z" fill="#E39A33"/>
-              <g stroke="none" fill="#FFF1C2">
-                <ellipse cx="200" cy="196" rx="11" ry="6" transform="rotate(-25 200 196)"/>
-                <ellipse cx="262" cy="178" rx="11" ry="6" transform="rotate(10 262 178)"/>
-                <ellipse cx="322" cy="200" rx="11" ry="6" transform="rotate(30 322 200)"/>
-                <ellipse cx="160" cy="238" rx="11" ry="6" transform="rotate(-40 160 238)"/>
-                <ellipse cx="362" cy="240" rx="11" ry="6" transform="rotate(40 362 240)"/>
-                <ellipse cx="262" cy="228" rx="11" ry="6" transform="rotate(-10 262 228)"/>
-                <ellipse cx="210" cy="256" rx="11" ry="6" transform="rotate(15 210 256)"/>
-                <ellipse cx="318" cy="258" rx="11" ry="6" transform="rotate(-15 318 258)"/>
-              </g>
-            </g>
-          </g>
-        </svg>
-        <div class="badge" aria-label="Burgers from 89 rupees"><div><span>Burgers from</span><b>₹89</b></div></div>
+        <ol class="steps"><li class="step"><figure><svg viewBox="0 0 220 276" aria-hidden="true"><g stroke="#1E130C" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="8" y="94" width="204" height="14" rx="2" fill="#2C3048"/><circle cx="110" cy="64" r="30" fill="#D25569"/><ellipse cx="110.2" cy="66.3" rx="3" ry="2" fill="#F08E9B" stroke="none"/><ellipse cx="107.3" cy="66.1" rx="3" ry="2" fill="#F08E9B" stroke="none"/><ellipse cx="118.1" cy="67.6" rx="3" ry="2" fill="#F08E9B" stroke="none"/><ellipse cx="125.3" cy="55.3" rx="3" ry="2" fill="#F08E9B" stroke="none"/><ellipse cx="110.5" cy="59.1" rx="3" ry="2" fill="#F08E9B" stroke="none"/><ellipse cx="104.1" cy="62.6" rx="3" ry="2" fill="#F08E9B" stroke="none"/><ellipse cx="111.1" cy="66.1" rx="3" ry="2" fill="#F08E9B" stroke="none"/><ellipse cx="114.5" cy="83.9" rx="3" ry="2" fill="#F08E9B" stroke="none"/><circle cx="110" cy="192" r="30" fill="#D25569"/><ellipse cx="98.3" cy="180.6" rx="3" ry="2" fill="#F08E9B" stroke="none"/><ellipse cx="115.8" cy="172.1" rx="3" ry="2" fill="#F08E9B" stroke="none"/><ellipse cx="108.7" cy="171.8" rx="3" ry="2" fill="#F08E9B" stroke="none"/><ellipse cx="120.1" cy="193.9" rx="3" ry="2" fill="#F08E9B" stroke="none"/><ellipse cx="123.4" cy="187" rx="3" ry="2" fill="#F08E9B" stroke="none"/><ellipse cx="112" cy="190.5" rx="3" ry="2" fill="#F08E9B" stroke="none"/><ellipse cx="104.7" cy="193.1" rx="3" ry="2" fill="#F08E9B" stroke="none"/><ellipse cx="97.8" cy="188.6" rx="3" ry="2" fill="#F08E9B" stroke="none"/></g></svg></figure><div><h3>Ball</h3><p>A ball of chicken or mutton goes onto a hot griddle.</p></div></li><li class="step"><figure><svg viewBox="0 0 220 276" aria-hidden="true"><g stroke="#1E130C" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="8" y="94" width="204" height="14" rx="2" fill="#2C3048"/><path d="M46 94 C46 81 62 78 110 78 C158 78 174 81 174 94 Z" fill="#9C5A28"/><rect x="48" y="66" width="124" height="12" rx="2" fill="#A6B0CC"/><rect x="104" y="32" width="12" height="34" fill="#3B4160"/><rect x="78" y="22" width="64" height="12" rx="6" fill="#241B22"/><path d="M62 16 L62 44" stroke-width="3"/><path d="M158 16 L158 44" stroke-width="3"/><path d="M40 88 l-12 -4 M40 92 l-12 4" stroke-width="2.6"/><path d="M180 88 l12 -4 M180 92 l12 4" stroke-width="2.6"/><circle cx="110" cy="192" r="54" fill="#9C5A28"/></g></svg></figure><div><h3>Smash</h3><p>We press it down hard until it is thin and flat.</p></div></li><li class="step"><figure><svg viewBox="0 0 220 276" aria-hidden="true"><g stroke="#1E130C" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="8" y="94" width="204" height="14" rx="2" fill="#2C3048"/><path d="M41 82 L58.2 81.8 L75.5 80.9 L92.8 80.7 L110 81.8 L127.2 80.4 L144.5 81.2 L161.8 81.3 L179 82 L189.6 82.3 L182.7 84.9 L189.8 87.5 L183.4 90.1 L191.1 92.7 L179 94 L161.8 93.6 L144.5 94.7 L127.2 93.8 L110 94.6 L92.8 94.2 L75.5 94.6 L58.2 93.8 L41 94 L32.1 92.7 L37.4 90.1 L29.3 87.5 L36.5 84.9 L32.8 82.3 Z" fill="#9C5A28"/><path d="M42 91.5 L178 91.5" stroke="#45200A" stroke-width="4"/><circle cx="26" cy="80" r="3" fill="#FFFFFF" stroke-width="1.8"/><circle cx="194" cy="78" r="3" fill="#FFFFFF" stroke-width="1.8"/><circle cx="20" cy="68" r="3" fill="#FFFFFF" stroke-width="1.8"/><circle cx="200" cy="64" r="3" fill="#FFFFFF" stroke-width="1.8"/><path d="M185.4 192 L181.8 199.5 L181.9 207.3 L179.2 214.5 L178.8 222.6 L171.5 227.5 L170.7 236.1 L164.4 241 L159.6 247.1 L153 251.1 L147 256.1 L137.9 254.7 L132.1 260.2 L124.7 261.2 L117.9 267 L110 264.4 L101.9 269.1 L95.2 261.7 L88.7 257.7 L80.2 259 L74.5 253.6 L67.2 250.9 L60.6 246.9 L58.9 238 L52.5 233.8 L52.4 225.3 L43.1 221.8 L44.1 213.4 L41.7 206.5 L43.6 199 L31.8 192 L40 184.6 L41.9 177.5 L46 171.2 L45.7 163.4 L50.7 157.8 L53 150.6 L57.2 144.4 L60.6 137.2 L69.4 136.2 L72 126.1 L82.1 129.3 L88 124.4 L95.6 124.4 L102.3 118.4 L110 119.4 L117.4 121.3 L124.5 123.9 L133.2 120.6 L139 126.8 L145.9 129.8 L151.6 134.7 L155.9 141 L162.5 144.7 L171.2 147.6 L170.1 157.3 L176.6 162.3 L179.1 169.6 L185.6 175.9 L176.3 185 Z" fill="#45200A"/><circle cx="110" cy="192" r="58" fill="#9C5A28"/></g></svg></figure><div><h3>Crisp</h3><p>The thin edge fries against the steel and turns lacy and crisp.</p></div></li></ol>
+        <p class="how-foot">Then a flip, melted cheese, and into a toasted bun.</p>
       </div>
     </div>
   </section>
 
-  <section id="menu" aria-labelledby="menu-title">
-    <div class="menu-head">
-      <div class="wrap">
-        <h2 id="menu-title">The menu</h2>
-        <div class="menu-tools">
-          <div class="legend" aria-hidden="true">
-            <span><i class="mark veg"></i> Veg</span>
-            <span><i class="mark nonveg"></i> Non-veg</span>
-          </div>
-          <div class="seg" role="group" aria-label="Filter the menu">
-            <button type="button" data-filter="all" aria-pressed="true">All</button>
-            <button type="button" data-filter="veg" aria-pressed="false">Veg</button>
-            <button type="button" data-filter="nonveg" aria-pressed="false">Non-veg</button>
-          </div>
+  <section id="menu" class="menu" aria-labelledby="menu-title">
+    <div class="wrap menu-head">
+      <h2 id="menu-title">The menu</h2>
+      <div class="menu-tools">
+        <p class="hint" data-js hidden>Tap <span class="plus-chip" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span><span class="sr-only">plus</span> to add things to your order, then send it to us on WhatsApp.</p>
+        <div class="diet" role="group" aria-label="Filter the menu">
+          <button type="button" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="veg" aria-pressed="false"><i class="mark veg" aria-hidden="true"></i>Veg</button>
+          <button type="button" data-filter="nonveg" aria-pressed="false"><i class="mark nonveg" aria-hidden="true"></i>Non-veg</button>
         </div>
       </div>
     </div>
-    <nav class="catnav" aria-label="Menu sections">
-      <ul>
-        <li><a href="#signatures">OG Smashery</a></li>
-        <li><a href="#chicken">Chicken burgers</a></li>
-        <li><a href="#mutton">Mutton burgers</a></li>
-        <li><a href="#fried-chicken">Fried chicken burgers</a></li>
-        <li><a href="#paneer">Paneer burgers</a></li>
-        <li><a href="#veg-burgers">Veg burgers</a></li>
-        <li><a href="#fries">Fries</a></li>
-        <li><a href="#onion-rings">Onion rings</a></li>
-        <li><a href="#sides">Sides</a></li>
-        <li><a href="#momos">Momos</a></li>
-        <li><a href="#dips-addons">Dips and add-ons</a></li>
-      </ul>
-    </nav>
-    <section class="cat sig" id="signatures" aria-labelledby="signatures-h">
-      <div class="wrap cat-grid">
-        <header><h2 id="signatures-h">OG Smashery</h2><p class="note">Our signature burgers.</p></header>
-        <ul class="items">
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Smashery Veg Lover</h3><p>Our signature burger, an exquisite blend of two distinct veg patties and butter garlic mushrooms with in-house sauces.</p></div><span class="price">₹259</span></li>
-          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Smashery Meat Lover</h3><p>An exquisite blend of two distinct meat patties with egg, tandoori &amp; cheesy sauces.</p></div><span class="price">₹399</span></li>
-        </ul>
+    <nav class="catnav" aria-label="Menu sections"><ul><li><a href="#signatures">OG Smashery</a></li><li><a href="#chicken">Chicken burgers</a></li><li><a href="#mutton">Mutton burgers</a></li><li><a href="#fried-chicken">Fried chicken burgers</a></li><li><a href="#paneer">Paneer burgers</a></li><li><a href="#veg-burgers">Veg burgers</a></li><li><a href="#fries">Fries</a></li><li><a href="#onion-rings">Onion rings</a></li><li><a href="#sides">Sides</a></li><li><a href="#momos">Momos</a></li><li><a href="#dips-addons">Dips and add-ons</a></li></ul></nav>
+    <div class="wrap">
+      <div class="sheet">
+        <section class="cat cat-og" id="signatures" aria-labelledby="signatures-h">
+          <div class="cat-head"><div><h3 id="signatures-h">OG Smashery</h3><p class="note">Our signature burgers.</p></div>
+            <svg class="fig" viewBox="0 0 150 130" role="img" aria-label="Drawing of a double-patty signature burger, to scale" style="--fw:150"><g stroke="#1E130C" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><ellipse cx="75" cy="125.5" rx="57" ry="3" fill="#1E130C" opacity=".16"/><path d="M25 110 L125 110 L125 118 Q125 124 118 124 L32 124 Q25 124 25 118 Z" fill="#E7A048"/><path d="M26 113.5 L124 113.5" stroke="#C77B2C" stroke-width="2"/><path d="M24 102 L36.8 102.1 L49.5 102.1 L62.2 100.3 L75 100.4 L87.8 101.9 L100.5 101.7 L113.2 101.5 L126 102 L132.3 101.9 L129.6 103.7 L133.5 105.5 L129.6 107.3 L131.8 109.1 L126 110 L113.2 110.1 L100.5 110.1 L87.8 110.5 L75 110.8 L62.2 110.7 L49.5 110.3 L36.8 110.1 L24 110 L17.8 109.1 L21 107.3 L18.7 105.5 L20.5 103.7 L17.6 101.9 Z" fill="#5E2A10"/><path d="M26 107.8 L124 107.8" stroke="#45200A" stroke-width="2.4"/><path d="M23 97.4 L127 97.4 L127 101 L124.8 101 Q124.8 108 120.8 108 Q116.8 108 116.8 101 L89.4 101 Q89.4 105 85.4 105 Q81.4 105 81.4 101 L30.1 101 Q30.1 110 26.1 110 Q22.1 110 22.1 101 L23 101 Z" fill="#FFC21A"/><path d="M24 89.4 L36.8 88.1 L49.5 88.7 L62.2 88.3 L75 88.8 L87.8 88.9 L100.5 87.7 L113.2 87.6 L126 89.4 L134.4 89.3 L129.2 91.1 L132.1 92.9 L130.1 94.7 L133 96.5 L126 97.4 L113.2 98 L100.5 97.6 L87.8 97.8 L75 97.2 L62.2 97.8 L49.5 98 L36.8 97.6 L24 97.4 L16 96.5 L20.3 94.7 L18.6 92.9 L20.2 91.1 L16.6 89.3 Z" fill="#9C5A28"/><path d="M26 95.2 L124 95.2" stroke="#45200A" stroke-width="2.4"/><path d="M23 84.8 L127 84.8 L127 88.4 L126.8 88.4 Q126.8 96.4 122.8 96.4 Q118.8 96.4 118.8 88.4 L37.4 88.4 Q37.4 94.4 33.4 94.4 Q29.4 94.4 29.4 88.4 L23 88.4 Z" fill="#FFC21A"/><path d="M23 84.8 C27 79.8 103 78.8 128 84.8 Z" fill="#FFFFFF"/><path d="M61 80.8 Q75 71.8 89 80.8 Z" fill="#FFC21A"/><path d="M21 79.8 Q15 74.8 21 72.8 Q27 70.8 33 74.8 Q39 74.8 45 72.8 Q51 70.8 57 74.8 Q63 74.8 69 72.8 Q75 70.8 81 74.8 Q87 74.8 93 72.8 Q99 70.8 105 74.8 Q111 74.8 117 72.8 Q123 70.8 129 74.8 L129 79.8 Z" fill="#62AC3A"/><path d="M24 73.8 C24 42.5 44.4 39.8 75 39.8 C105.6 39.8 126 42.5 126 73.8 Q75 76.8 24 73.8 Z" fill="#E7A048"/><path d="M41.3 55.1 C46.4 44.6 62.8 42.5 73 43.2" fill="none" stroke="#F8D59A" stroke-width="3.2"/><ellipse cx="52.6" cy="55.1" rx="2.6" ry="1.5" transform="rotate(-27 52.6 55.1)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="77" cy="49.3" rx="2.6" ry="1.5" transform="rotate(2 77 49.3)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="99.5" cy="56.8" rx="2.6" ry="1.5" transform="rotate(35 99.5 56.8)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="87.2" cy="62.6" rx="2.6" ry="1.5" transform="rotate(-11 87.2 62.6)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="66.8" cy="60.9" rx="2.6" ry="1.5" transform="rotate(23 66.8 60.9)" fill="#FFF3D6" stroke-width="1"/></g></svg></div>
+          <ul class="items">
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Smashery Veg Lover</h4><p>Our signature burger, an exquisite blend of two distinct veg patties and butter garlic mushrooms with in-house sauces.</p></div>
+              <div class="buy" data-sku="signatures-smashery-veg-lover" data-name="Smashery Veg Lover" data-price="259"><span class="price">₹259</span></div>
+            </li>
+            <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i>
+              <div class="item-main"><h4>Smashery Meat Lover</h4><p>An exquisite blend of two distinct meat patties with egg, tandoori &amp; cheesy sauces.</p></div>
+              <div class="buy" data-sku="signatures-smashery-meat-lover" data-name="Smashery Meat Lover" data-price="399"><span class="price">₹399</span></div>
+            </li>
+          </ul>
+        </section>
+        <section class="cat" id="chicken" aria-labelledby="chicken-h">
+          <div class="cat-head"><div><h3 id="chicken-h">Chicken smash burgers</h3></div>
+            <svg class="fig" viewBox="0 0 150 130" role="img" aria-label="Drawing of a chicken smash burger, to scale" style="--fw:150"><g stroke="#1E130C" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><ellipse cx="75" cy="125.5" rx="57" ry="3" fill="#1E130C" opacity=".16"/><path d="M25 110 L125 110 L125 118 Q125 124 118 124 L32 124 Q25 124 25 118 Z" fill="#E7A048"/><path d="M26 113.5 L124 113.5" stroke="#C77B2C" stroke-width="2"/><path d="M24 102 L36.8 102.1 L49.5 102.1 L62.2 100.3 L75 100.4 L87.8 101.9 L100.5 101.7 L113.2 101.5 L126 102 L132.3 101.9 L129.6 103.7 L133.5 105.5 L129.6 107.3 L131.8 109.1 L126 110 L113.2 110.1 L100.5 110.1 L87.8 110.5 L75 110.8 L62.2 110.7 L49.5 110.3 L36.8 110.1 L24 110 L17.8 109.1 L21 107.3 L18.7 105.5 L20.5 103.7 L17.6 101.9 Z" fill="#9C5A28"/><path d="M26 107.8 L124 107.8" stroke="#45200A" stroke-width="2.4"/><path d="M23 97.4 L127 97.4 L127 101 L124.8 101 Q124.8 108 120.8 108 Q116.8 108 116.8 101 L89.4 101 Q89.4 105 85.4 105 Q81.4 105 81.4 101 L30.1 101 Q30.1 110 26.1 110 Q22.1 110 22.1 101 L23 101 Z" fill="#FFC21A"/><path d="M26 97.4 L26 93.1 L34.2 93.4 L42.3 93.5 L50.5 93.9 L58.7 93.4 L66.8 93.9 L75 91.5 L83.2 92.7 L91.3 93.9 L99.5 93.2 L107.7 93.8 L115.8 91.7 L124 92.7 L124 97.4 Z" fill="#B4702C"/><path d="M21 92.9 Q15 87.9 21 85.9 Q27 83.9 33 87.9 Q39 87.9 45 85.9 Q51 83.9 57 87.9 Q63 87.9 69 85.9 Q75 83.9 81 87.9 Q87 87.9 93 85.9 Q99 83.9 105 87.9 Q111 87.9 117 85.9 Q123 83.9 129 87.9 L129 92.9 Z" fill="#62AC3A"/><ellipse cx="45" cy="85.4" rx="7" ry="2.6" fill="#3E8226"/><ellipse cx="81" cy="85.4" rx="7" ry="2.6" fill="#3E8226"/><ellipse cx="109" cy="85.4" rx="7" ry="2.6" fill="#3E8226"/><path d="M24 86.9 C24 55.6 44.4 52.9 75 52.9 C105.6 52.9 126 55.6 126 86.9 Q75 89.9 24 86.9 Z" fill="#E7A048"/><path d="M41.3 68.2 C46.4 57.7 62.8 55.6 73 56.3" fill="none" stroke="#F8D59A" stroke-width="3.2"/><ellipse cx="52.6" cy="68.2" rx="2.6" ry="1.5" transform="rotate(-29 52.6 68.2)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="77" cy="62.4" rx="2.6" ry="1.5" transform="rotate(11 77 62.4)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="99.5" cy="69.9" rx="2.6" ry="1.5" transform="rotate(34 99.5 69.9)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="87.2" cy="75.7" rx="2.6" ry="1.5" transform="rotate(-14 87.2 75.7)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="66.8" cy="74" rx="2.6" ry="1.5" transform="rotate(16 66.8 74)" fill="#FFF3D6" stroke-width="1"/></g></svg></div>
+          <ul class="items">
+            <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i>
+              <div class="item-main"><h4>Classic Chicken Smash</h4><p>Succulent smashed chicken burger with melted cheese, caramelized onions, crisp lettuce, pickles, jalapeños, and our signature house sauces, all nestled in a toasted bun.</p></div>
+              <div class="buy" data-sku="chicken-classic-chicken-smash" data-name="Classic Chicken Smash" data-price="169"><span class="price">₹169</span></div>
+            </li>
+            <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i>
+              <div class="item-main"><h4>Slam-Chic Smash</h4><p>Succulent smashed chicken burger with toasted salami, chipotle flavour melted cheese, caramelized onions, crisp lettuce, and our signature house sauce, all nestled in a toasted bun.</p></div>
+              <div class="buy" data-sku="chicken-slam-chic-smash" data-name="Slam-Chic Smash" data-price="199"><span class="price">₹199</span></div>
+            </li>
+            <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i>
+              <div class="item-main"><h4>Smokey Chicken Egg Smash</h4><p>Juicy smashed chicken burger with melted cheese, tandoori flavour, fried egg, caramelized onions, crisp lettuce, pickles, jalapeños, and our signature house sauce wrapped in toasted bun.</p></div>
+              <div class="buy" data-sku="chicken-smokey-chicken-egg-smash" data-name="Smokey Chicken Egg Smash" data-price="219"><span class="price">₹219</span></div>
+            </li>
+            <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i>
+              <div class="item-main"><h4>Melto Chicken Cheese Smash</h4><p>A succulent smashed chicken burger with mozzarella cheese layer, caramelized onions, crisp lettuce, pickles, jalapeños, and our signature house sauces, all nestled in a toasted bun.</p></div>
+              <div class="buy" data-sku="chicken-melto-chicken-cheese-smash" data-name="Melto Chicken Cheese Smash" data-price="239"><span class="price">₹239</span></div>
+            </li>
+            <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i>
+              <div class="item-main"><h4>Double Chicken Smash</h4><p>Succulent double smashed chicken burger with double melted cheese, caramelized onions, crisp lettuce, pickles, jalapeños, and our signature house sauces, all nestled in a toasted bun.</p></div>
+              <div class="buy" data-sku="chicken-double-chicken-smash" data-name="Double Chicken Smash" data-price="269"><span class="price">₹269</span></div>
+            </li>
+          </ul>
+        </section>
+        <section class="cat" id="mutton" aria-labelledby="mutton-h">
+          <div class="cat-head"><div><h3 id="mutton-h">Mutton smash burgers</h3></div>
+            <svg class="fig" viewBox="0 0 150 130" role="img" aria-label="Drawing of a mutton smash burger, to scale" style="--fw:150"><g stroke="#1E130C" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><ellipse cx="75" cy="125.5" rx="57" ry="3" fill="#1E130C" opacity=".16"/><path d="M25 110 L125 110 L125 118 Q125 124 118 124 L32 124 Q25 124 25 118 Z" fill="#E7A048"/><path d="M26 113.5 L124 113.5" stroke="#C77B2C" stroke-width="2"/><path d="M24 102 L36.8 102.1 L49.5 102.1 L62.2 100.3 L75 100.4 L87.8 101.9 L100.5 101.7 L113.2 101.5 L126 102 L132.3 101.9 L129.6 103.7 L133.5 105.5 L129.6 107.3 L131.8 109.1 L126 110 L113.2 110.1 L100.5 110.1 L87.8 110.5 L75 110.8 L62.2 110.7 L49.5 110.3 L36.8 110.1 L24 110 L17.8 109.1 L21 107.3 L18.7 105.5 L20.5 103.7 L17.6 101.9 Z" fill="#5E2A10"/><path d="M26 107.8 L124 107.8" stroke="#45200A" stroke-width="2.4"/><path d="M23 97.4 L127 97.4 L127 101 L124.8 101 Q124.8 108 120.8 108 Q116.8 108 116.8 101 L89.4 101 Q89.4 105 85.4 105 Q81.4 105 81.4 101 L30.1 101 Q30.1 110 26.1 110 Q22.1 110 22.1 101 L23 101 Z" fill="#FFC21A"/><path d="M26 97.4 L26 93.1 L34.2 93.4 L42.3 93.5 L50.5 93.9 L58.7 93.4 L66.8 93.9 L75 91.5 L83.2 92.7 L91.3 93.9 L99.5 93.2 L107.7 93.8 L115.8 91.7 L124 92.7 L124 97.4 Z" fill="#B4702C"/><path d="M21 92.9 Q15 87.9 21 85.9 Q27 83.9 33 87.9 Q39 87.9 45 85.9 Q51 83.9 57 87.9 Q63 87.9 69 85.9 Q75 83.9 81 87.9 Q87 87.9 93 85.9 Q99 83.9 105 87.9 Q111 87.9 117 85.9 Q123 83.9 129 87.9 L129 92.9 Z" fill="#62AC3A"/><path d="M24 86.9 C24 55.6 44.4 52.9 75 52.9 C105.6 52.9 126 55.6 126 86.9 Q75 89.9 24 86.9 Z" fill="#E7A048"/><path d="M41.3 68.2 C46.4 57.7 62.8 55.6 73 56.3" fill="none" stroke="#F8D59A" stroke-width="3.2"/><ellipse cx="52.6" cy="68.2" rx="2.6" ry="1.5" transform="rotate(-29 52.6 68.2)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="77" cy="62.4" rx="2.6" ry="1.5" transform="rotate(11 77 62.4)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="99.5" cy="69.9" rx="2.6" ry="1.5" transform="rotate(34 99.5 69.9)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="87.2" cy="75.7" rx="2.6" ry="1.5" transform="rotate(-14 87.2 75.7)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="66.8" cy="74" rx="2.6" ry="1.5" transform="rotate(16 66.8 74)" fill="#FFF3D6" stroke-width="1"/></g></svg></div>
+          <ul class="items">
+            <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i>
+              <div class="item-main"><h4>Classic Mutton Smash</h4><p>Juicy mutton patty, crispy edges, melted cheddar, caramelised onion, fresh lettuce and our signature sauces on a toasted bun.</p></div>
+              <div class="buy" data-sku="mutton-classic-mutton-smash" data-name="Classic Mutton Smash" data-price="239"><span class="price">₹239</span></div>
+            </li>
+            <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i>
+              <div class="item-main"><h4>Mutton-Cheesy Smash</h4><p>Mozzarella cheese layered on juicy mutton patty with chipotle, caramelized onions, crisp lettuce, pickles, jalapeños, and our signature house sauce, all nestled in a toasted bun.</p></div>
+              <div class="buy" data-sku="mutton-mutton-cheesy-smash" data-name="Mutton-Cheesy Smash" data-price="299"><span class="price">₹299</span></div>
+            </li>
+            <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i>
+              <div class="item-main"><h4>Double Mutton Smash</h4><p>Double mutton patty with double melted cheese, caramelised onion, crispy edges, fresh lettuce and our signature sauces on a toasted bun.</p></div>
+              <div class="buy" data-sku="mutton-double-mutton-smash" data-name="Double Mutton Smash" data-price="339"><span class="price">₹339</span></div>
+            </li>
+          </ul>
+        </section>
+        <section class="cat" id="fried-chicken" aria-labelledby="fried-chicken-h">
+          <div class="cat-head"><div><h3 id="fried-chicken-h">Fried zing burgers</h3><p class="note">Fried chicken breast burgers.</p></div>
+            <svg class="fig" viewBox="0 0 150 130" role="img" aria-label="Drawing of a fried chicken breast burger, to scale" style="--fw:150"><g stroke="#1E130C" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><ellipse cx="75" cy="125.5" rx="57" ry="3" fill="#1E130C" opacity=".16"/><path d="M25 110 L125 110 L125 118 Q125 124 118 124 L32 124 Q25 124 25 118 Z" fill="#E7A048"/><path d="M26 113.5 L124 113.5" stroke="#C77B2C" stroke-width="2"/><path d="M20 85.6 L27.9 86.1 L35.7 87.5 L43.6 88.9 L51.4 86.2 L59.3 86.1 L67.1 86.7 L75 89.3 L82.9 86.2 L90.7 89.2 L98.6 88.8 L106.4 86.2 L114.3 88.2 L122.1 87.7 L130 87.6 L140 91.7 L135.5 95.3 L135.1 99 L139.7 102.7 L137 106.3 L130 109.1 L122.1 109.5 L114.3 109.6 L106.4 111.4 L98.6 109.1 L90.7 109.2 L82.9 110.3 L75 110.1 L67.1 111.4 L59.3 111 L51.4 109.6 L43.6 109.1 L35.7 111 L27.9 111.5 L20 108.6 L13.7 106.3 L14.3 102.7 L13.3 99 L11.1 95.3 L14 91.7 Z" fill="#DB9A36"/><path d="M26 96.2 q3 -3 6 0" fill="none" stroke="#EDBF63" stroke-width="2"/><path d="M38.2 101.5 q3 -3 6 0" fill="none" stroke="#EDBF63" stroke-width="2"/><path d="M50.5 97.1 q3 -3 6 0" fill="none" stroke="#EDBF63" stroke-width="2"/><path d="M62.8 101.2 q3 -3 6 0" fill="none" stroke="#EDBF63" stroke-width="2"/><path d="M75 103 q3 -3 6 0" fill="none" stroke="#EDBF63" stroke-width="2"/><path d="M87.2 100.1 q3 -3 6 0" fill="none" stroke="#EDBF63" stroke-width="2"/><path d="M99.5 100.1 q3 -3 6 0" fill="none" stroke="#EDBF63" stroke-width="2"/><path d="M111.8 99.5 q3 -3 6 0" fill="none" stroke="#EDBF63" stroke-width="2"/><path d="M124 97 q3 -3 6 0" fill="none" stroke="#EDBF63" stroke-width="2"/><path d="M21 88 Q15 83 21 81 Q27 79 33 83 Q39 83 45 81 Q51 79 57 83 Q63 83 69 81 Q75 79 81 83 Q87 83 93 81 Q99 79 105 83 Q111 83 117 81 Q123 79 129 83 L129 88 Z" fill="#62AC3A"/><rect x="28" y="77" width="94" height="5" rx="2.5" fill="#E8482F"/><path d="M24 77 C24 45.7 44.4 43 75 43 C105.6 43 126 45.7 126 77 Q75 80 24 77 Z" fill="#E7A048"/><path d="M41.3 58.3 C46.4 47.8 62.8 45.7 73 46.4" fill="none" stroke="#F8D59A" stroke-width="3.2"/><ellipse cx="52.6" cy="58.3" rx="2.6" ry="1.5" transform="rotate(-33 52.6 58.3)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="77" cy="52.5" rx="2.6" ry="1.5" transform="rotate(7 77 52.5)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="99.5" cy="60" rx="2.6" ry="1.5" transform="rotate(35 99.5 60)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="87.2" cy="65.8" rx="2.6" ry="1.5" transform="rotate(-16 87.2 65.8)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="66.8" cy="64.1" rx="2.6" ry="1.5" transform="rotate(17 66.8 64.1)" fill="#FFF3D6" stroke-width="1"/></g></svg></div>
+          <ul class="items">
+            <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i>
+              <div class="item-main"><h4>Kentucky Pollo Zing</h4><p>Crispy spice-infused chicken breast layered with fresh lettuce, tomato, onion and a tangy house sauces, all embraced by a perfectly toasted bun.</p></div>
+              <div class="buy" data-sku="fried-chicken-kentucky-pollo-zing" data-name="Kentucky Pollo Zing" data-price="169"><span class="price">₹169</span></div>
+            </li>
+            <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i>
+              <div class="item-main"><h4>Kentucky Tandoori Pollo Zing</h4><p>Fried chicken breast, artfully paired with crisp lettuce, tomato, onion and a tandoori sauce, all encased in a delicately toasted charcoal infused bun.</p></div>
+              <div class="buy" data-sku="fried-chicken-kentucky-tandoori-pollo-zing" data-name="Kentucky Tandoori Pollo Zing" data-price="179"><span class="price">₹179</span></div>
+            </li>
+            <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i>
+              <div class="item-main"><h4>Kentucky Hot Pollo Zing</h4><p>Crispy spiced chicken breast coated with in-house hot sauce, crisp lettuce, juicy tomato, onion all served in a toasted bun.</p></div>
+              <div class="buy" data-sku="fried-chicken-kentucky-hot-pollo-zing" data-name="Kentucky Hot Pollo Zing" data-price="219"><span class="price">₹219</span></div>
+            </li>
+            <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i>
+              <div class="item-main"><h4>Kentucky Korean Pollo Zing</h4><p>Marinated fried chicken breast coated with in-house Korean sauce, crisp lettuce, juicy tomato, onion, all served in a toasted bun.</p></div>
+              <div class="buy" data-sku="fried-chicken-kentucky-korean-pollo-zing" data-name="Kentucky Korean Pollo Zing" data-price="219"><span class="price">₹219</span></div>
+            </li>
+          </ul>
+        </section>
+        <section class="cat" id="paneer" aria-labelledby="paneer-h">
+          <div class="cat-head"><div><h3 id="paneer-h">Cottage cheese burgers</h3><p class="note">Fried paneer patty burgers.</p></div>
+            <svg class="fig" viewBox="0 0 150 130" role="img" aria-label="Drawing of a fried paneer burger, to scale" style="--fw:150"><g stroke="#1E130C" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><ellipse cx="75" cy="125.5" rx="57" ry="3" fill="#1E130C" opacity=".16"/><path d="M25 110 L125 110 L125 118 Q125 124 118 124 L32 124 Q25 124 25 118 Z" fill="#E7A048"/><path d="M26 113.5 L124 113.5" stroke="#C77B2C" stroke-width="2"/><rect x="23" y="93" width="104" height="17" rx="7.7" fill="#E3A447"/><circle cx="102.4" cy="102.6" r="1.6" fill="#B8732A" stroke="none"/><circle cx="58.1" cy="99.2" r="1.6" fill="#B8732A" stroke="none"/><circle cx="47" cy="98.1" r="1.6" fill="#B8732A" stroke="none"/><circle cx="101.2" cy="100.7" r="1.6" fill="#B8732A" stroke="none"/><circle cx="71.8" cy="97.9" r="1.6" fill="#B8732A" stroke="none"/><circle cx="33.7" cy="97.4" r="1.6" fill="#B8732A" stroke="none"/><circle cx="74.9" cy="100.6" r="1.6" fill="#B8732A" stroke="none"/><circle cx="81.2" cy="100.5" r="1.6" fill="#B8732A" stroke="none"/><circle cx="65.2" cy="98.4" r="1.6" fill="#B8732A" stroke="none"/><circle cx="69.8" cy="102.8" r="1.6" fill="#B8732A" stroke="none"/><path d="M21 93 Q15 88 21 86 Q27 84 33 88 Q39 88 45 86 Q51 84 57 88 Q63 88 69 86 Q75 84 81 88 Q87 88 93 86 Q99 84 105 88 Q111 88 117 86 Q123 84 129 88 L129 93 Z" fill="#62AC3A"/><rect x="28" y="82" width="94" height="5" rx="2.5" fill="#E8482F"/><path d="M24 82 C24 50.7 44.4 48 75 48 C105.6 48 126 50.7 126 82 Q75 85 24 82 Z" fill="#E7A048"/><path d="M41.3 63.3 C46.4 52.8 62.8 50.7 73 51.4" fill="none" stroke="#F8D59A" stroke-width="3.2"/><ellipse cx="52.6" cy="63.3" rx="2.6" ry="1.5" transform="rotate(-33 52.6 63.3)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="77" cy="57.5" rx="2.6" ry="1.5" transform="rotate(7 77 57.5)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="99.5" cy="65" rx="2.6" ry="1.5" transform="rotate(35 99.5 65)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="87.2" cy="70.8" rx="2.6" ry="1.5" transform="rotate(-16 87.2 70.8)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="66.8" cy="69.1" rx="2.6" ry="1.5" transform="rotate(17 66.8 69.1)" fill="#FFF3D6" stroke-width="1"/></g></svg></div>
+          <ul class="items">
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Classic Paneer Zing</h4><p>Crispy, spice-infused paneer patty elegantly layered with fresh tomato, onion, lettuce and a tangy house sauce, all embraced by a perfectly toasted bun.</p></div>
+              <div class="buy" data-sku="paneer-classic-paneer-zing" data-name="Classic Paneer Zing" data-price="149"><span class="price">₹149</span></div>
+            </li>
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Tandoori Paneer Zing</h4><p>Fried paneer patty with crisp lettuce, tomato, onion and a tandoori sauce, all encased in a delicately toasted charcoal infused bun.</p></div>
+              <div class="buy" data-sku="paneer-tandoori-paneer-zing" data-name="Tandoori Paneer Zing" data-price="169"><span class="price">₹169</span></div>
+            </li>
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Korean Paneer Zing</h4><p>Crispy fried paneer patty coated with in-house Korean sauce, fresh lettuce, juicy tomato, onion all served in a toasted bun.</p></div>
+              <div class="buy" data-sku="paneer-korean-paneer-zing" data-name="Korean Paneer Zing" data-price="199"><span class="price">₹199</span></div>
+            </li>
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Hot Paneer Zing</h4><p>Crispy fried paneer patty coated with in-house hot sauce, fresh lettuce, juicy tomato, onion all served in a toasted bun.</p></div>
+              <div class="buy" data-sku="paneer-hot-paneer-zing" data-name="Hot Paneer Zing" data-price="199"><span class="price">₹199</span></div>
+            </li>
+          </ul>
+        </section>
+        <section class="cat" id="veg-burgers" aria-labelledby="veg-burgers-h">
+          <div class="cat-head"><div><h3 id="veg-burgers-h">Veg burgers</h3></div>
+            <svg class="fig" viewBox="0 0 150 130" role="img" aria-label="Drawing of a veg burger, to scale" style="--fw:150"><g stroke="#1E130C" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><ellipse cx="75" cy="125.5" rx="57" ry="3" fill="#1E130C" opacity=".16"/><path d="M25 110 L125 110 L125 118 Q125 124 118 124 L32 124 Q25 124 25 118 Z" fill="#E7A048"/><path d="M26 113.5 L124 113.5" stroke="#C77B2C" stroke-width="2"/><rect x="23" y="97" width="104" height="13" rx="5.9" fill="#C9A445"/><circle cx="58" cy="101.6" r="1.6" fill="#6E9E3A" stroke="none"/><circle cx="104.1" cy="101.7" r="1.6" fill="#6E9E3A" stroke="none"/><circle cx="114.9" cy="102.9" r="1.6" fill="#6E9E3A" stroke="none"/><circle cx="107.8" cy="105.3" r="1.6" fill="#6E9E3A" stroke="none"/><circle cx="42.7" cy="102.4" r="1.6" fill="#6E9E3A" stroke="none"/><circle cx="50.6" cy="102.8" r="1.6" fill="#6E9E3A" stroke="none"/><circle cx="55.5" cy="104.9" r="1.6" fill="#6E9E3A" stroke="none"/><circle cx="68.5" cy="101.7" r="1.6" fill="#6E9E3A" stroke="none"/><circle cx="108.3" cy="103.4" r="1.6" fill="#6E9E3A" stroke="none"/><circle cx="40.8" cy="103.8" r="1.6" fill="#6E9E3A" stroke="none"/><path d="M23 93.4 L127 93.4 L127 97 L124.8 97 Q124.8 104 120.8 104 Q116.8 104 116.8 97 L89.4 97 Q89.4 101 85.4 101 Q81.4 101 81.4 97 L30.1 97 Q30.1 106 26.1 106 Q22.1 106 22.1 97 L23 97 Z" fill="#FFC21A"/><rect x="28" y="88.4" width="94" height="5" rx="2.5" fill="#E8482F"/><path d="M21 88.4 Q15 83.4 21 81.4 Q27 79.4 33 83.4 Q39 83.4 45 81.4 Q51 79.4 57 83.4 Q63 83.4 69 81.4 Q75 79.4 81 83.4 Q87 83.4 93 81.4 Q99 79.4 105 83.4 Q111 83.4 117 81.4 Q123 79.4 129 83.4 L129 88.4 Z" fill="#62AC3A"/><path d="M24 82.4 C24 51.1 44.4 48.4 75 48.4 C105.6 48.4 126 51.1 126 82.4 Q75 85.4 24 82.4 Z" fill="#E7A048"/><path d="M41.3 63.7 C46.4 53.2 62.8 51.1 73 51.8" fill="none" stroke="#F8D59A" stroke-width="3.2"/><ellipse cx="52.6" cy="63.7" rx="2.6" ry="1.5" transform="rotate(-33 52.6 63.7)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="77" cy="57.9" rx="2.6" ry="1.5" transform="rotate(7 77 57.9)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="99.5" cy="65.4" rx="2.6" ry="1.5" transform="rotate(35 99.5 65.4)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="87.2" cy="71.2" rx="2.6" ry="1.5" transform="rotate(-16 87.2 71.2)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="66.8" cy="69.5" rx="2.6" ry="1.5" transform="rotate(17 66.8 69.5)" fill="#FFF3D6" stroke-width="1"/></g></svg></div>
+          <ul class="items">
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Indiana Classic</h4><p>Classic crisp aloo patty, melted cheddar, fresh tomato, onion, fresh lettuce and our signature sauces on a toasted soft bun.</p></div>
+              <div class="buy" data-sku="veg-burgers-indiana-classic" data-name="Indiana Classic" data-price="89"><span class="price">₹89</span></div>
+            </li>
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Indiana Double Classic</h4><p>Double crisp aloo patty with double melted cheddar, fresh tomato, onion, fresh lettuce and our signature sauces on a toasted soft bun.</p></div>
+              <div class="buy" data-sku="veg-burgers-indiana-double-classic" data-name="Indiana Double Classic" data-price="139"><span class="price">₹139</span></div>
+            </li>
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Mexican Veg Burger</h4><p>Rajma filled patty with in-house Ranch.</p></div>
+              <div class="buy" data-sku="veg-burgers-mexican-veg-burger" data-name="Mexican Veg Burger" data-price="149"><span class="price">₹149</span></div>
+            </li>
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Supreme Veggie</h4><p>Exquisite crunchy savoury veg patty with melted cheddar, chipotle sauce, fresh tomato, onion, fresh lettuce and our signature sauce on a toasted soft bun.</p></div>
+              <div class="buy" data-sku="veg-burgers-supreme-veggie" data-name="Supreme Veggie" data-price="129"><span class="price">₹129</span></div>
+            </li>
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Supreme Double Veggie</h4><p>Double crisp veg patty with double melted cheddar, chipotle sauce, fresh tomato, onion, fresh lettuce and our signature sauce on a toasted soft bun.</p></div>
+              <div class="buy" data-sku="veg-burgers-supreme-double-veggie" data-name="Supreme Double Veggie" data-price="179"><span class="price">₹179</span></div>
+            </li>
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Cheesy Stretch Veg</h4><p>Succulent veg patty burger with mozzarella cheese patty, tandoori sauce, fresh tomato, onion, crisp lettuce, and our signature house sauce, all nestled in a toasted soft bun.</p></div>
+              <div class="buy" data-sku="veg-burgers-cheesy-stretch-veg" data-name="Cheesy Stretch Veg" data-price="219"><span class="price">₹219</span></div>
+            </li>
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Fongo Veg</h4><p>Succulent veg patty burger stuffed with butter garlic mushrooms, layered with fresh tomato, onion, crisp lettuce, and our signature house sauces, all nestled in a toasted soft bun.</p></div>
+              <div class="buy" data-sku="veg-burgers-fongo-veg" data-name="Fongo Veg" data-price="219"><span class="price">₹219</span></div>
+            </li>
+          </ul>
+        </section>
+        <section class="cat" id="fries" aria-labelledby="fries-h">
+          <div class="cat-head"><div><h3 id="fries-h">Fries</h3></div>
+            <svg class="fig" viewBox="0 0 110 130" role="img" aria-label="Drawing of a carton of fries, to scale" style="--fw:110"><g stroke="#1E130C" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><ellipse cx="55" cy="125.5" rx="41.8" ry="3" fill="#1E130C" opacity=".16"/><rect x="25.7" y="39.2" width="7" height="54.8" rx="1.5" fill="#F2BE45" transform="rotate(5.3 29.2 84)"/><rect x="32.9" y="39.2" width="7" height="54.8" rx="1.5" fill="#F2BE45" transform="rotate(7.6 36.4 84)"/><rect x="37.6" y="44.7" width="7" height="49.3" rx="1.5" fill="#F2BE45" transform="rotate(8 41.1 84)"/><rect x="45.3" y="36" width="7" height="58" rx="1.5" fill="#F2BE45" transform="rotate(-7 48.8 84)"/><rect x="51.4" y="49.1" width="7" height="44.9" rx="1.5" fill="#F2BE45" transform="rotate(0.8 54.9 84)"/><rect x="58.1" y="53.7" width="7" height="40.3" rx="1.5" fill="#F2BE45" transform="rotate(-5.1 61.6 84)"/><rect x="64.1" y="35.7" width="7" height="58.3" rx="1.5" fill="#F2BE45" transform="rotate(4.8 67.6 84)"/><rect x="70.3" y="38.1" width="7" height="55.9" rx="1.5" fill="#F2BE45" transform="rotate(-6.5 73.8 84)"/><rect x="77.7" y="51.5" width="7" height="42.5" rx="1.5" fill="#F2BE45" transform="rotate(-9 81.2 84)"/><path d="M21 66 L89 66 L81 124 L29 124 Z" fill="#D9301C"/><path d="M21 66 Q55 78 89 66" fill="#B52314"/><path d="M24.5 92 L85.5 92 L84 102 L26 102 Z" fill="#FFC21A"/></g></svg></div>
+          <ul class="items">
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Classic Fries</h4></div>
+              <div class="buy" data-sku="fries-classic-fries" data-name="Classic Fries" data-price="59"><span class="price">₹59</span></div>
+            </li>
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Peri-Peri Fries</h4></div>
+              <div class="buy" data-sku="fries-peri-peri-fries" data-name="Peri-Peri Fries" data-price="99"><span class="price">₹99</span></div>
+            </li>
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Cheesebuster Fries</h4><p>Crispy fries topped with two types of melted cheese and flamed to perfection.</p></div>
+              <div class="buy" data-sku="fries-cheesebuster-fries" data-name="Cheesebuster Fries" data-price="149"><span class="price">₹149</span></div>
+            </li>
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Butter Garlic Mushroom Loaded</h4><p>Crispy fries topped with butter garlic mushroom and a drizzle of creamy in-house sauces.</p></div>
+              <div class="buy" data-sku="fries-butter-garlic-mushroom-loaded" data-name="Butter Garlic Mushroom Loaded" data-price="159"><span class="price">₹159</span></div>
+            </li>
+            <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i>
+              <div class="item-main"><h4>Smashed Chicken Loaded</h4><p>Crispy fries topped with smashed juicy chicken pieces and a drizzle of creamy in-house sauces.</p></div>
+              <div class="buy" data-sku="fries-smashed-chicken-loaded" data-name="Smashed Chicken Loaded" data-price="199"><span class="price">₹199</span></div>
+            </li>
+            <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i>
+              <div class="item-main"><h4>Smashed Mutton Loaded</h4><p>Crispy fries topped with smashed mutton pieces and a drizzle of creamy in-house sauces.</p></div>
+              <div class="buy" data-sku="fries-smashed-mutton-loaded" data-name="Smashed Mutton Loaded" data-price="249"><span class="price">₹249</span></div>
+            </li>
+          </ul>
+        </section>
+        <section class="cat" id="onion-rings" aria-labelledby="onion-rings-h">
+          <div class="cat-head"><div><h3 id="onion-rings-h">Onion rings</h3><p class="note">4 pieces.</p></div>
+            <svg class="fig" viewBox="0 0 120 130" role="img" aria-label="Drawing of onion rings, to scale" style="--fw:120"><g stroke="#1E130C" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><ellipse cx="60" cy="125.5" rx="45.6" ry="3" fill="#1E130C" opacity=".16"/><ellipse cx="38" cy="117" rx="28" ry="8" fill="#DB9A36"/><ellipse cx="38" cy="115.5" rx="13" ry="3.4" fill="#FAF8F2"/><ellipse cx="80" cy="117" rx="28" ry="8" fill="#DB9A36"/><ellipse cx="80" cy="115.5" rx="13" ry="3.4" fill="#FAF8F2"/><circle cx="60" cy="94" r="27" fill="#DB9A36"/><circle cx="60" cy="94" r="13" fill="#FAF8F2"/><circle cx="80" cy="94" r="1.5" fill="#EDBF63" stroke="none"/><circle cx="78" cy="102.7" r="1.5" fill="#EDBF63" stroke="none"/><circle cx="72.5" cy="109.6" r="1.5" fill="#EDBF63" stroke="none"/><circle cx="64.5" cy="113.5" r="1.5" fill="#EDBF63" stroke="none"/><circle cx="55.5" cy="113.5" r="1.5" fill="#EDBF63" stroke="none"/><circle cx="47.5" cy="109.6" r="1.5" fill="#EDBF63" stroke="none"/><circle cx="42" cy="102.7" r="1.5" fill="#EDBF63" stroke="none"/><circle cx="40" cy="94" r="1.5" fill="#EDBF63" stroke="none"/><circle cx="42" cy="85.3" r="1.5" fill="#EDBF63" stroke="none"/><circle cx="47.5" cy="78.4" r="1.5" fill="#EDBF63" stroke="none"/><circle cx="55.5" cy="74.5" r="1.5" fill="#EDBF63" stroke="none"/><circle cx="64.5" cy="74.5" r="1.5" fill="#EDBF63" stroke="none"/><circle cx="72.5" cy="78.4" r="1.5" fill="#EDBF63" stroke="none"/><circle cx="78" cy="85.3" r="1.5" fill="#EDBF63" stroke="none"/></g></svg></div>
+          <ul class="items">
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Classic</h4></div>
+              <div class="buy" data-sku="onion-rings-onion-rings-classic" data-name="Onion Rings, Classic" data-price="79"><span class="price">₹79</span></div>
+            </li>
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Peri-Peri</h4></div>
+              <div class="buy" data-sku="onion-rings-onion-rings-peri-peri" data-name="Onion Rings, Peri-Peri" data-price="99"><span class="price">₹99</span></div>
+            </li>
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Italian Cheese</h4></div>
+              <div class="buy" data-sku="onion-rings-onion-rings-italian-cheese" data-name="Onion Rings, Italian Cheese" data-price="119"><span class="price">₹119</span></div>
+            </li>
+          </ul>
+        </section>
+        <section class="cat" id="sides" aria-labelledby="sides-h">
+          <div class="cat-head"><div><h3 id="sides-h">Sides</h3><p class="note">Each portion is 4 pieces, except chicken strips.</p></div>
+            <svg class="fig" viewBox="0 0 130 130" role="img" aria-label="Drawing of cigar rolls, a nugget and a cheese triangle, to scale" style="--fw:130"><g stroke="#1E130C" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><ellipse cx="65" cy="125.5" rx="49.4" ry="3" fill="#1E130C" opacity=".16"/><rect x="17" y="111" width="74" height="13" rx="6.5" fill="#DB9A36"/><rect x="27" y="98" width="74" height="13" rx="6.5" fill="#EDBF63"/><path d="M95 124 L127 124 L111 94 Z" fill="#DB9A36"/><path d="M103 118 L119 118" stroke="#FFC21A" stroke-width="3"/><path d="M5 124 C1 110 17 104 25 110 C31 114 29 124 17 124 Z" fill="#DB9A36"/></g></svg></div>
+          <ul class="items">
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Cheese Jalapeno Triangle (4 pc)</h4></div>
+              <div class="buy" data-sku="sides-cheese-jalapeno-triangle-4-pc" data-name="Cheese Jalapeno Triangle (4 pc)" data-price="99"><span class="price">₹99</span></div>
+            </li>
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Veggie Cigar Roll (4 pc)</h4><p>Crispy roll filled with a savoury blend of seasoned vegetables, offering a perfect bite-sized treat.</p></div>
+              <div class="buy" data-sku="sides-veggie-cigar-roll-4-pc" data-name="Veggie Cigar Roll (4 pc)" data-price="99"><span class="price">₹99</span></div>
+            </li>
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Cheese Corn Cigar Roll (4 pc)</h4></div>
+              <div class="buy" data-sku="sides-cheese-corn-cigar-roll-4-pc" data-name="Cheese Corn Cigar Roll (4 pc)" data-price=""><span class="price ask">Ask for price</span></div>
+            </li>
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Cheese Corn Nugget (4 pc)</h4></div>
+              <div class="buy" data-sku="sides-cheese-corn-nugget-4-pc" data-name="Cheese Corn Nugget (4 pc)" data-price=""><span class="price ask">Ask for price</span></div>
+            </li>
+            <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i>
+              <div class="item-main"><h4>Chicken Nugget (4 pc)</h4></div>
+              <div class="buy" data-sku="sides-chicken-nugget-4-pc" data-name="Chicken Nugget (4 pc)" data-price="99"><span class="price">₹99</span></div>
+            </li>
+            <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i>
+              <div class="item-main"><h4>Cheese Chicken Cigar Roll (4 pc)</h4><p>Crispy roll filled with cheesy savoury blend of chicken with cheese, offering a perfect bite-sized treat.</p></div>
+              <div class="buy" data-sku="sides-cheese-chicken-cigar-roll-4-pc" data-name="Cheese Chicken Cigar Roll (4 pc)" data-price="149"><span class="price">₹149</span></div>
+            </li>
+          <li class="item multi" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i>
+            <div class="item-main"><h4>Chicken Strips</h4>
+            <ul class="variants">
+              <li class="buy" data-sku="sides-chicken-strips-2-pc" data-name="Chicken Strips (2 pc)" data-price="80"><span class="vlabel">2 pc</span><span class="price">₹80</span></li>
+              <li class="buy" data-sku="sides-chicken-strips-4-pc" data-name="Chicken Strips (4 pc)" data-price="120"><span class="vlabel">4 pc</span><span class="price">₹120</span></li>
+            </ul></div>
+          </li>
+          </ul>
+        </section>
+        <section class="cat" id="momos" aria-labelledby="momos-h">
+          <div class="cat-head"><div><h3 id="momos-h">Momos</h3><p class="note">6 pieces per plate. Pick steamed, fried, kurkure or pan fried.</p></div>
+            <svg class="fig" viewBox="0 0 120 130" role="img" aria-label="Drawing of momos in a bamboo steamer, to scale" style="--fw:120"><g stroke="#1E130C" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><ellipse cx="60" cy="125.5" rx="45.6" ry="3" fill="#1E130C" opacity=".16"/><path d="M20 102 C20 86 28 81 36 78 C44 81 52 86 52 102 Z" fill="#F7F0E1"/><path d="M36 79 L29 90 M36 79 L43 90 M36 79 L36 89" fill="none" stroke-width="1.6"/><path d="M68 102 C68 86 76 81 84 78 C92 81 100 86 100 102 Z" fill="#F7F0E1"/><path d="M84 79 L77 90 M84 79 L91 90 M84 79 L84 89" fill="none" stroke-width="1.6"/><path d="M44 102 C44 83 52 78 60 75 C68 78 76 83 76 102 Z" fill="#F7F0E1"/><path d="M60 76 L53 87 M60 76 L67 87 M60 76 L60 86" fill="none" stroke-width="1.6"/><path d="M10 100 L110 100 L110 119 Q110 124 104 124 L16 124 Q10 124 10 119 Z" fill="#D9B26A"/><path d="M10 107 L110 107" stroke="#A97F3A" stroke-width="1.6"/><path d="M10 114 L110 114" stroke="#A97F3A" stroke-width="1.6"/></g></svg></div>
+          <ul class="items">
+          <li class="item multi" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+            <div class="item-main"><h4>Veg Momo</h4><p>A blend of freshly chopped vegetables carrot, onion, cabbage, beans and coriander, herbs and a tiny pinch of our signature spices.</p>
+            <ul class="variants">
+              <li class="buy" data-sku="momos-veg-momo-steamed" data-name="Veg Momo, Steamed" data-price="89"><span class="vlabel">Steamed</span><span class="price">₹89</span></li>
+              <li class="buy" data-sku="momos-veg-momo-fried" data-name="Veg Momo, Fried" data-price="109"><span class="vlabel">Fried</span><span class="price">₹109</span></li>
+              <li class="buy" data-sku="momos-veg-momo-kurkure" data-name="Veg Momo, Kurkure" data-price="119"><span class="vlabel">Kurkure</span><span class="price">₹119</span></li>
+              <li class="buy" data-sku="momos-veg-momo-pan-fried" data-name="Veg Momo, Pan fried" data-price="119"><span class="vlabel">Pan fried</span><span class="price">₹119</span></li>
+            </ul></div>
+          </li>
+          <li class="item multi" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+            <div class="item-main"><h4>Wheat Veg Momo</h4><p>A blend of freshly chopped vegetables carrot, onion, cabbage, beans and coriander, herbs and a tiny pinch of our signature spices.</p>
+            <ul class="variants">
+              <li class="buy" data-sku="momos-wheat-veg-momo-steamed" data-name="Wheat Veg Momo, Steamed" data-price="99"><span class="vlabel">Steamed</span><span class="price">₹99</span></li>
+              <li class="buy" data-sku="momos-wheat-veg-momo-fried" data-name="Wheat Veg Momo, Fried" data-price="119"><span class="vlabel">Fried</span><span class="price">₹119</span></li>
+              <li class="buy" data-sku="momos-wheat-veg-momo-kurkure" data-name="Wheat Veg Momo, Kurkure" data-price="129"><span class="vlabel">Kurkure</span><span class="price">₹129</span></li>
+              <li class="buy" data-sku="momos-wheat-veg-momo-pan-fried" data-name="Wheat Veg Momo, Pan fried" data-price="129"><span class="vlabel">Pan fried</span><span class="price">₹129</span></li>
+            </ul></div>
+          </li>
+          <li class="item multi" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+            <div class="item-main"><h4>Paneer Momo</h4><p>A blend of freshly juicy paneer filling inside and a paper like outer covering to fulfill your taste buds.</p>
+            <ul class="variants">
+              <li class="buy" data-sku="momos-paneer-momo-steamed" data-name="Paneer Momo, Steamed" data-price="99"><span class="vlabel">Steamed</span><span class="price">₹99</span></li>
+              <li class="buy" data-sku="momos-paneer-momo-fried" data-name="Paneer Momo, Fried" data-price="119"><span class="vlabel">Fried</span><span class="price">₹119</span></li>
+              <li class="buy" data-sku="momos-paneer-momo-kurkure" data-name="Paneer Momo, Kurkure" data-price="129"><span class="vlabel">Kurkure</span><span class="price">₹129</span></li>
+              <li class="buy" data-sku="momos-paneer-momo-pan-fried" data-name="Paneer Momo, Pan fried" data-price="129"><span class="vlabel">Pan fried</span><span class="price">₹129</span></li>
+            </ul></div>
+          </li>
+          <li class="item multi" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+            <div class="item-main"><h4>Cheese Corn Momo</h4><p>Momo loaded with sweet corn and shredded cheese and enhanced with the deep flavours of Indian spices.</p>
+            <ul class="variants">
+              <li class="buy" data-sku="momos-cheese-corn-momo-steamed" data-name="Cheese Corn Momo, Steamed" data-price="119"><span class="vlabel">Steamed</span><span class="price">₹119</span></li>
+              <li class="buy" data-sku="momos-cheese-corn-momo-fried" data-name="Cheese Corn Momo, Fried" data-price="139"><span class="vlabel">Fried</span><span class="price">₹139</span></li>
+              <li class="buy" data-sku="momos-cheese-corn-momo-kurkure" data-name="Cheese Corn Momo, Kurkure" data-price="149"><span class="vlabel">Kurkure</span><span class="price">₹149</span></li>
+              <li class="buy" data-sku="momos-cheese-corn-momo-pan-fried" data-name="Cheese Corn Momo, Pan fried" data-price="149"><span class="vlabel">Pan fried</span><span class="price">₹149</span></li>
+            </ul></div>
+          </li>
+          <li class="item multi" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+            <div class="item-main"><h4>Veg Cheese Baked Momo</h4><p>Momo loaded with sweet corn and shredded cheese and enhanced with the deep flavours of Indian spices.</p>
+            <ul class="variants">
+              <li class="buy" data-sku="momos-veg-cheese-baked-momo-baked" data-name="Veg Cheese Baked Momo, Baked" data-price="169"><span class="vlabel">Baked</span><span class="price">₹169</span></li>
+            </ul></div>
+          </li>
+          </ul>
+        </section>
+        <section class="cat" id="dips-addons" aria-labelledby="dips-addons-h">
+          <div class="cat-head"><div><h3 id="dips-addons-h">Dips and add-ons</h3></div>
+            <svg class="fig" viewBox="0 0 150 130" role="img" aria-label="Drawing of four dip cups, to scale" style="--fw:150"><g stroke="#1E130C" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><ellipse cx="75" cy="125.5" rx="57" ry="3" fill="#1E130C" opacity=".16"/><path d="M9 106 L39 106 L36 124 L12 124 Z" fill="#FFFFFF"/><ellipse cx="24" cy="106" rx="15" ry="3.6" fill="#D9301C"/><path d="M43 106 L73 106 L70 124 L46 124 Z" fill="#FFFFFF"/><ellipse cx="58" cy="106" rx="15" ry="3.6" fill="#FFC21A"/><path d="M77 106 L107 106 L104 124 L80 124 Z" fill="#FFFFFF"/><ellipse cx="92" cy="106" rx="15" ry="3.6" fill="#C9672E"/><path d="M111 106 L141 106 L138 124 L114 124 Z" fill="#FFFFFF"/><ellipse cx="126" cy="106" rx="15" ry="3.6" fill="#E85A3C"/></g></svg></div>
+          <ul class="items">
+          <li class="item multi" data-diet="any"><i class="nomark-gap" aria-hidden="true"></i>
+            <div class="item-main"><h4>Dips</h4>
+            <ul class="variants">
+              <li class="buy" data-sku="dips-addons-dips-house-hot-sauce" data-name="House Hot Sauce dip" data-price="40"><span class="vlabel">House Hot Sauce</span><span class="price">₹40</span></li>
+              <li class="buy" data-sku="dips-addons-dips-cheese-sauce" data-name="Cheese Sauce dip" data-price="40"><span class="vlabel">Cheese Sauce</span><span class="price">₹40</span></li>
+              <li class="buy" data-sku="dips-addons-dips-sweet-chilli-sauce" data-name="Sweet Chilli Sauce dip" data-price="40"><span class="vlabel">Sweet Chilli Sauce</span><span class="price">₹40</span></li>
+              <li class="buy" data-sku="dips-addons-dips-chipotle-sauce" data-name="Chipotle Sauce dip" data-price="40"><span class="vlabel">Chipotle Sauce</span><span class="price">₹40</span></li>
+            </ul></div>
+          </li>
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Cheese Slice</h4></div>
+              <div class="buy" data-sku="dips-addons-cheese-slice" data-name="Cheese Slice" data-price="15"><span class="price">₹15</span></div>
+            </li>
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Caramelized Onion</h4></div>
+              <div class="buy" data-sku="dips-addons-caramelized-onion" data-name="Caramelized Onion" data-price="30"><span class="price">₹30</span></div>
+            </li>
+            <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i>
+              <div class="item-main"><h4>Fried Egg</h4></div>
+              <div class="buy" data-sku="dips-addons-fried-egg" data-name="Fried Egg" data-price="30"><span class="price">₹30</span></div>
+            </li>
+            <li class="item" data-diet="any"><i class="nomark-gap" aria-hidden="true"></i>
+              <div class="item-main"><h4>Coleslaw Salad</h4></div>
+              <div class="buy" data-sku="dips-addons-coleslaw-salad" data-name="Coleslaw Salad" data-price="20"><span class="price">₹20</span></div>
+            </li>
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Melted Cheese</h4></div>
+              <div class="buy" data-sku="dips-addons-melted-cheese" data-name="Melted Cheese" data-price="50"><span class="price">₹50</span></div>
+            </li>
+            <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i>
+              <div class="item-main"><h4>Butter Garlic Mushroom</h4></div>
+              <div class="buy" data-sku="dips-addons-butter-garlic-mushroom" data-name="Butter Garlic Mushroom" data-price="50"><span class="price">₹50</span></div>
+            </li>
+            <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i>
+              <div class="item-main"><h4>Chicken Patty</h4></div>
+              <div class="buy" data-sku="dips-addons-chicken-patty" data-name="Chicken Patty" data-price="100"><span class="price">₹100</span></div>
+            </li>
+            <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i>
+              <div class="item-main"><h4>Mutton Patty</h4></div>
+              <div class="buy" data-sku="dips-addons-mutton-patty" data-name="Mutton Patty" data-price="180"><span class="price">₹180</span></div>
+            </li>
+          </ul>
+        </section>
       </div>
-    </section>
-    <section class="cat" id="chicken" aria-labelledby="chicken-h">
-      <div class="wrap cat-grid">
-        <header><h2 id="chicken-h">Chicken smash burgers</h2></header>
-        <ul class="items">
-          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Classic Chicken Smash</h3><p>Succulent smashed chicken burger with melted cheese, caramelized onions, crisp lettuce, pickles, jalapeños, and our signature house sauces, all nestled in a toasted bun.</p></div><span class="price">₹169</span></li>
-          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Slam-Chic Smash</h3><p>Succulent smashed chicken burger with toasted salami, chipotle flavour melted cheese, caramelized onions, crisp lettuce, and our signature house sauce, all nestled in a toasted bun.</p></div><span class="price">₹199</span></li>
-          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Smokey Chicken Egg Smash</h3><p>Juicy smashed chicken burger with melted cheese, tandoori flavour, fried egg, caramelized onions, crisp lettuce, pickles, jalapeños, and our signature house sauce wrapped in toasted bun.</p></div><span class="price">₹219</span></li>
-          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Melto Chicken Cheese Smash</h3><p>A succulent smashed chicken burger with mozzarella cheese layer, caramelized onions, crisp lettuce, pickles, jalapeños, and our signature house sauces, all nestled in a toasted bun.</p></div><span class="price">₹239</span></li>
-          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Double Chicken Smash</h3><p>Succulent double smashed chicken burger with double melted cheese, caramelized onions, crisp lettuce, pickles, jalapeños, and our signature house sauces, all nestled in a toasted bun.</p></div><span class="price">₹269</span></li>
-        </ul>
-      </div>
-    </section>
-    <section class="cat" id="mutton" aria-labelledby="mutton-h">
-      <div class="wrap cat-grid">
-        <header><h2 id="mutton-h">Mutton smash burgers</h2></header>
-        <ul class="items">
-          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Classic Mutton Smash</h3><p>Juicy mutton patty, crispy edges, melted cheddar, caramelised onion, fresh lettuce and our signature sauces on a toasted bun.</p></div><span class="price">₹239</span></li>
-          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Mutton-Cheesy Smash</h3><p>Mozzarella cheese layered on juicy mutton patty with chipotle, caramelized onions, crisp lettuce, pickles, jalapeños, and our signature house sauce, all nestled in a toasted bun.</p></div><span class="price">₹299</span></li>
-          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Double Mutton Smash</h3><p>Double mutton patty with double melted cheese, caramelised onion, crispy edges, fresh lettuce and our signature sauces on a toasted bun.</p></div><span class="price">₹339</span></li>
-        </ul>
-      </div>
-    </section>
-    <section class="cat" id="fried-chicken" aria-labelledby="fried-chicken-h">
-      <div class="wrap cat-grid">
-        <header><h2 id="fried-chicken-h">Fried zing burgers</h2><p class="note">Fried chicken breast burgers.</p></header>
-        <ul class="items">
-          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Kentucky Pollo Zing</h3><p>Crispy spice-infused chicken breast layered with fresh lettuce, tomato, onion and a tangy house sauces, all embraced by a perfectly toasted bun.</p></div><span class="price">₹169</span></li>
-          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Kentucky Tandoori Pollo Zing</h3><p>Fried chicken breast, artfully paired with crisp lettuce, tomato, onion and a tandoori sauce, all encased in a delicately toasted charcoal infused bun.</p></div><span class="price">₹179</span></li>
-          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Kentucky Hot Pollo Zing</h3><p>Crispy spiced chicken breast coated with in-house hot sauce, crisp lettuce, juicy tomato, onion all served in a toasted bun.</p></div><span class="price">₹219</span></li>
-          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Kentucky Korean Pollo Zing</h3><p>Marinated fried chicken breast coated with in-house Korean sauce, crisp lettuce, juicy tomato, onion, all served in a toasted bun.</p></div><span class="price">₹219</span></li>
-        </ul>
-      </div>
-    </section>
-    <section class="cat" id="paneer" aria-labelledby="paneer-h">
-      <div class="wrap cat-grid">
-        <header><h2 id="paneer-h">Cottage cheese burgers</h2><p class="note">Fried paneer patty burgers.</p></header>
-        <ul class="items">
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Classic Paneer Zing</h3><p>Crispy, spice-infused paneer patty elegantly layered with fresh tomato, onion, lettuce and a tangy house sauce, all embraced by a perfectly toasted bun.</p></div><span class="price">₹149</span></li>
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Tandoori Paneer Zing</h3><p>Fried paneer patty with crisp lettuce, tomato, onion and a tandoori sauce, all encased in a delicately toasted charcoal infused bun.</p></div><span class="price">₹169</span></li>
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Korean Paneer Zing</h3><p>Crispy fried paneer patty coated with in-house Korean sauce, fresh lettuce, juicy tomato, onion all served in a toasted bun.</p></div><span class="price">₹199</span></li>
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Hot Paneer Zing</h3><p>Crispy fried paneer patty coated with in-house hot sauce, fresh lettuce, juicy tomato, onion all served in a toasted bun.</p></div><span class="price">₹199</span></li>
-        </ul>
-      </div>
-    </section>
-    <section class="cat" id="veg-burgers" aria-labelledby="veg-burgers-h">
-      <div class="wrap cat-grid">
-        <header><h2 id="veg-burgers-h">Veg burgers</h2></header>
-        <ul class="items">
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Indiana Classic</h3><p>Classic crisp aloo patty, melted cheddar, fresh tomato, onion, fresh lettuce and our signature sauces on a toasted soft bun.</p></div><span class="price">₹89</span></li>
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Indiana Double Classic</h3><p>Double crisp aloo patty with double melted cheddar, fresh tomato, onion, fresh lettuce and our signature sauces on a toasted soft bun.</p></div><span class="price">₹139</span></li>
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Mexican Veg Burger</h3><p>Rajma filled patty with in-house Ranch.</p></div><span class="price">₹149</span></li>
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Supreme Veggie</h3><p>Exquisite crunchy savoury veg patty with melted cheddar, chipotle sauce, fresh tomato, onion, fresh lettuce and our signature sauce on a toasted soft bun.</p></div><span class="price">₹129</span></li>
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Supreme Double Veggie</h3><p>Double crisp veg patty with double melted cheddar, chipotle sauce, fresh tomato, onion, fresh lettuce and our signature sauce on a toasted soft bun.</p></div><span class="price">₹179</span></li>
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Cheesy Stretch Veg</h3><p>Succulent veg patty burger with mozzarella cheese patty, tandoori sauce, fresh tomato, onion, crisp lettuce, and our signature house sauce, all nestled in a toasted soft bun.</p></div><span class="price">₹219</span></li>
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Fongo Veg</h3><p>Succulent veg patty burger stuffed with butter garlic mushrooms, layered with fresh tomato, onion, crisp lettuce, and our signature house sauces, all nestled in a toasted soft bun.</p></div><span class="price">₹219</span></li>
-        </ul>
-      </div>
-    </section>
-    <section class="cat" id="fries" aria-labelledby="fries-h">
-      <div class="wrap cat-grid">
-        <header><h2 id="fries-h">Fries</h2></header>
-        <ul class="items">
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Classic Fries</h3></div><span class="price">₹59</span></li>
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Peri-Peri Fries</h3></div><span class="price">₹99</span></li>
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Cheesebuster Fries</h3><p>Crispy fries topped with two types of melted cheese and flamed to perfection.</p></div><span class="price">₹149</span></li>
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Butter Garlic Mushroom Loaded</h3><p>Crispy fries topped with butter garlic mushroom and a drizzle of creamy in-house sauces.</p></div><span class="price">₹159</span></li>
-          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Smashed Chicken Loaded</h3><p>Crispy fries topped with smashed juicy chicken pieces and a drizzle of creamy in-house sauces.</p></div><span class="price">₹199</span></li>
-          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Smashed Mutton Loaded</h3><p>Crispy fries topped with smashed mutton pieces and a drizzle of creamy in-house sauces.</p></div><span class="price">₹249</span></li>
-        </ul>
-      </div>
-    </section>
-    <section class="cat" id="onion-rings" aria-labelledby="onion-rings-h">
-      <div class="wrap cat-grid">
-        <header><h2 id="onion-rings-h">Onion rings</h2><p class="note">4 pieces.</p></header>
-        <ul class="items">
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Classic</h3></div><span class="price">₹79</span></li>
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Peri-Peri</h3></div><span class="price">₹99</span></li>
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Italian Cheese</h3></div><span class="price">₹119</span></li>
-        </ul>
-      </div>
-    </section>
-    <section class="cat" id="sides" aria-labelledby="sides-h">
-      <div class="wrap cat-grid">
-        <header><h2 id="sides-h">Sides</h2><p class="note">Each portion is 4 pieces, except chicken strips.</p></header>
-        <ul class="items">
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Cheese Jalapeno Triangle (4 pc)</h3></div><span class="price">₹99</span></li>
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Veggie Cigar Roll (4 pc)</h3><p>Crispy roll filled with a savoury blend of seasoned vegetables, offering a perfect bite-sized treat.</p></div><span class="price">₹99</span></li>
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Cheese Corn Cigar Roll (4 pc)</h3></div><span class="price ask">Ask for price</span></li>
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Cheese Corn Nugget (4 pc)</h3></div><span class="price ask">Ask for price</span></li>
-          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Chicken Nugget (4 pc)</h3></div><span class="price">₹99</span></li>
-          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Cheese Chicken Cigar Roll (4 pc)</h3><p>Crispy roll filled with cheesy savoury blend of chicken with cheese, offering a perfect bite-sized treat.</p></div><span class="price">₹149</span></li>
-          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Chicken Strips</h3></div><span class="price multi"><span><small>2 pc</small>₹80</span><span><small>4 pc</small>₹120</span></span></li>
-        </ul>
-      </div>
-    </section>
-    <section class="cat" id="momos" aria-labelledby="momos-h">
-      <div class="wrap cat-grid">
-        <header><h2 id="momos-h">Momos</h2><p class="note">6 pieces per plate. Pick steamed, fried, kurkure or pan fried.</p></header>
-        <ul class="items">
-          <li class="item momo" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Veg Momo</h3><p>A blend of freshly chopped vegetables carrot, onion, cabbage, beans and coriander, herbs and a tiny pinch of our signature spices.</p><dl class="mprices"><div><dt>Steamed</dt><dd>₹89</dd></div><div><dt>Fried</dt><dd>₹109</dd></div><div><dt>Kurkure</dt><dd>₹119</dd></div><div><dt>Pan fried</dt><dd>₹119</dd></div></dl></div></li>
-          <li class="item momo" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Wheat Veg Momo</h3><p>A blend of freshly chopped vegetables carrot, onion, cabbage, beans and coriander, herbs and a tiny pinch of our signature spices.</p><dl class="mprices"><div><dt>Steamed</dt><dd>₹99</dd></div><div><dt>Fried</dt><dd>₹119</dd></div><div><dt>Kurkure</dt><dd>₹129</dd></div><div><dt>Pan fried</dt><dd>₹129</dd></div></dl></div></li>
-          <li class="item momo" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Paneer Momo</h3><p>A blend of freshly juicy paneer filling inside and a paper like outer covering to fulfill your taste buds.</p><dl class="mprices"><div><dt>Steamed</dt><dd>₹99</dd></div><div><dt>Fried</dt><dd>₹119</dd></div><div><dt>Kurkure</dt><dd>₹129</dd></div><div><dt>Pan fried</dt><dd>₹129</dd></div></dl></div></li>
-          <li class="item momo" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Cheese Corn Momo</h3><p>Momo loaded with sweet corn and shredded cheese and enhanced with the deep flavours of Indian spices.</p><dl class="mprices"><div><dt>Steamed</dt><dd>₹119</dd></div><div><dt>Fried</dt><dd>₹139</dd></div><div><dt>Kurkure</dt><dd>₹149</dd></div><div><dt>Pan fried</dt><dd>₹149</dd></div></dl></div></li>
-          <li class="item momo" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Veg Cheese Baked Momo</h3><p>Momo loaded with sweet corn and shredded cheese and enhanced with the deep flavours of Indian spices.</p><dl class="mprices one"><div><dt>Baked</dt><dd>₹169</dd></div></dl></div></li>
-        </ul>
-      </div>
-    </section>
-    <section class="cat" id="dips-addons" aria-labelledby="dips-addons-h">
-      <div class="wrap cat-grid">
-        <header><h2 id="dips-addons-h">Dips and add-ons</h2></header>
-        <ul class="items">
-          <li class="item nomark" data-diet="any"><div><h3>Dips</h3><p>House Hot Sauce, Cheese Sauce, Sweet Chilli Sauce, Chipotle Sauce.</p></div><span class="price">₹40 <small>each</small></span></li>
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Cheese Slice</h3></div><span class="price">₹15</span></li>
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Caramelized Onion</h3></div><span class="price">₹30</span></li>
-          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Fried Egg</h3></div><span class="price">₹30</span></li>
-          <li class="item nomark" data-diet="any"><div><h3>Coleslaw Salad</h3></div><span class="price">₹20</span></li>
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Melted Cheese</h3></div><span class="price">₹50</span></li>
-          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Butter Garlic Mushroom</h3></div><span class="price">₹50</span></li>
-          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Chicken Patty</h3></div><span class="price">₹100</span></li>
-          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Mutton Patty</h3></div><span class="price">₹180</span></li>
-        </ul>
-      </div>
-    </section>
+      <p class="fine">Prices as on our current menu and may change.</p>
+    </div>
   </section>
 
-  <section class="outlets" id="find-us" aria-labelledby="find-title">
+  <section class="find" id="find-us" aria-labelledby="find-title">
     <div class="wrap">
       <h2 id="find-title">Find us</h2>
-      <div class="outlet-grid">
-        <article class="outlet">
+      <div class="outlets">
+        <article class="panel outlet">
           <h3>Indirapuram</h3>
           <address>Lotus Pond Market, Vaibhav Khand,<br>Indirapuram, Ghaziabad</address>
-          <p class="when">Opens at 5 PM</p>
+          <p class="when"><i class="bulb on" aria-hidden="true"></i>Opens at 5 PM</p>
           <div class="row">
-            <a class="btn btn-yellow" href="https://maps.app.goo.gl/pe6csEpJZryvv2on6" target="_blank" rel="noopener">Get directions</a>
-            <a class="btn btn-ghost-dark" href="tel:+917895099420">Call 78950 99420</a>
+            <a class="btn btn-ink" href="https://maps.app.goo.gl/pe6csEpJZryvv2on6" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg>Get directions</a>
+            <a class="btn btn-line" href="tel:+917895099420"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5h3l1.5 4-2 1.5a11 11 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5.5a2 2 0 0 1 2-2z"/></svg>Call 78950 99420</a>
           </div>
         </article>
-        <article class="outlet">
+        <article class="panel outlet">
           <h3>Noida, Sector 76</h3>
           <address>76 Complex Street, Sector-76,<br>Noida</address>
-          <p class="when">Call for timings</p>
+          <p class="when"><i class="bulb" aria-hidden="true"></i>Call for timings</p>
           <div class="row">
-            <a class="btn btn-yellow" href="https://www.google.com/maps/search/?api=1&amp;query=The+Smashery+76+Complex+Street+Sector+76+Noida" target="_blank" rel="noopener">Get directions</a>
-            <a class="btn btn-ghost-dark" href="tel:+917895099420">Call 78950 99420</a>
+            <a class="btn btn-ink" href="https://www.google.com/maps/search/?api=1&amp;query=The+Smashery+76+Complex+Street+Sector+76+Noida" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg>Get directions</a>
+            <a class="btn btn-line" href="tel:+917895099420"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5h3l1.5 4-2 1.5a11 11 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5.5a2 2 0 0 1 2-2z"/></svg>Call 78950 99420</a>
           </div>
         </article>
       </div>
-      <div class="order">
-        <p>Order ahead:</p>
-        <a class="btn btn-red" href="https://wa.me/917895099420?text=Hi%20The%20Smashery%2C%20I%27d%20like%20to%20place%20an%20order.">Order on WhatsApp</a>
-        <a class="btn btn-ghost-dark" href="https://www.zomato.com/ncr/the-smashery-indirapuram-ghaziabad/order" target="_blank" rel="noopener">Order on Zomato</a>
+      <div class="order-ahead">
+        <p>Order ahead</p>
+        <a class="btn btn-cheese" href="https://wa.me/917895099420?text=Hi%20The%20Smashery%2C%20I%27d%20like%20to%20place%20an%20order."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18.5l1.3-3.6A8 8 0 1 1 8.6 18z"/><path d="M9 10.5h6M9 13.5h4"/></svg>Order on WhatsApp</a>
+        <a class="btn btn-ghost" href="https://www.zomato.com/ncr/the-smashery-indirapuram-ghaziabad/order" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>Order on Zomato</a>
       </div>
     </div>
   </section>
-</main>
+  </main>
 
-<footer class="foot">
-  <div class="wrap">
-    <p><q>I may look like I'm listening, but I'm thinking cheeseburgers.</q></p>
-    <p>© 2026 The Smashery. Prices as on our current menu and may change.</p>
+<footer class="close">
+  <div class="hoarding hoarding-close">
+    <div class="lamps" aria-hidden="true"><span class="lamp l1"><svg viewBox="0 0 80 80" aria-hidden="true"><path d="M24 80 L24 24 Q24 10 38 10 L48 10 Q60 10 60 22 L60 34" fill="none" stroke="#1E130C" stroke-width="10" stroke-linecap="round"/><path d="M24 80 L24 24 Q24 10 38 10 L48 10 Q60 10 60 22 L60 34" fill="none" stroke="#3B4160" stroke-width="5" stroke-linecap="round"/><path d="M42 32 L78 32 L72 49 L48 49 Z" fill="#3B4160" stroke="#1E130C" stroke-width="3.5" stroke-linejoin="round"/><path d="M46 36 L62 36" stroke="#6B7594" stroke-width="3" stroke-linecap="round"/><path class="lens" d="M48 49 L72 49 L69 55 L51 55 Z" fill="#FFF4CF" stroke="#1E130C" stroke-width="3" stroke-linejoin="round"/></svg></span><span class="lamp l3"><svg viewBox="0 0 80 80" aria-hidden="true"><path d="M24 80 L24 24 Q24 10 38 10 L48 10 Q60 10 60 22 L60 34" fill="none" stroke="#1E130C" stroke-width="10" stroke-linecap="round"/><path d="M24 80 L24 24 Q24 10 38 10 L48 10 Q60 10 60 22 L60 34" fill="none" stroke="#3B4160" stroke-width="5" stroke-linecap="round"/><path d="M42 32 L78 32 L72 49 L48 49 Z" fill="#3B4160" stroke="#1E130C" stroke-width="3.5" stroke-linejoin="round"/><path d="M46 36 L62 36" stroke="#6B7594" stroke-width="3" stroke-linecap="round"/><path class="lens" d="M48 49 L72 49 L69 55 L51 55 Z" fill="#FFF4CF" stroke="#1E130C" stroke-width="3" stroke-linejoin="round"/></svg></span></div>
+    <div class="board board-close">
+      <p class="quote">I may look like I’m listening, but I’m thinking cheeseburgers.</p>
+      <div class="thought"><svg viewBox="0 0 300 260" aria-hidden="true"><g stroke="#1E130C" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><path d="M70 200 C30 200 22 150 56 136 C40 96 92 64 126 84 C142 44 214 46 226 92 C268 84 290 130 262 156 C290 186 252 222 214 206 C196 236 128 238 112 210 C98 216 80 212 70 200 Z" fill="#FFFFFF"/><circle cx="52" cy="226" r="11" fill="#FFFFFF"/><circle cx="26" cy="248" r="6" fill="#FFFFFF"/></g><g transform="translate(62 30) scale(1.25)" stroke="#1E130C" stroke-width="3.84" stroke-linejoin="round" stroke-linecap="round"><path d="M25 110 L125 110 L125 118 Q125 124 118 124 L32 124 Q25 124 25 118 Z" fill="#E7A048"/><path d="M26 113.5 L124 113.5" stroke="#C77B2C" stroke-width="2"/><path d="M24 102 L36.8 102.1 L49.5 102.1 L62.2 100.3 L75 100.4 L87.8 101.9 L100.5 101.7 L113.2 101.5 L126 102 L132.3 101.9 L129.6 103.7 L133.5 105.5 L129.6 107.3 L131.8 109.1 L126 110 L113.2 110.1 L100.5 110.1 L87.8 110.5 L75 110.8 L62.2 110.7 L49.5 110.3 L36.8 110.1 L24 110 L17.8 109.1 L21 107.3 L18.7 105.5 L20.5 103.7 L17.6 101.9 Z" fill="#7E3F18"/><path d="M26 107.8 L124 107.8" stroke="#45200A" stroke-width="2.4"/><path d="M23 97.4 L127 97.4 L127 101 L124.8 101 Q124.8 108 120.8 108 Q116.8 108 116.8 101 L89.4 101 Q89.4 105 85.4 105 Q81.4 105 81.4 101 L30.1 101 Q30.1 110 26.1 110 Q22.1 110 22.1 101 L23 101 Z" fill="#FFC21A"/><path d="M21 97.4 Q15 92.4 21 90.4 Q27 88.4 33 92.4 Q39 92.4 45 90.4 Q51 88.4 57 92.4 Q63 92.4 69 90.4 Q75 88.4 81 92.4 Q87 92.4 93 90.4 Q99 88.4 105 92.4 Q111 92.4 117 90.4 Q123 88.4 129 92.4 L129 97.4 Z" fill="#62AC3A"/><path d="M24 91.4 C24 60.1 44.4 57.4 75 57.4 C105.6 57.4 126 60.1 126 91.4 Q75 94.4 24 91.4 Z" fill="#E7A048"/><path d="M41.3 72.7 C46.4 62.2 62.8 60.1 73 60.8" fill="none" stroke="#F8D59A" stroke-width="3.2"/><ellipse cx="52.6" cy="72.7" rx="2.6" ry="1.5" transform="rotate(-29 52.6 72.7)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="77" cy="66.9" rx="2.6" ry="1.5" transform="rotate(11 77 66.9)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="99.5" cy="74.4" rx="2.6" ry="1.5" transform="rotate(34 99.5 74.4)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="87.2" cy="80.2" rx="2.6" ry="1.5" transform="rotate(-14 87.2 80.2)" fill="#FFF3D6" stroke-width="1"/><ellipse cx="66.8" cy="78.5" rx="2.6" ry="1.5" transform="rotate(16 66.8 78.5)" fill="#FFF3D6" stroke-width="1"/></g></svg></div>
+      <p class="signoff"><b>The Smashery</b><span>Est. 2024 · Indirapuram &amp; Noida</span></p>
+    </div>
+    <div class="catwalk" aria-hidden="true"></div>
+    <div class="legs" aria-hidden="true"><i></i><i></i></div>
+  </div>
+  <svg class="skyline" viewBox="0 0 1600 220" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><g fill="#222B72"><rect x="-20" y="54" width="92.2" height="166"/><rect x="70.2" y="96.6" width="87.8" height="123.4"/><rect x="157.5" y="62.7" width="88.1" height="157.3"/><rect x="255.2" y="62.2" width="75" height="157.8"/><rect x="329.3" y="125.2" width="117.4" height="94.8"/><rect x="463" y="81.4" width="105.4" height="138.6"/><rect x="597.7" y="103.4" width="114.6" height="116.6"/><rect x="720.5" y="79.7" width="73.8" height="140.3"/><rect x="800.4" y="79.2" width="76" height="140.8"/><rect x="897" y="73" width="75.3" height="147"/><rect x="989.5" y="71.6" width="76.3" height="148.4"/><rect x="1060" y="65.8" width="71.2" height="154.2"/><rect x="1157.2" y="52.6" width="100" height="167.4"/><rect x="1271.1" y="94.4" width="122.9" height="125.6"/><rect x="1401.5" y="84.5" width="125.6" height="135.5"/><rect x="1536.2" y="70" width="123" height="150"/></g><g fill="#131A4C"><rect x="-10" y="74.7" width="81.6" height="145.3"/><rect x="27.6" y="65.7" width="15.8" height="9"/><rect x="95.1" y="146.5" width="98.5" height="73.5"/><rect x="156.3" y="137.5" width="15.1" height="9"/><rect x="218.6" y="124.9" width="77.9" height="95.1"/><rect x="256.4" y="115.9" width="23.2" height="9"/><rect x="321.9" y="148.1" width="115.1" height="71.9"/><rect x="462.8" y="127.7" width="79.4" height="92.3"/><rect x="552" y="110" width="113.1" height="110"/><rect x="631" y="101" width="19.4" height="9"/><rect x="675.9" y="139.8" width="70.4" height="80.2"/><rect x="767" y="137.1" width="69.4" height="82.9"/><rect x="804.7" y="128.1" width="18.9" height="9"/><rect x="861.3" y="89.1" width="94.1" height="130.9"/><rect x="868.9" y="80.1" width="22.3" height="9"/><rect x="973.8" y="96.3" width="88.6" height="123.7"/><rect x="985.5" y="87.3" width="22.6" height="9"/><rect x="1069.5" y="117.9" width="98.3" height="102.1"/><rect x="1175.7" y="74.5" width="88.8" height="145.5"/><rect x="1270" y="148.9" width="71.9" height="71.1"/><rect x="1317.6" y="139.9" width="18.1" height="9"/><rect x="1359.8" y="124.7" width="89.3" height="95.3"/><rect x="1385.6" y="115.7" width="18.9" height="9"/><rect x="1459.9" y="149.2" width="103.8" height="70.8"/><rect x="1578.8" y="81.3" width="77.4" height="138.7"/><rect x="1621.2" y="72.3" width="20.5" height="9"/></g><g opacity=".85"><rect x="5" y="82.7" width="4" height="5" fill="#CFDBFF"/><rect x="14" y="82.7" width="4" height="5" fill="#CFDBFF"/><rect x="41" y="82.7" width="4" height="5" fill="#FFD36B"/><rect x="23" y="93.7" width="4" height="5" fill="#FFD36B"/><rect x="41" y="93.7" width="4" height="5" fill="#FFD36B"/><rect x="50" y="93.7" width="4" height="5" fill="#FFD36B"/><rect x="50" y="104.7" width="4" height="5" fill="#FFD36B"/><rect x="5" y="115.7" width="4" height="5" fill="#FFD36B"/><rect x="14" y="115.7" width="4" height="5" fill="#FFD36B"/><rect x="41" y="115.7" width="4" height="5" fill="#FFD36B"/><rect x="14" y="126.7" width="4" height="5" fill="#FFD36B"/><rect x="-4" y="148.7" width="4" height="5" fill="#FFD36B"/><rect x="41" y="148.7" width="4" height="5" fill="#CFDBFF"/><rect x="23" y="159.7" width="4" height="5" fill="#FFD36B"/><rect x="14" y="181.7" width="4" height="5" fill="#CFDBFF"/><rect x="5" y="203.7" width="4" height="5" fill="#FFD36B"/><rect x="101.1" y="154.5" width="4" height="5" fill="#FFD36B"/><rect x="101.1" y="165.5" width="4" height="5" fill="#CFDBFF"/><rect x="110.1" y="165.5" width="4" height="5" fill="#FFD36B"/><rect x="128.1" y="165.5" width="4" height="5" fill="#FFD36B"/><rect x="146.1" y="165.5" width="4" height="5" fill="#CFDBFF"/><rect x="137.1" y="176.5" width="4" height="5" fill="#CFDBFF"/><rect x="101.1" y="198.5" width="4" height="5" fill="#FFD36B"/><rect x="128.1" y="198.5" width="4" height="5" fill="#CFDBFF"/><rect x="137.1" y="198.5" width="4" height="5" fill="#FFD36B"/><rect x="278.6" y="132.9" width="4" height="5" fill="#CFDBFF"/><rect x="251.6" y="143.9" width="4" height="5" fill="#FFD36B"/><rect x="269.6" y="143.9" width="4" height="5" fill="#FFD36B"/><rect x="278.6" y="143.9" width="4" height="5" fill="#FFD36B"/><rect x="233.6" y="154.9" width="4" height="5" fill="#FFD36B"/><rect x="233.6" y="176.9" width="4" height="5" fill="#FFD36B"/><rect x="242.6" y="187.9" width="4" height="5" fill="#FFD36B"/><rect x="354.9" y="156.1" width="4" height="5" fill="#CFDBFF"/><rect x="399.9" y="156.1" width="4" height="5" fill="#FFD36B"/><rect x="354.9" y="178.1" width="4" height="5" fill="#CFDBFF"/><rect x="327.9" y="189.1" width="4" height="5" fill="#FFD36B"/><rect x="381.9" y="189.1" width="4" height="5" fill="#FFD36B"/><rect x="513.8" y="135.7" width="4" height="5" fill="#FFD36B"/><rect x="468.8" y="146.7" width="4" height="5" fill="#FFD36B"/><rect x="495.8" y="146.7" width="4" height="5" fill="#CFDBFF"/><rect x="495.8" y="157.7" width="4" height="5" fill="#FFD36B"/><rect x="495.8" y="168.7" width="4" height="5" fill="#CFDBFF"/><rect x="504.8" y="168.7" width="4" height="5" fill="#FFD36B"/><rect x="522.8" y="168.7" width="4" height="5" fill="#FFD36B"/><rect x="468.8" y="201.7" width="4" height="5" fill="#CFDBFF"/><rect x="486.8" y="201.7" width="4" height="5" fill="#FFD36B"/><rect x="576" y="118" width="4" height="5" fill="#FFD36B"/><rect x="585" y="118" width="4" height="5" fill="#FFD36B"/><rect x="567" y="151" width="4" height="5" fill="#FFD36B"/><rect x="648" y="151" width="4" height="5" fill="#FFD36B"/><rect x="558" y="162" width="4" height="5" fill="#FFD36B"/><rect x="585" y="162" width="4" height="5" fill="#FFD36B"/><rect x="612" y="162" width="4" height="5" fill="#FFD36B"/><rect x="621" y="162" width="4" height="5" fill="#CFDBFF"/><rect x="558" y="173" width="4" height="5" fill="#CFDBFF"/><rect x="621" y="173" width="4" height="5" fill="#FFD36B"/><rect x="639" y="173" width="4" height="5" fill="#FFD36B"/><rect x="585" y="184" width="4" height="5" fill="#CFDBFF"/><rect x="612" y="195" width="4" height="5" fill="#FFD36B"/><rect x="639" y="195" width="4" height="5" fill="#FFD36B"/><rect x="717.9" y="169.8" width="4" height="5" fill="#FFD36B"/><rect x="681.9" y="191.8" width="4" height="5" fill="#FFD36B"/><rect x="708.9" y="191.8" width="4" height="5" fill="#CFDBFF"/><rect x="773" y="145.1" width="4" height="5" fill="#FFD36B"/><rect x="809" y="156.1" width="4" height="5" fill="#CFDBFF"/><rect x="782" y="167.1" width="4" height="5" fill="#FFD36B"/><rect x="791" y="167.1" width="4" height="5" fill="#FFD36B"/><rect x="773" y="178.1" width="4" height="5" fill="#FFD36B"/><rect x="800" y="178.1" width="4" height="5" fill="#FFD36B"/><rect x="912.3" y="108.1" width="4" height="5" fill="#FFD36B"/><rect x="903.3" y="119.1" width="4" height="5" fill="#CFDBFF"/><rect x="930.3" y="119.1" width="4" height="5" fill="#FFD36B"/><rect x="876.3" y="130.1" width="4" height="5" fill="#FFD36B"/><rect x="885.3" y="130.1" width="4" height="5" fill="#FFD36B"/><rect x="930.3" y="141.1" width="4" height="5" fill="#FFD36B"/><rect x="939.3" y="141.1" width="4" height="5" fill="#FFD36B"/><rect x="903.3" y="152.1" width="4" height="5" fill="#FFD36B"/><rect x="921.3" y="152.1" width="4" height="5" fill="#CFDBFF"/><rect x="885.3" y="163.1" width="4" height="5" fill="#FFD36B"/><rect x="930.3" y="163.1" width="4" height="5" fill="#FFD36B"/><rect x="903.3" y="174.1" width="4" height="5" fill="#FFD36B"/><rect x="939.3" y="174.1" width="4" height="5" fill="#CFDBFF"/><rect x="894.3" y="185.1" width="4" height="5" fill="#FFD36B"/><rect x="885.3" y="196.1" width="4" height="5" fill="#CFDBFF"/><rect x="988.8" y="104.3" width="4" height="5" fill="#FFD36B"/><rect x="1024.8" y="104.3" width="4" height="5" fill="#FFD36B"/><rect x="1015.8" y="115.3" width="4" height="5" fill="#FFD36B"/><rect x="988.8" y="126.3" width="4" height="5" fill="#CFDBFF"/><rect x="997.8" y="126.3" width="4" height="5" fill="#CFDBFF"/><rect x="1033.8" y="126.3" width="4" height="5" fill="#CFDBFF"/><rect x="988.8" y="137.3" width="4" height="5" fill="#CFDBFF"/><rect x="997.8" y="148.3" width="4" height="5" fill="#FFD36B"/><rect x="1015.8" y="148.3" width="4" height="5" fill="#FFD36B"/><rect x="1006.8" y="203.3" width="4" height="5" fill="#CFDBFF"/><rect x="1111.5" y="125.9" width="4" height="5" fill="#FFD36B"/><rect x="1084.5" y="136.9" width="4" height="5" fill="#FFD36B"/><rect x="1138.5" y="147.9" width="4" height="5" fill="#FFD36B"/><rect x="1084.5" y="169.9" width="4" height="5" fill="#FFD36B"/><rect x="1075.5" y="180.9" width="4" height="5" fill="#CFDBFF"/><rect x="1147.5" y="180.9" width="4" height="5" fill="#FFD36B"/><rect x="1120.5" y="191.9" width="4" height="5" fill="#FFD36B"/><rect x="1129.5" y="191.9" width="4" height="5" fill="#FFD36B"/><rect x="1138.5" y="191.9" width="4" height="5" fill="#FFD36B"/><rect x="1084.5" y="202.9" width="4" height="5" fill="#FFD36B"/><rect x="1093.5" y="202.9" width="4" height="5" fill="#FFD36B"/><rect x="1102.5" y="202.9" width="4" height="5" fill="#CFDBFF"/><rect x="1181.7" y="82.5" width="4" height="5" fill="#CFDBFF"/><rect x="1217.7" y="82.5" width="4" height="5" fill="#FFD36B"/><rect x="1235.7" y="82.5" width="4" height="5" fill="#FFD36B"/><rect x="1235.7" y="104.5" width="4" height="5" fill="#CFDBFF"/><rect x="1190.7" y="115.5" width="4" height="5" fill="#FFD36B"/><rect x="1244.7" y="115.5" width="4" height="5" fill="#FFD36B"/><rect x="1217.7" y="126.5" width="4" height="5" fill="#FFD36B"/><rect x="1226.7" y="126.5" width="4" height="5" fill="#FFD36B"/><rect x="1199.7" y="137.5" width="4" height="5" fill="#CFDBFF"/><rect x="1190.7" y="159.5" width="4" height="5" fill="#FFD36B"/><rect x="1181.7" y="170.5" width="4" height="5" fill="#FFD36B"/><rect x="1208.7" y="170.5" width="4" height="5" fill="#FFD36B"/><rect x="1199.7" y="181.5" width="4" height="5" fill="#CFDBFF"/><rect x="1208.7" y="181.5" width="4" height="5" fill="#FFD36B"/><rect x="1235.7" y="181.5" width="4" height="5" fill="#FFD36B"/><rect x="1199.7" y="192.5" width="4" height="5" fill="#FFD36B"/><rect x="1208.7" y="192.5" width="4" height="5" fill="#CFDBFF"/><rect x="1244.7" y="192.5" width="4" height="5" fill="#CFDBFF"/><rect x="1217.7" y="203.5" width="4" height="5" fill="#CFDBFF"/><rect x="1226.7" y="203.5" width="4" height="5" fill="#FFD36B"/><rect x="1276" y="156.9" width="4" height="5" fill="#CFDBFF"/><rect x="1312" y="189.9" width="4" height="5" fill="#FFD36B"/><rect x="1321" y="189.9" width="4" height="5" fill="#FFD36B"/><rect x="1285" y="200.9" width="4" height="5" fill="#FFD36B"/><rect x="1321" y="200.9" width="4" height="5" fill="#CFDBFF"/><rect x="1428.8" y="132.7" width="4" height="5" fill="#FFD36B"/><rect x="1401.8" y="154.7" width="4" height="5" fill="#FFD36B"/><rect x="1419.8" y="154.7" width="4" height="5" fill="#FFD36B"/><rect x="1374.8" y="165.7" width="4" height="5" fill="#FFD36B"/><rect x="1383.8" y="165.7" width="4" height="5" fill="#FFD36B"/><rect x="1401.8" y="165.7" width="4" height="5" fill="#CFDBFF"/><rect x="1428.8" y="176.7" width="4" height="5" fill="#FFD36B"/><rect x="1365.8" y="187.7" width="4" height="5" fill="#FFD36B"/><rect x="1383.8" y="187.7" width="4" height="5" fill="#FFD36B"/><rect x="1419.8" y="187.7" width="4" height="5" fill="#FFD36B"/><rect x="1428.8" y="187.7" width="4" height="5" fill="#FFD36B"/><rect x="1428.8" y="198.7" width="4" height="5" fill="#FFD36B"/><rect x="1474.9" y="157.2" width="4" height="5" fill="#CFDBFF"/><rect x="1492.9" y="179.2" width="4" height="5" fill="#FFD36B"/><rect x="1474.9" y="190.2" width="4" height="5" fill="#FFD36B"/><rect x="1492.9" y="190.2" width="4" height="5" fill="#FFD36B"/><rect x="1501.9" y="190.2" width="4" height="5" fill="#FFD36B"/><rect x="1546.9" y="190.2" width="4" height="5" fill="#FFD36B"/><rect x="1465.9" y="201.2" width="4" height="5" fill="#FFD36B"/><rect x="1474.9" y="201.2" width="4" height="5" fill="#CFDBFF"/><rect x="1510.9" y="201.2" width="4" height="5" fill="#FFD36B"/><rect x="1620.8" y="89.3" width="4" height="5" fill="#CFDBFF"/><rect x="1611.8" y="100.3" width="4" height="5" fill="#FFD36B"/><rect x="1638.8" y="100.3" width="4" height="5" fill="#FFD36B"/><rect x="1602.8" y="111.3" width="4" height="5" fill="#FFD36B"/><rect x="1584.8" y="122.3" width="4" height="5" fill="#CFDBFF"/><rect x="1611.8" y="122.3" width="4" height="5" fill="#FFD36B"/><rect x="1638.8" y="133.3" width="4" height="5" fill="#FFD36B"/><rect x="1638.8" y="155.3" width="4" height="5" fill="#FFD36B"/><rect x="1584.8" y="166.3" width="4" height="5" fill="#CFDBFF"/><rect x="1611.8" y="166.3" width="4" height="5" fill="#FFD36B"/><rect x="1638.8" y="166.3" width="4" height="5" fill="#CFDBFF"/><rect x="1638.8" y="177.3" width="4" height="5" fill="#FFD36B"/><rect x="1593.8" y="188.3" width="4" height="5" fill="#FFD36B"/></g><rect x="0" y="214" width="1600" height="6" fill="#0C1140"/></svg>
+  <div class="foot-base">
+    <p>© 2026 The Smashery</p>
+    <p><a href="tel:+917895099420">+91 78950 99420</a></p>
   </div>
 </footer>
 
-<div class="dock">
-  <a class="btn btn-ink" href="tel:+917895099420">Call</a>
-  <a class="btn btn-red" href="https://wa.me/917895099420?text=Hi%20The%20Smashery%2C%20I%27d%20like%20to%20place%20an%20order.">Order on WhatsApp</a>
+<div class="dock" data-count="0">
+  <div class="tray-sheet" id="tray-sheet" role="region" aria-labelledby="tray-title" hidden>
+    <div class="tray-head"><h2 id="tray-title">Your order</h2><button type="button" class="tray-clear">Clear order</button></div>
+    <ul class="tray-lines"></ul>
+    <div class="tray-total"><span>Total</span><strong class="tray-total-n">₹0</strong></div>
+    <p class="tray-note" hidden>Items without a price get one on WhatsApp.</p>
+    <fieldset class="outlet-pick">
+      <legend>Which outlet?</legend>
+      <label><input type="radio" name="outlet" value="Indirapuram"><span>Indirapuram</span></label>
+      <label><input type="radio" name="outlet" value="Noida, Sector 76"><span>Noida, Sector 76</span></label>
+    </fieldset>
+  </div>
+  <div class="dock-bar">
+    <div class="dock-empty">
+      <a class="btn btn-ghost" href="tel:+917895099420"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5h3l1.5 4-2 1.5a11 11 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5.5a2 2 0 0 1 2-2z"/></svg>Call</a>
+      <a class="btn btn-cheese" href="https://wa.me/917895099420?text=Hi%20The%20Smashery%2C%20I%27d%20like%20to%20place%20an%20order."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18.5l1.3-3.6A8 8 0 1 1 8.6 18z"/><path d="M9 10.5h6M9 13.5h4"/></svg>Order on WhatsApp</a>
+    </div>
+    <div class="dock-order">
+      <button type="button" class="tray-toggle" aria-expanded="false" aria-controls="tray-sheet">
+        <span class="tray-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><b class="tray-n">0</b></span>
+        <span class="tray-sum"><span>Your order</span><strong class="tray-sum-n">₹0</strong></span>
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg>
+      </button>
+      <a class="btn btn-cheese tray-send" href="https://wa.me/917895099420?text=Hi%20The%20Smashery%2C%20I%27d%20like%20to%20place%20an%20order."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18.5l1.3-3.6A8 8 0 1 1 8.6 18z"/><path d="M9 10.5h6M9 13.5h4"/></svg>Send on WhatsApp</a>
+    </div>
+  </div>
 </div>
+<p class="sr-only" aria-live="polite" id="announce"></p>
 
 <script>
+var ICON={plus:'<svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>',minus:'<svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>',tick:'<svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>'};
 (function () {
-  var buttons = document.querySelectorAll('[data-filter]');
-  var items = document.querySelectorAll('.item');
-  var blocks = document.querySelectorAll('.cat');
-  var navList = document.querySelector('.catnav ul');
+  var PHONE = '917895099420';
+  var KEY = 'smashery-order';
+  var state = { lines: [], outlet: '' };
+  var units = {};
+  var dock = document.querySelector('.dock');
+  var sheet = document.getElementById('tray-sheet');
+  var toggle = document.querySelector('.tray-toggle');
+  var linesEl = document.querySelector('.tray-lines');
+  var announce = document.getElementById('announce');
 
-  function apply(filter) {
-    buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.filter === filter)); });
-    items.forEach(function (li) {
-      var d = li.dataset.diet;
-      li.hidden = !(filter === 'all' || d === 'any' || d === filter);
-    });
-    blocks.forEach(function (b) {
-      var anyShown = Array.prototype.some.call(b.querySelectorAll('.item'), function (li) { return !li.hidden; });
-      b.hidden = !anyShown;
-      var chip = navList.querySelector('a[href="#' + b.id + '"]');
-      if (chip && chip.parentNode) chip.parentNode.hidden = !anyShown;
-    });
+  /* On a phone the hoarding turns portrait: frame the cartoon on the action. */
+  var scene = document.querySelector('.stage .scene');
+  var narrow = window.matchMedia('(max-width: 759px)');
+  function frame() { scene.setAttribute('viewBox', narrow.matches ? '560 160 640 440' : '0 0 1200 600'); }
+  frame();
+  if (narrow.addEventListener) narrow.addEventListener('change', frame);
+
+  function load() {
+    try {
+      var s = JSON.parse(localStorage.getItem(KEY) || 'null');
+      if (s && Array.isArray(s.lines)) state = { lines: s.lines, outlet: s.outlet || '' };
+    } catch (e) {}
   }
-  buttons.forEach(function (b) { b.addEventListener('click', function () { apply(b.dataset.filter); }); });
+  function save() {
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+  }
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; });
+  }
+  function money(n) { return '₹' + n.toLocaleString('en-IN'); }
+  function qtyOf(sku) {
+    for (var i = 0; i < state.lines.length; i++) if (state.lines[i][0] === sku) return state.lines[i][1];
+    return 0;
+  }
+  function setQty(sku, n) {
+    for (var i = 0; i < state.lines.length; i++) {
+      if (state.lines[i][0] === sku) {
+        if (n > 0) state.lines[i][1] = n; else state.lines.splice(i, 1);
+        return;
+      }
+    }
+    if (n > 0) state.lines.push([sku, n]);
+  }
 
-  /* Highlight the chip for the section being read */
+  function control(sku, n, small) {
+    var u = units[sku], name = esc(u.name);
+    if (!n) {
+      return '<button type="button" class="add" data-sku="' + sku + '" data-act="inc" aria-label="Add ' + name + ' to your order">' + ICON.plus + '</button>';
+    }
+    return '<button type="button" data-sku="' + sku + '" data-act="dec" aria-label="Remove one ' + name + '">' + ICON.minus + '</button>' +
+      '<span class="count" aria-label="' + n + ' in your order">' + (small ? '' : ICON.tick) + n + '</span>' +
+      '<button type="button" data-sku="' + sku + '" data-act="inc" aria-label="Add another ' + name + '">' + ICON.plus + '</button>';
+  }
+
+  function renderUnit(sku) {
+    var u = units[sku], n = qtyOf(sku), el = u.ctl;
+    el.className = n ? 'qty on' : 'qty';
+    el.innerHTML = control(sku, n);
+    u.el.classList.toggle('in', n > 0);
+  }
+
+  function message() {
+    var out = ["Hi The Smashery, I'd like to order:", ''];
+    var total = 0, ask = false;
+    state.lines.forEach(function (l) {
+      var u = units[l[0]];
+      if (u.price == null) { ask = true; out.push(l[1] + ' × ' + u.name + ' (price to confirm)'); }
+      else { total += u.price * l[1]; out.push(l[1] + ' × ' + u.name + ' (' + money(u.price * l[1]) + ')'); }
+    });
+    out.push('', 'Total: ' + money(total) + (ask ? ' + items to confirm' : ''));
+    if (state.outlet) out.push('Outlet: ' + state.outlet);
+    return out.join('\n');
+  }
+
+  function renderTray() {
+    var count = 0, total = 0, ask = false;
+    var html = '';
+    state.lines.forEach(function (l) {
+      var u = units[l[0]];
+      count += l[1];
+      if (u.price == null) ask = true; else total += u.price * l[1];
+      html += '<li><span class="ln">' + esc(u.name) + '</span><span class="qty on">' + control(l[0], l[1], true) +
+        '</span><span class="lp">' + (u.price == null ? 'ask' : money(u.price * l[1])) + '</span></li>';
+    });
+    linesEl.innerHTML = html;
+    dock.setAttribute('data-count', String(count));
+    document.querySelector('.tray-n').textContent = count;
+    document.querySelector('.tray-sum-n').textContent = money(total) + (ask ? ' +' : '');
+    document.querySelector('.tray-total-n').textContent = money(total);
+    document.querySelector('.tray-note').hidden = !ask;
+    document.querySelector('.tray-send').href = 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(message());
+    if (!count) open(false);
+  }
+
+  function open(on) {
+    sheet.hidden = !on;
+    toggle.setAttribute('aria-expanded', String(on));
+  }
+
+  function change(sku, delta, fromTray) {
+    var n = Math.max(0, qtyOf(sku) + delta);
+    setQty(sku, n);
+    save();
+    renderUnit(sku);
+    renderTray();
+    var u = units[sku];
+    announce.textContent = (delta > 0 ? 'Added ' : 'Removed ') + u.name + '. ' + (n ? n + ' in your order.' : 'Not in your order.');
+    /* keep focus on the control that was used, even though it was redrawn */
+    var scope = fromTray ? linesEl : u.ctl;
+    var target = scope.querySelector('[data-sku="' + sku + '"][data-act="' + (delta > 0 ? 'inc' : 'dec') + '"]') ||
+      u.ctl.querySelector('button') || toggle;
+    target.focus();
+  }
+
+  load();
+  document.querySelectorAll('.buy[data-sku]').forEach(function (el) {
+    var sku = el.getAttribute('data-sku');
+    var p = el.getAttribute('data-price');
+    var ctl = document.createElement('span');
+    el.appendChild(ctl);
+    units[sku] = { name: el.getAttribute('data-name'), price: p === '' ? null : +p, el: el, ctl: ctl };
+  });
+  state.lines = state.lines.filter(function (l) { return units[l[0]] && l[1] > 0; });
+  Object.keys(units).forEach(renderUnit);
+  document.querySelectorAll('[data-js]').forEach(function (el) { el.hidden = false; });
+  var radio = state.outlet && document.querySelector('.outlet-pick input[value="' + state.outlet + '"]');
+  if (radio) radio.checked = true;
+  renderTray();
+
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('button[data-act]');
+    if (!b) return;
+    change(b.getAttribute('data-sku'), b.getAttribute('data-act') === 'inc' ? 1 : -1, !!b.closest('.tray-lines'));
+  });
+  toggle.addEventListener('click', function () { open(sheet.hidden); });
+  document.querySelector('.tray-clear').addEventListener('click', function () {
+    var skus = state.lines.map(function (l) { return l[0]; });
+    state.lines = [];
+    save();
+    skus.forEach(renderUnit);
+    renderTray();
+    announce.textContent = 'Order cleared.';
+    toggle.focus();
+  });
+  document.querySelectorAll('.outlet-pick input').forEach(function (r) {
+    r.addEventListener('change', function () { state.outlet = r.value; save(); renderTray(); });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !sheet.hidden) { open(false); toggle.focus(); }
+  });
+
+  /* Veg / non-veg filter */
+  var filters = document.querySelectorAll('[data-filter]');
+  var cats = document.querySelectorAll('.cat');
+  var navList = document.querySelector('.catnav ul');
+  filters.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var f = b.getAttribute('data-filter');
+      filters.forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+      document.querySelectorAll('.item').forEach(function (li) {
+        var d = li.getAttribute('data-diet');
+        li.hidden = !(f === 'all' || d === 'any' || d === f);
+      });
+      cats.forEach(function (c) {
+        var any = Array.prototype.some.call(c.querySelectorAll('.item'), function (li) { return !li.hidden; });
+        c.hidden = !any;
+        var chip = navList.querySelector('a[href="#' + c.id + '"]');
+        if (chip) chip.parentNode.hidden = !any;
+      });
+    });
+  });
+
+  /* Highlight the section being read in the sticky bar */
   if ('IntersectionObserver' in window) {
     var chips = navList.querySelectorAll('a');
     var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
         chips.forEach(function (c) {
-          var on = c.getAttribute('href') === '#' + e.target.id;
-          if (on) { c.setAttribute('aria-current', 'true'); } else { c.removeAttribute('aria-current'); }
+          var on = c.getAttribute('href') === '#' + en.target.id;
           if (on) {
-            var left = c.offsetLeft - (navList.clientWidth - c.offsetWidth) / 2;
-            navList.scrollTo({ left: left, behavior: 'auto' });
+            c.setAttribute('aria-current', 'true');
+            navList.scrollTo({ left: c.offsetLeft - (navList.clientWidth - c.offsetWidth) / 2 });
+          } else {
+            c.removeAttribute('aria-current');
           }
         });
       });
-    }, { rootMargin: '-35% 0px -60% 0px' });
-    blocks.forEach(function (b) { io.observe(b); });
+    }, { rootMargin: '-30% 0px -65% 0px' });
+    cats.forEach(function (c) { io.observe(c); });
   }
 })();
+
 </script>
 </body>
 </html>
