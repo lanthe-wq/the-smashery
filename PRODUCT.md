@@ -38,13 +38,15 @@ Also on the menu but not a stated differentiator: momos (steamed, fried, kurkure
 
 - Name: The Smashery. "Est. 2024".
 - Footer line in use: "I may look like I'm listening, but I'm thinking cheeseburgers."
-- No logo or brand rules exist yet. No binding colours or fonts.
+- No logo yet; the wordmark is set type. The visual language follows the Paput Menorca design kit's tokens (flat colour bands, pills, heavy capitals; see DESIGN.md). Only the tokens are borrowed, never Paput's logo, photos, fonts or copy.
+- Slogan: "Daba ke khao" (Hindi), used as the statement heading and the marquee. Have a native speaker confirm the wording.
 
 ## Evidence on Hand
 
 - Full menu with prices (in `index.html`).
 - Two outlet addresses, one phone number, a Zomato listing, geo coordinates for Indirapuram.
-- No food or outlet photography, no logo, no reviews, ratings, press, or customer counts. Do not fabricate any of these; visuals are illustrated in code.
+- No own food or outlet photography yet. The site uses CC0 stock photos of burgers (sources in `images/CREDITS.md`), each labelled "for illustration", illustrating a category rather than a named item. Replace them with real photos as soon as they exist.
+- No logo, reviews, ratings, press, or customer counts. Do not fabricate any of these.
 
 ## Product Principles
 
