@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "images": "node images.mjs",
-    "audit": "node audit.mjs"
+    "audit": "node audit.mjs",
+    "video": "node video.mjs"
   },
   "devDependencies": {
     "chrome-launcher": "^1.2.2",
