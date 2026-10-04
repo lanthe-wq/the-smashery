@@ -1,0 +1,17 @@
+{
+  "name": "The Smashery",
+  "short_name": "Smashery",
+  "description": "Smash burgers, loaded fries and momos in Indirapuram and Noida. Order on WhatsApp.",
+  "lang": "en-IN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F4F3E6",
+  "theme_color": "#F4F3E6",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

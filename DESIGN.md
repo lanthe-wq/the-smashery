@@ -189,13 +189,17 @@ Five flat hues from the kit, two regulated food-mark colours, and one scrim.
 It stands in for the kit's Roc Grotesk. Display type is set at `font-stretch: 87%`, which
 brings Archivo closer to Roc Grotesk's proportions. **Accent face:** Fraunces 600, for the
 marquee only, standing in for Nazare. The CSS variables `--font-roc` and `--font-nazare`
-make the swap one line if the licensed faces are bought. The ₹ glyph is a separate 1.4KB
-file (`archivo-rupee.woff2`) loaded only where a price appears.
+make the swap one line if the licensed faces are bought. Archivo is subset to ASCII, common
+symbols (© ® ° · ×), typographic quotes and dashes, and the accented letters food copy uses
+(café, jalapeño, crème), 40KB; any other character falls back to Arial through
+`unicode-range`. The ₹ glyph is a separate 1.4KB file (`archivo-rupee.woff2`), preloaded
+because the hero sticker shows a price. Fraunces carries only capitals and basic
+punctuation (4KB), since the marquee is set uppercase.
 
 | Style | Size (desktop → ≤991 → ≤767 → ≤479) | Weight / leading |
 |---|---|---|
 | Hero | 160 → 120 → 80 → 70, capped to fit "SINCE 2024" (5.49em) | 900 / 0.8 |
-| Section title | 80 → 60 → 40 | 900 / 0.9 |
+| Section title | 80 → 60 → 40 (the closer is capped to fit "CHEESEBURGERS.", 8.99em) | 900 / 0.9 |
 | Category title | 50 → 44 → 34 | 900 / 0.9 |
 | Burger name, step title | 35 → 30 → 28 | 900 / 0.95 |
 | Address title | 30 → 26 | 900 / 1 |
@@ -217,8 +221,18 @@ items sit in two columns and option grids (momos, dips, chicken strips) span bot
 options per row (two on phones, where each option stacks label, price and ADD).
 
 The navbar is sticky. Inside the menu, the verde section bar sticks directly beneath it.
-The script measures both heights into `--nav-h` and `--catnav-h`, so anchors land clear of
-both bars. The order dock is hidden until something is added. It floats bottom-right on
+A ResizeObserver measures both heights into `--nav-h` and `--catnav-h` (the CSS defaults
+already match, 88px and 76px on phones, so nothing reflows), and anchors land clear of
+both bars: a menu category heading lands 16px below the section bar.
+
+The page uses `viewport-fit=cover`, so every edge-hugging band (wrap, navbar, hero, section
+bar, menu overlay, dock) pads by `max(gutter, safe-area inset)` and nothing sits under a
+phone's notch held sideways.
+
+Find us, the closer and the footer use `content-visibility:auto`, so the browser skips their
+layout until they scroll near. Only bands below the top of the last jump target qualify: a
+jump that scrolled through a skipped band would aim at its placeholder height and land
+short. The order dock is hidden until something is added. It floats bottom-right on
 wide screens and becomes a full-width bar under 900px.
 
 ## Elevation & Depth
@@ -277,6 +291,13 @@ listed with sources in `images/CREDITS.md`:
 - **Hero:** a double smash burger with melted cheese, under the scrim.
 - **Slider:** three studio burgers with the background cut out to transparent WebP.
 
+Every photo ships as AVIF with the WebP as fallback in `<picture>`. Phones held upright get
+a portrait crop of the hero (the part a cover-fit hero shows anyway), 760 or 900px wide,
+instead of the whole landscape frame. The slider has a 660w step so a DPR-2 phone doesn't
+pull the 900w file. `tools/images.mjs` (`cd tools && npm install && npm run images`)
+rebuilds every variant from the largest WebP of each photo; run it after swapping in real
+photography. `npm run audit` runs Lighthouse for mobile and desktop.
+
 Rules:
 - Every photo is labelled "Picture(s) for illustration" where it appears, and in the footer.
 - Photos illustrate categories, never a specific named item.
@@ -286,7 +307,9 @@ Rules:
 
 ## Motion
 
-One duration, `.3s`, on colour swaps only. The marquee loops in 30s. There are no
+One duration, `.3s`, on colour swaps only. Hover styles apply only where a pointer can
+hover (`@media (hover:hover)`): on a phone a tapped pill would otherwise stay inverted. The
+marquee loops in 30s. There are no
 springs, parallax or scroll reveals. `prefers-reduced-motion` stops the marquee, turns off
 smooth scrolling and removes transitions.
 
