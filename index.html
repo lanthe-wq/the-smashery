@@ -6,24 +6,63 @@
 <title>The Smashery | Smash burgers, loaded fries and momos in Indirapuram and Noida</title>
 <meta name="description" content="The Smashery serves smash burgers (chicken, mutton, paneer and veg), loaded fries, onion rings and momos. Burgers from ₹89. Outlets in Vaibhav Khand, Indirapuram and Sector 76, Noida. Order on WhatsApp.">
 <meta name="theme-color" content="#F4F3E6">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<!-- Share previews: WhatsApp, Facebook, X. Most crawlers want absolute URLs, so prefix
+     og:image with the live domain (and add og:url) once the site has one. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Smashery">
+<meta property="og:locale" content="en_IN">
+<meta property="og:title" content="The Smashery | Smash burgers in Indirapuram and Noida">
+<meta property="og:description" content="Smash burgers from ₹89, loaded fries and momos. Order on WhatsApp.">
+<meta property="og:image" content="images/og-share-1200x630.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Smashery, burgers from ₹89, over a photo of a double smash burger">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" href="images/hero-double-smash-1200.webp" imagesrcset="images/hero-double-smash-1200.webp 1200w, images/hero-double-smash-2000.webp 2000w" imagesizes="100vw">
+<!-- ₹ is in the hero sticker, so its 1.4KB file is needed for the first paint too -->
+<link rel="preload" href="fonts/archivo-rupee.woff2" as="font" type="font/woff2" crossorigin>
+<!-- The hero is the LCP image. These mirror the <picture> sources exactly (AVIF only;
+     a browser without AVIF skips the preload and finds the WebP in the markup). -->
+<link rel="preload" as="image" type="image/avif" fetchpriority="high" media="(max-width: 767px) and (orientation: portrait)" href="images/hero-double-smash-portrait-760.avif" imagesrcset="images/hero-double-smash-portrait-760.avif 760w, images/hero-double-smash-portrait-900.avif 900w" imagesizes="100vw">
+<link rel="preload" as="image" type="image/avif" fetchpriority="high" media="not all and (max-width: 767px) and (orientation: portrait)" href="images/hero-double-smash-1200.avif" imagesrcset="images/hero-double-smash-1200.avif 1200w, images/hero-double-smash-2000.avif 2000w" imagesizes="100vw">
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Restaurant",
-  "name": "The Smashery",
-  "servesCuisine": ["Burgers", "Fast food", "Momos"],
-  "telephone": "+917895099420",
-  "foundingDate": "2024",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Lotus Pond Market, Vaibhav Khand",
-    "addressLocality": "Indirapuram, Ghaziabad",
-    "addressCountry": "IN"
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "The Smashery",
+    "servesCuisine": ["Burgers", "Fast food", "Momos"],
+    "telephone": "+917895099420",
+    "foundingDate": "2024",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Lotus Pond Market, Vaibhav Khand",
+      "addressLocality": "Indirapuram, Ghaziabad",
+      "addressRegion": "Uttar Pradesh",
+      "addressCountry": "IN"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 28.6363203, "longitude": 77.363811 }
   },
-  "geo": { "@type": "GeoCoordinates", "latitude": 28.6363203, "longitude": 77.363811 }
-}
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "The Smashery",
+    "servesCuisine": ["Burgers", "Fast food", "Momos"],
+    "telephone": "+917895099420",
+    "foundingDate": "2024",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "76 Complex Street, Sector 76",
+      "addressLocality": "Noida",
+      "addressRegion": "Uttar Pradesh",
+      "addressCountry": "IN"
+    }
+  }
+]
 </script>
 <style>
 /* ==========================================================================
@@ -32,10 +71,13 @@
    ========================================================================== */
 
 /* Archivo stands in for Roc Grotesk, Fraunces for Nazare (the kit's free substitutes).
-   ₹ lives in its own tiny file, pulled in only where a price appears. */
-@font-face{font-family:'Archivo';src:url(fonts/archivo-var.woff2) format('woff2-variations'),url(fonts/archivo-var.woff2) format('woff2');font-weight:400 900;font-stretch:75% 100%;font-display:swap;unicode-range:U+0000-00FF,U+2013-2014,U+2018-2019,U+201C-201D,U+2022,U+2026,U+2032,U+2190,U+2192,U+2212}
+   Archivo is subset to ASCII, common symbols and the accented letters food copy uses
+   (café, jalapeño, crème); anything else falls back to Arial through unicode-range.
+   ₹ lives in its own tiny file. Fraunces is subset to capitals and basic punctuation:
+   the marquee is its only use and it is set uppercase. */
+@font-face{font-family:'Archivo';src:url(fonts/archivo-var.woff2) format('woff2-variations'),url(fonts/archivo-var.woff2) format('woff2');font-weight:400 900;font-stretch:75% 100%;font-display:swap;unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AE,U+00B0,U+00B7,U+00D7,U+00C0-00C2,U+00C4,U+00C7-00CB,U+00CE-00CF,U+00D1,U+00D4,U+00D6,U+00DB-00DC,U+00E0-00E2,U+00E4,U+00E7-00EB,U+00EE-00EF,U+00F1,U+00F4,U+00F6,U+00FB-00FC,U+2013-2014,U+2018-2019,U+201C-201D,U+2022,U+2026,U+2212}
 @font-face{font-family:'Archivo';src:url(fonts/archivo-rupee.woff2) format('woff2-variations'),url(fonts/archivo-rupee.woff2) format('woff2');font-weight:400 900;font-stretch:75% 100%;font-display:swap;unicode-range:U+20B9}
-@font-face{font-family:'Fraunces';src:url(fonts/fraunces-600.woff2) format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Fraunces';src:url(fonts/fraunces-600.woff2) format('woff2');font-weight:600;font-display:swap;unicode-range:U+0020-0021,U+0027,U+002C-002E,U+0041-005A,U+2019}
 
 :root{
   /* colour: five flat hues, no gradients, no shadows */
@@ -62,7 +104,12 @@
   --radius-lg:25px;
   --t:.3s;
 
-  --nav-h:80px;          /* measured in script */
+  /* viewport-fit=cover hands the notch to the page: never let content sit under it */
+  --safe-l:env(safe-area-inset-left,0px);
+  --safe-r:env(safe-area-inset-right,0px);
+  --safe-b:env(safe-area-inset-bottom,0px);
+
+  --nav-h:88px;          /* measured in script; these defaults match, so no reflow */
   --catnav-h:64px;
   --hero-max:160px;
   --section-size:80px;
@@ -76,10 +123,13 @@
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--nav-h) + 12px)}
 body{margin:0;background:var(--blanco);color:var(--verde);font:400 18px/1.3 var(--font-roc);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 img,svg{display:block;max-width:100%}
+picture{display:contents}   /* the <img> stays the layout box; <picture> only picks the file */
+source{display:none}        /* or each <source> becomes an empty flex item and adds a gap */
 a{color:inherit}
 h1,h2,h3,h4,p,ul,ol,figure{margin:0}
 ul,ol{padding:0;list-style:none}
 button{font:inherit;color:inherit;cursor:pointer}
+a,button,label{touch-action:manipulation}   /* quick repeat taps on + never zoom the page */
 address{font-style:normal}
 
 :focus-visible{outline:3px solid var(--verde);outline-offset:3px}
@@ -89,7 +139,7 @@ address{font-style:normal}
 .skip{position:absolute;left:var(--space-20);top:-120px;z-index:300;padding:var(--space-15) var(--space-25);border-radius:var(--radius-pill);background:var(--amarillo);color:var(--verde);font-weight:900;text-transform:uppercase;text-decoration:none}
 .skip:focus{top:var(--space-20)}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-.wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter)}
+.wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:max(var(--gutter),var(--safe-l)) max(var(--gutter),var(--safe-r))}
 
 /* ---------- type ---------- */
 .caps,.t-hero,.t-section,.t-band,.t-burger,.t-address,.t-cat{font-weight:900;text-transform:uppercase;font-stretch:var(--display-stretch);letter-spacing:-.005em}
@@ -104,40 +154,41 @@ address{font-style:normal}
 .t-small{font-size:18px;line-height:1.25}
 .t-hours{font-size:25px;line-height:1;font-weight:500}
 
-/* ---------- pill buttons: fill and text swap on hover, nothing else moves ---------- */
+/* ---------- pill buttons: fill and text swap on hover, nothing else moves.
+   Every :hover sits in (hover:hover): on a phone it would stick after a tap. ---------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:56px;padding:var(--space-20) var(--space-25);border:0;border-radius:var(--radius-pill);background:var(--amarillo);color:var(--verde);font:900 18px/1 var(--font-roc);font-stretch:var(--display-stretch);text-transform:uppercase;text-decoration:none;text-align:center;transition:background-color var(--t),color var(--t)}
-.btn:hover{background:var(--verde);color:var(--amarillo)}
+@media (hover:hover){.btn:hover{background:var(--verde);color:var(--amarillo)}}
 .btn-inverse{background:var(--verde);color:var(--amarillo)}
-.btn-inverse:hover{background:var(--amarillo);color:var(--verde)}
+@media (hover:hover){.btn-inverse:hover{background:var(--amarillo);color:var(--verde)}}
 .btn-cream{background:var(--blanco);color:var(--verde)}
-.btn-cream:hover{background:var(--amarillo);color:var(--verde)}
-.on-verde .btn:not(.btn-cream):hover,.hero .btn:not(.btn-cream):hover,.on-amarillo .btn-inverse:hover{background:var(--blanco);color:var(--verde)}
+@media (hover:hover){.btn-cream:hover{background:var(--amarillo);color:var(--verde)}}
+@media (hover:hover){.on-verde .btn:not(.btn-cream):hover,.hero .btn:not(.btn-cream):hover,.on-amarillo .btn-inverse:hover{background:var(--blanco);color:var(--verde)}}
 .btn-sm{min-height:46px;padding:var(--space-15) var(--space-20);font-size:16px}
 
 /* ==========================================================================
    1. Navbar and full-screen menu
    ========================================================================== */
-.navbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:var(--space-20);padding:var(--space-15) var(--space-20) var(--space-15) var(--gutter);background:var(--blanco)}
+.navbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:var(--space-20);padding:var(--space-15) max(var(--space-20),var(--safe-r)) var(--space-15) max(var(--gutter),var(--safe-l));background:var(--blanco)}
 .wordmark{display:inline-block;color:var(--verde);font:900 26px/.84 var(--font-roc);font-stretch:var(--display-stretch);text-transform:uppercase;letter-spacing:-.01em;text-decoration:none}
 .wordmark span{display:block}
 .navbar .wordmark{padding-block:3px}
 .navbar-right{display:flex;align-items:center;gap:var(--space-20)}
 .menu-btn{display:grid;place-items:center;width:56px;height:56px;padding:0;border:0;border-radius:var(--radius-pill);background:transparent;transition:background-color var(--t)}
-.menu-btn:hover{background:var(--amarillo)}
+@media (hover:hover){.menu-btn:hover{background:var(--amarillo)}}
 .menu-btn svg{width:30px;height:30px}
 
-.overlay{position:fixed;inset:0;z-index:200;display:none;flex-direction:column;align-items:center;justify-content:center;gap:var(--space-10);padding:var(--space-60) var(--gutter);background:var(--amarillo);overflow-y:auto}
+.overlay{position:fixed;inset:0;z-index:200;display:none;flex-direction:column;align-items:center;justify-content:center;gap:var(--space-10);padding:var(--space-60) max(var(--gutter),var(--safe-r)) var(--space-60) max(var(--gutter),var(--safe-l));background:var(--amarillo);overflow-y:auto;overscroll-behavior:contain}
 .overlay.is-open{display:flex}
 .overlay a{color:var(--verde);font:900 var(--menu-link)/1 var(--font-roc);font-stretch:var(--display-stretch);text-transform:uppercase;text-decoration:none;text-align:center;text-underline-offset:.08em;text-decoration-thickness:.07em}
 /* the kit's source hover is rojo (2.45:1 on amarillo); azul passes at 7.73:1 */
-.overlay a:hover{color:var(--azul);text-decoration-line:underline}
-.overlay-close{position:absolute;top:var(--space-15);right:var(--space-20)}
+@media (hover:hover){.overlay a:hover{color:var(--azul);text-decoration-line:underline}}
+.overlay-close{position:absolute;top:var(--space-15);right:max(var(--space-20),var(--safe-r))}
 body.menu-open{overflow:hidden}
 
 /* ==========================================================================
    2. Hero: one photograph under a flat scrim, centred capitals, one primary pill
    ========================================================================== */
-.hero{position:relative;min-height:90vh;min-height:90svh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--space-20);padding:var(--space-60) var(--gutter);color:var(--blanco);text-align:center;background:var(--verde);isolation:isolate;overflow:hidden}
+.hero{position:relative;min-height:90vh;min-height:90svh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--space-20);padding:var(--space-60) max(var(--gutter),var(--safe-r)) var(--space-60) max(var(--gutter),var(--safe-l));color:var(--blanco);text-align:center;background:var(--verde);isolation:isolate;overflow:hidden}
 .hero-img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:50% 58%}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:var(--scrim)}
 .hero .t-hero span{display:block}
@@ -146,7 +197,7 @@ body.menu-open{overflow:hidden}
 .hero-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--space-15);margin-top:var(--space-15)}
 .sticker{position:absolute;top:clamp(20px,6vh,70px);right:clamp(16px,6vw,110px);display:grid;place-content:center;width:150px;aspect-ratio:1;border-radius:50%;background:var(--amarillo);color:var(--verde);transform:rotate(-10deg);text-align:center;font-weight:900;font-stretch:var(--display-stretch);text-transform:uppercase;line-height:.9;font-size:17px}
 .sticker b{display:block;font-size:44px;line-height:.95;font-variant-numeric:lining-nums}
-.photo-note{position:absolute;right:var(--space-15);bottom:var(--space-10);font-size:13px;color:var(--blanco)}
+.photo-note{position:absolute;right:max(var(--space-15),var(--safe-r));bottom:var(--space-10);font-size:13px;color:var(--blanco)}
 
 /* ==========================================================================
    3. Statement and the smash, step by step
@@ -165,7 +216,7 @@ body.menu-open{overflow:hidden}
    4. Smash-burger slider: one studio cut-out per card, on yellow like the box it comes in
    ========================================================================== */
 .burgers-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:var(--space-20);margin-bottom:var(--space-40)}
-.slider{display:flex;gap:var(--space-20);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:var(--space-5)}
+.slider{display:flex;gap:var(--space-20);overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:var(--space-5)}
 .slider::-webkit-scrollbar{display:none}
 .card{flex:0 0 min(86%,420px);scroll-snap-align:center;display:flex;flex-direction:column;align-items:center;gap:var(--space-10);padding:var(--space-40) var(--space-25) var(--space-30);border-radius:var(--radius-lg);background:var(--amarillo);text-align:center}
 .card img{width:100%;max-width:330px;height:auto;aspect-ratio:330/260;object-fit:contain;margin-bottom:var(--space-15)}
@@ -196,7 +247,7 @@ body.menu-open{overflow:hidden}
 
 .diet{display:inline-flex;gap:var(--space-5);padding:var(--space-5);border-radius:var(--radius-pill);background:var(--amarillo)}
 .diet button{display:inline-flex;align-items:center;gap:.5em;min-height:46px;padding:0 var(--space-20);border:0;border-radius:var(--radius-pill);background:transparent;color:var(--verde);font-weight:900;font-size:16px;font-stretch:var(--display-stretch);text-transform:uppercase;transition:background-color var(--t),color var(--t)}
-.diet button:hover{background:var(--blanco)}
+@media (hover:hover){.diet button:hover{background:var(--blanco)}}
 .diet button[aria-pressed="true"]{background:var(--verde);color:var(--amarillo)}
 
 .mark{flex:none;display:inline-grid;place-items:center;width:18px;height:18px;margin-top:2px;border:2px solid var(--c);border-radius:3px;background:var(--blanco)}
@@ -207,14 +258,15 @@ body.menu-open{overflow:hidden}
 .nomark-gap{width:18px}
 
 .catnav{position:sticky;top:var(--nav-h);z-index:40;background:var(--verde)}
-.catnav ul{display:flex;gap:var(--space-5);max-width:var(--wrap);margin-inline:auto;padding:var(--space-10) var(--gutter);overflow-x:auto;scrollbar-width:none;scroll-behavior:smooth}
+.catnav ul{display:flex;gap:var(--space-5);max-width:var(--wrap);margin-inline:auto;padding:var(--space-10) max(var(--gutter),var(--safe-r)) var(--space-10) max(var(--gutter),var(--safe-l));overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;scroll-behavior:smooth}
 .catnav ul::-webkit-scrollbar{display:none}
 .catnav a{display:inline-flex;align-items:center;min-height:44px;padding:0 var(--space-15);border-radius:var(--radius-pill);color:var(--amarillo);font-weight:900;font-size:15px;font-stretch:var(--display-stretch);text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:background-color var(--t),color var(--t)}
-.catnav a:hover{background:var(--blanco);color:var(--verde)}
+@media (hover:hover){.catnav a:hover{background:var(--blanco);color:var(--verde)}}
 .catnav a[aria-current="true"]{background:var(--amarillo);color:var(--verde)}
 
 .sheet{display:grid;gap:var(--space-60);padding-top:var(--space-40)}
-.cat{scroll-margin-top:calc(var(--nav-h) + var(--catnav-h) + 16px)}
+/* adds to the page's scroll-padding (navbar + 12px), so the heading lands 16px under both bars */
+.cat{scroll-margin-top:calc(var(--catnav-h) + 4px)}
 .cat[hidden],.item[hidden],.catnav li[hidden]{display:none}
 .cat-head{padding-top:var(--space-20);border-top:4px solid var(--verde)}
 .cat-head>div{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:var(--space-10) var(--space-30)}
@@ -240,10 +292,10 @@ body.menu-open{overflow:hidden}
 /* add control: a verde pill; once added, it turns yellow and shows the count */
 .qty{display:inline-flex;align-items:center}
 .add{display:inline-flex;align-items:center;justify-content:center;min-width:76px;min-height:44px;padding:0 var(--space-20);border:0;border-radius:var(--radius-pill);background:var(--verde);color:var(--amarillo);font-weight:900;font-size:15px;font-stretch:var(--display-stretch);text-transform:uppercase;transition:background-color var(--t),color var(--t)}
-.add:hover{background:var(--amarillo);color:var(--verde)}
+@media (hover:hover){.add:hover{background:var(--amarillo);color:var(--verde)}}
 .qty.on{height:44px;padding:0 2px;border-radius:var(--radius-pill);background:var(--amarillo);color:var(--verde)}
 .qty.on button{display:grid;place-items:center;width:40px;height:40px;padding:0;border:0;border-radius:50%;background:transparent;transition:background-color var(--t),color var(--t)}
-.qty.on button:hover{background:var(--verde);color:var(--amarillo)}
+@media (hover:hover){.qty.on button:hover{background:var(--verde);color:var(--amarillo)}}
 .count{display:inline-flex;align-items:center;justify-content:center;gap:2px;min-width:2.4rem;font-weight:900;font-size:17px;font-variant-numeric:tabular-nums}
 .ico{width:20px;height:20px;flex:none}
 .count .ico{width:14px;height:14px;stroke-width:3.4}
@@ -271,7 +323,8 @@ body.menu-open{overflow:hidden}
    ========================================================================== */
 .closer{background:var(--amarillo);padding:var(--space-60) 0}
 .closer .wrap{display:grid;gap:var(--space-25);justify-items:start}
-.closer .t-section{max-width:16ch}
+/* capped so CHEESEBURGERS. (8.99em) fits a 320px phone, like the hero's SINCE 2024 */
+.closer .t-section{max-width:16ch;font-size:min(var(--section-size),calc((100vw - 2 * var(--gutter)) / 9.1))}
 
 /* ==========================================================================
    10. Footer
@@ -279,9 +332,10 @@ body.menu-open{overflow:hidden}
 .footer{background:var(--verde);color:var(--amarillo);padding:var(--space-40) 0}
 .footer .wrap{display:grid;grid-template-columns:1.2fr 1fr 1.2fr 1fr;gap:var(--space-30)}
 .foot-col{display:grid;gap:var(--space-5);align-content:start;justify-items:start}
-.footer .wordmark{color:var(--amarillo);font-size:34px}
+/* restate the wordmark after .footer a, whose display and font shorthand flattened it to THESMASHERY */
+.footer .wordmark{display:inline-block;color:var(--amarillo);font:900 34px/.84 var(--font-roc);font-stretch:var(--display-stretch)}
 .footer a{display:inline-flex;align-items:center;min-height:44px;color:var(--amarillo);font:700 18px/1.1 var(--font-roc);text-transform:uppercase;text-decoration:none}
-.footer a:hover{text-decoration:underline}
+@media (hover:hover){.footer a:hover{text-decoration:underline}}
 .footer h3{margin-top:var(--space-10);font:900 18px/1 var(--font-roc);font-stretch:var(--display-stretch);text-transform:uppercase}
 .footer h3:first-child{margin-top:0}
 .footer p,.footer address{font-size:16px;line-height:1.3}
@@ -290,11 +344,11 @@ body.menu-open{overflow:hidden}
 /* ==========================================================================
    11. Order dock and tray: appears once something is in the order
    ========================================================================== */
-.dock{position:fixed;z-index:60;right:var(--space-25);bottom:var(--space-25);width:min(440px,100vw - 50px);display:none}
+.dock{position:fixed;z-index:60;right:max(var(--space-25),var(--safe-r));bottom:max(var(--space-25),var(--safe-b));width:min(440px,100vw - 50px);display:none}
 body.has-order .dock{display:block}
 .dock-bar{display:flex;align-items:center;gap:var(--space-10);padding:6px;border-radius:var(--radius-pill);background:var(--verde);color:var(--amarillo)}
 .tray-toggle{flex:1;min-width:0;display:flex;align-items:center;gap:var(--space-10);min-height:52px;padding:0 var(--space-10) 0 6px;border:0;border-radius:var(--radius-pill);background:transparent;color:var(--amarillo);text-align:left}
-.tray-toggle:hover .tray-badge{background:var(--blanco)}
+@media (hover:hover){.tray-toggle:hover .tray-badge{background:var(--blanco)}}
 .tray-badge{display:grid;place-items:center;min-width:44px;height:44px;padding:0 8px;border-radius:var(--radius-pill);background:var(--amarillo);color:var(--verde);font-weight:900;font-size:18px;font-variant-numeric:tabular-nums;transition:background-color var(--t)}
 .tray-sum{display:grid;line-height:1.05;min-width:0}
 .tray-sum span{font-size:13px;font-weight:700;text-transform:uppercase}
@@ -302,7 +356,7 @@ body.has-order .dock{display:block}
 .tray-toggle>.ico{margin-left:auto;transition:transform var(--t)}
 .tray-toggle[aria-expanded="true"]>.ico{transform:rotate(180deg)}
 .tray-send{flex:none;min-height:52px;padding:0 var(--space-20)}
-.tray-sheet{position:absolute;right:0;bottom:calc(100% + 10px);width:100%;max-height:min(70vh,560px);overflow-y:auto;padding:var(--space-25);border-radius:var(--radius-lg);background:var(--amarillo);color:var(--verde)}
+.tray-sheet{position:absolute;right:0;bottom:calc(100% + 10px);width:100%;max-height:min(70vh,560px);max-height:min(70svh,560px);overflow-y:auto;overscroll-behavior:contain;padding:var(--space-25);border-radius:var(--radius-lg);background:var(--amarillo);color:var(--verde)}
 .tray-sheet[hidden]{display:none}
 .tray-head{display:flex;align-items:baseline;justify-content:space-between;gap:var(--space-10)}
 .tray-head h2{font-weight:900;font-size:30px;line-height:1;text-transform:uppercase;font-stretch:var(--display-stretch)}
@@ -312,7 +366,7 @@ body.has-order .dock{display:block}
 .tray-lines .ln{font-weight:700;line-height:1.2;font-size:16px}
 .tray-lines .lp{min-width:3.6rem;text-align:right;font-weight:900;font-variant-numeric:tabular-nums lining-nums}
 .tray-lines .qty.on{background:var(--verde);color:var(--amarillo)}
-.tray-lines .qty.on button:hover{background:var(--amarillo);color:var(--verde)}
+@media (hover:hover){.tray-lines .qty.on button:hover{background:var(--amarillo);color:var(--verde)}}
 .tray-lines .qty.on button:focus-visible{outline-color:var(--verde)}
 .tray-total{display:flex;justify-content:space-between;align-items:baseline;margin-top:var(--space-10);padding-top:var(--space-15);border-top:3px solid var(--verde);font-weight:900;text-transform:uppercase}
 .tray-total strong{font-size:26px;font-stretch:var(--display-stretch);font-variant-numeric:tabular-nums lining-nums}
@@ -328,9 +382,29 @@ body.has-order .dock{display:block}
 .outlet-pick input:focus-visible+span{outline:3px solid var(--verde);outline-offset:3px}
 
 /* ==========================================================================
+   Rendering: the last bands skip layout and paint until they scroll near.
+   Only bands below the top of the last jump target (#find-us) qualify: a jump
+   that scrolled through a skipped band would aim at its placeholder height and
+   land short once the real content rendered. --cis is each band's typical
+   height ("auto" then remembers the real one).
+   ========================================================================== */
+#find-us,.closer,.footer{content-visibility:auto;contain-intrinsic-size:auto var(--cis)}
+#find-us{--cis:850px}
+.closer{--cis:395px}
+.footer{--cis:650px}
+
+/* ==========================================================================
    Responsive: the kit's breakpoints, 991 / 767 / 479
    ========================================================================== */
+@media (min-width:768px){
+  #find-us{--cis:545px}
+  .closer{--cis:470px}
+  .footer{--cis:424px}
+}
 @media (min-width:1000px){
+  #find-us{--cis:507px}
+  .closer{--cis:541px}
+  .footer{--cis:271px}
   .card{flex-basis:calc((100% - 2 * var(--space-20)) / 3)}
   .items{grid-template-columns:repeat(2,minmax(0,1fr))}
   .item.multi{grid-column:1/-1}
@@ -345,13 +419,13 @@ body.has-order .dock{display:block}
 }
 @media (max-width:899px){
   .dock{left:0;right:0;bottom:0;width:auto}
-  .dock-bar{border-radius:var(--radius-lg) var(--radius-lg) 0 0;padding:8px 10px calc(8px + env(safe-area-inset-bottom))}
+  .dock-bar{border-radius:var(--radius-lg) var(--radius-lg) 0 0;padding:8px max(10px,var(--safe-r)) calc(8px + var(--safe-b)) max(10px,var(--safe-l))}
   .tray-sheet{bottom:100%;border-radius:var(--radius-lg) var(--radius-lg) 0 0;padding-bottom:var(--space-30)}
-  body.has-order{padding-bottom:80px}
+  body.has-order{padding-bottom:calc(80px + var(--safe-b))}   /* the bar grows by the home-indicator inset */
 }
 @media (max-width:767px){
   :root{--gutter:15px;--hero-max:80px;--section-size:40px;--cat-size:34px;--menu-link:50px}
-  .navbar{padding-left:20px}
+  .navbar{padding-left:max(20px,var(--safe-l))}
   .sticker{position:relative;top:auto;right:auto;order:-1;width:104px;font-size:12px;margin-bottom:var(--space-5)}
   .sticker b{font-size:30px}
   .photo-note{right:auto;left:50%;transform:translateX(-50%);white-space:nowrap}
@@ -367,7 +441,7 @@ body.has-order .dock{display:block}
   .t-band{font-size:40px}
 }
 @media (max-width:479px){
-  :root{--hero-max:70px;--menu-link:34px;--marquee-size:50px}
+  :root{--hero-max:70px;--menu-link:34px;--marquee-size:50px;--nav-h:76px}
   .navbar{padding:10px 10px 10px 15px}
   .navbar-right{gap:var(--space-5)}
   .navbar .btn{min-height:46px;padding:0 var(--space-20);font-size:15px}
@@ -402,7 +476,7 @@ body.has-order .dock{display:block}
 
 <!-- ============ 1. NAVBAR + FULL-SCREEN MENU ============ -->
 <header class="navbar">
-  <a class="wordmark" href="#top" aria-label="The Smashery, back to top"><span>The</span><span>Smashery</span></a>
+  <a class="wordmark" href="#top" aria-label="The Smashery, back to top"><span>The</span> <span>Smashery</span></a>
   <div class="navbar-right">
     <a class="btn" href="https://wa.me/917895099420?text=Hi%20The%20Smashery%2C%20I%27d%20like%20to%20place%20an%20order."><span>Order<span class="wide">&nbsp;on WhatsApp</span></span></a>
     <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="overlay"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M4 8h22M4 15h22M4 22h22" stroke="#0A4635" stroke-width="3.4" stroke-linecap="round"/></svg></button>
@@ -423,7 +497,12 @@ body.has-order .dock{display:block}
 
 <!-- ============ 2. HERO ============ -->
 <section class="hero" aria-labelledby="hero-title">
-  <img class="hero-img" src="images/hero-double-smash-1200.webp" srcset="images/hero-double-smash-1200.webp 1200w, images/hero-double-smash-2000.webp 2000w" sizes="100vw" width="2000" height="1500" alt="" fetchpriority="high">
+  <picture>
+    <source media="(max-width: 767px) and (orientation: portrait)" type="image/avif" srcset="images/hero-double-smash-portrait-760.avif 760w, images/hero-double-smash-portrait-900.avif 900w" sizes="100vw">
+    <source media="(max-width: 767px) and (orientation: portrait)" type="image/webp" srcset="images/hero-double-smash-portrait-760.webp 760w, images/hero-double-smash-portrait-900.webp 900w" sizes="100vw">
+    <source type="image/avif" srcset="images/hero-double-smash-1200.avif 1200w, images/hero-double-smash-2000.avif 2000w" sizes="100vw">
+    <img class="hero-img" src="images/hero-double-smash-1200.webp" srcset="images/hero-double-smash-1200.webp 1200w, images/hero-double-smash-2000.webp 2000w" sizes="100vw" width="2000" height="1500" alt="" fetchpriority="high">
+  </picture>
   <p class="t-lead">Smash burgers in Indirapuram and Noida</p>
   <h1 class="t-hero" id="hero-title"><span>Under</span> <span>pressure</span> <span>since 2024</span></h1>
   <div class="hero-actions">
@@ -452,27 +531,36 @@ body.has-order .dock{display:block}
     <div class="burgers-head">
       <h2 class="t-section" id="burgers-title">Our smash burgers</h2>
       <div class="slider-controls" hidden>
-        <button class="btn btn-sm" type="button" data-slide="-1" aria-label="Previous burger">← Back</button>
+        <button class="btn btn-sm" type="button" data-slide="-1" aria-label="Back, previous burger">← Back</button>
         <button class="btn btn-sm btn-inverse" type="button" data-slide="1" aria-label="Next burger">Next →</button>
       </div>
     </div>
     <div class="slider" id="slider" tabindex="0" role="group" aria-label="Smash burgers, scroll sideways for more">
       <article class="card on-amarillo">
-        <img src="images/burger-double-480.webp" srcset="images/burger-double-480.webp 480w, images/burger-double-900.webp 900w" sizes="330px" width="900" height="774" alt="" loading="lazy">
+        <picture>
+          <source type="image/avif" srcset="images/burger-double-480.avif 480w, images/burger-double-660.avif 660w, images/burger-double-900.avif 900w" sizes="(max-width: 479px) calc(86vw - 66px), 330px">
+          <img src="images/burger-double-480.webp" srcset="images/burger-double-480.webp 480w, images/burger-double-660.webp 660w, images/burger-double-900.webp 900w" sizes="(max-width: 479px) calc(86vw - 66px), 330px" width="900" height="774" alt="" loading="lazy">
+        </picture>
         <h3 class="t-burger">OG Smashery</h3>
         <p class="t-small">Two patties, butter garlic mushrooms or egg, and our in-house sauces.</p>
         <p class="from">From ₹259</p>
         <a class="btn btn-inverse btn-sm" href="#signatures">See OG Smashery</a>
       </article>
       <article class="card on-amarillo">
-        <img src="images/burger-cheese-480.webp" srcset="images/burger-cheese-480.webp 480w, images/burger-cheese-900.webp 900w" sizes="330px" width="900" height="669" alt="" loading="lazy">
+        <picture>
+          <source type="image/avif" srcset="images/burger-cheese-480.avif 480w, images/burger-cheese-660.avif 660w, images/burger-cheese-900.avif 900w" sizes="(max-width: 479px) calc(86vw - 66px), 330px">
+          <img src="images/burger-cheese-480.webp" srcset="images/burger-cheese-480.webp 480w, images/burger-cheese-660.webp 660w, images/burger-cheese-900.webp 900w" sizes="(max-width: 479px) calc(86vw - 66px), 330px" width="900" height="669" alt="" loading="lazy">
+        </picture>
         <h3 class="t-burger">Chicken smash</h3>
         <p class="t-small">Smashed chicken, melted cheese, caramelised onion, pickles, jalapeños and house sauce.</p>
         <p class="from">From ₹169</p>
         <a class="btn btn-inverse btn-sm" href="#chicken">See chicken smash</a>
       </article>
       <article class="card on-amarillo">
-        <img src="images/burger-classic-480.webp" srcset="images/burger-classic-480.webp 480w, images/burger-classic-900.webp 900w" sizes="330px" width="877" height="689" alt="" loading="lazy">
+        <picture>
+          <source type="image/avif" srcset="images/burger-classic-480.avif 480w, images/burger-classic-660.avif 660w, images/burger-classic-900.avif 900w" sizes="(max-width: 479px) calc(86vw - 66px), 330px">
+          <img src="images/burger-classic-480.webp" srcset="images/burger-classic-480.webp 480w, images/burger-classic-660.webp 660w, images/burger-classic-900.webp 900w" sizes="(max-width: 479px) calc(86vw - 66px), 330px" width="877" height="689" alt="" loading="lazy">
+        </picture>
         <h3 class="t-burger">Mutton smash</h3>
         <p class="t-small">Juicy mutton with crispy edges, melted cheddar, caramelised onion and lettuce.</p>
         <p class="from">From ₹239</p>
@@ -851,7 +939,7 @@ body.has-order .dock{display:block}
         <p class="t-hours">Opens at 5 PM</p>
         <div class="row">
           <a class="btn btn-inverse btn-sm" href="https://maps.app.goo.gl/pe6csEpJZryvv2on6" target="_blank" rel="noopener">Get directions</a>
-          <a class="btn btn-sm" href="tel:+917895099420">Call 78950 99420</a>
+          <a class="btn btn-sm" href="tel:+917895099420">Call 78950&nbsp;99420</a>
         </div>
       </article>
       <article class="location">
@@ -861,7 +949,7 @@ body.has-order .dock{display:block}
         <p class="t-hours">Call for timings</p>
         <div class="row">
           <a class="btn btn-inverse btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=The+Smashery+76+Complex+Street+Sector+76+Noida" target="_blank" rel="noopener">Get directions</a>
-          <a class="btn btn-sm" href="tel:+917895099420">Call 78950 99420</a>
+          <a class="btn btn-sm" href="tel:+917895099420">Call 78950&nbsp;99420</a>
         </div>
       </article>
     </div>
@@ -883,7 +971,7 @@ body.has-order .dock{display:block}
 <footer class="footer on-verde">
   <div class="wrap">
     <div class="foot-col">
-      <a class="wordmark" href="#top" aria-label="The Smashery, back to top"><span>The</span><span>Smashery</span></a>
+      <a class="wordmark" href="#top" aria-label="The Smashery, back to top"><span>The</span> <span>Smashery</span></a>
       <p>Est. 2024</p>
     </div>
     <nav class="foot-col" aria-label="Footer">
@@ -900,7 +988,7 @@ body.has-order .dock{display:block}
     </div>
     <div class="foot-col">
       <h3>Contact</h3>
-      <a href="tel:+917895099420">+91 78950 99420</a>
+      <a href="tel:+917895099420">+91&nbsp;78950&nbsp;99420</a>
       <p><small>© 2026 The Smashery. Pictures are for illustration.</small></p>
     </div>
   </div>
@@ -941,12 +1029,27 @@ var ICON={plus:'<svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="no
      ------------------------------------------------------------------------ */
   var navbar = document.querySelector('.navbar');
   var catnav = document.querySelector('.catnav');
-  function measure() {
-    root.style.setProperty('--nav-h', navbar.offsetHeight + 'px');
-    root.style.setProperty('--catnav-h', catnav.offsetHeight + 'px');
+  /* Heights are read in a ResizeObserver, after the browser has laid out anyway, and
+     written only when they differ from the CSS defaults. Reading them up front forced
+     an extra full-page layout before the first paint, and a resize listener re-ran it
+     every time a phone's address bar slid in or out. */
+  function setVar(name, px) {
+    if (getComputedStyle(root).getPropertyValue(name).trim() !== px) root.style.setProperty(name, px);
   }
-  measure();
-  window.addEventListener('resize', measure);
+  function measure() {
+    setVar('--nav-h', navbar.offsetHeight + 'px');
+    setVar('--catnav-h', catnav.offsetHeight + 'px');
+  }
+  function observe(els, fn) {
+    if ('ResizeObserver' in window) {
+      var ro = new ResizeObserver(fn);
+      els.forEach(function (el) { ro.observe(el); });
+    } else {
+      fn();
+      window.addEventListener('resize', fn);
+    }
+  }
+  observe([navbar, catnav], measure);
 
   /* ------------------------------------------------------------------------
      1. Full-screen menu: open, close, Esc, focus trap
@@ -979,8 +1082,7 @@ var ICON={plus:'<svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="no
   var slider = document.getElementById('slider');
   var controls = document.querySelector('.slider-controls');
   function sliderControls() { controls.hidden = slider.scrollWidth <= slider.clientWidth + 2; }
-  sliderControls();
-  window.addEventListener('resize', sliderControls);
+  observe([slider], sliderControls);
   controls.querySelectorAll('[data-slide]').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var card = slider.querySelector('.card');
