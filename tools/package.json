@@ -1,0 +1,15 @@
+{
+  "name": "the-smashery-tools",
+  "private": true,
+  "description": "Optional dev tooling. The site itself is plain static files with no build step.",
+  "type": "module",
+  "scripts": {
+    "images": "node images.mjs",
+    "audit": "node audit.mjs"
+  },
+  "devDependencies": {
+    "chrome-launcher": "^1.2.2",
+    "lighthouse": "^13.5.0",
+    "sharp": "^0.35.5"
+  }
+}
