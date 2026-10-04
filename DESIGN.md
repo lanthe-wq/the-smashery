@@ -1,241 +1,316 @@
 ---
 name: The Smashery
-description: Smash burgers on a roadside hoarding at dusk.
+description: Smash burgers in flat colour bands, pill buttons and heavy capitals.
 colors:
-  ink: "#1E130C"
-  ink-soft: "#56463B"
-  flex-white: "#FAF8F2"
-  paper: "#FFFFFF"
-  cheese: "#FFC21A"
-  cheese-hi: "#FFD24D"
-  chilli: "#D9301C"
-  chilli-plate: "#C42816"
-  sodium: "#FF8A1F"
-  veg-green: "#0F7B36"
-  nonveg-brown: "#8B3A12"
-  night: "#0F1546"
-  night-raised: "#151C58"
-  steel: "#6B7594"
-  steel-dark: "#3B4160"
-  on-night: "#F5F3FF"
-  on-night-soft: "#BAC0E8"
+  blanco: "#F4F3E6"
+  verde: "#0A4635"
+  amarillo: "#FFC62D"
+  rojo: "#E54D3A"
+  azul: "#28306C"
+  scrim: "rgba(0,0,0,.5)"
+  veg-mark: "#0F7B36"
+  nonveg-mark: "#8B3A12"
 typography:
-  display:
-    fontFamily: "Shrikhand, Georgia, serif"
-    fontSize: "clamp(3rem, 1.6rem + 6vw, 6rem)"
-    fontWeight: 400
+  hero:
+    fontFamily: "Archivo, Arial, sans-serif"
+    fontSize: "min(160px, (100vw - 48px) / 5.8)"
+    fontWeight: 900
+    lineHeight: 0.8
+    fontStretch: "87%"
+    textTransform: "uppercase"
+  section-title:
+    fontFamily: "Archivo, Arial, sans-serif"
+    fontSize: "80px"
+    fontWeight: 900
+    lineHeight: 0.9
+    fontStretch: "87%"
+    textTransform: "uppercase"
+  category-title:
+    fontFamily: "Archivo, Arial, sans-serif"
+    fontSize: "50px"
+    fontWeight: 900
+    lineHeight: 0.9
+    fontStretch: "87%"
+    textTransform: "uppercase"
+  burger-name:
+    fontFamily: "Archivo, Arial, sans-serif"
+    fontSize: "35px"
+    fontWeight: 900
     lineHeight: 0.95
-  headline:
-    fontFamily: "Shrikhand, Georgia, serif"
-    fontSize: "clamp(1.85rem, 1.2rem + 2.5vw, 3.05rem)"
-    fontWeight: 400
-    lineHeight: 1.02
-  title:
-    fontFamily: "Anek Latin, system-ui, sans-serif"
-    fontSize: "1.1875rem"
-    fontWeight: 680
-    lineHeight: 1.25
-    fontVariation: "'wdth' 96"
+    fontStretch: "87%"
+    textTransform: "uppercase"
+  item-name:
+    fontFamily: "Archivo, Arial, sans-serif"
+    fontSize: "22px"
+    fontWeight: 900
+    lineHeight: 1
+    fontStretch: "87%"
+    textTransform: "uppercase"
   body:
-    fontFamily: "Anek Latin, system-ui, sans-serif"
-    fontSize: "1.0625rem"
-    fontWeight: 450
-    lineHeight: 1.5
+    fontFamily: "Archivo, Arial, sans-serif"
+    fontSize: "20px"
+    fontWeight: 400
+    lineHeight: 1.25
   price:
-    fontFamily: "Anek Latin, system-ui, sans-serif"
-    fontSize: "1.3rem"
-    fontWeight: 800
-    lineHeight: 1.2
+    fontFamily: "Archivo, Arial, sans-serif"
+    fontSize: "22px"
+    fontWeight: 900
+    lineHeight: 1
     fontFeature: "'tnum' 1, 'lnum' 1"
-    fontVariation: "'wdth' 84"
-  label:
-    fontFamily: "Anek Latin, system-ui, sans-serif"
-    fontSize: "0.78rem"
-    fontWeight: 700
-    letterSpacing: "0.08em"
-    fontVariation: "'wdth' 85"
+  button:
+    fontFamily: "Archivo, Arial, sans-serif"
+    fontSize: "18px"
+    fontWeight: 900
+    lineHeight: 1
+    fontStretch: "87%"
+    textTransform: "uppercase"
+  marquee:
+    fontFamily: "Fraunces, Georgia, serif"
+    fontSize: "100px"
+    fontWeight: 600
+    lineHeight: 1.05
+    textTransform: "uppercase"
 rounded:
-  board: "3px"
-  panel: "6px"
-  plate: "8px"
-  tray: "12px"
-  pill: "999px"
+  pill: "100px"
+  card: "20px"
+  large: "25px"
 spacing:
-  gutter: "clamp(16px, 4vw, 40px)"
-  wrap: "1180px"
-  section: "clamp(64px, 8vw, 112px)"
-  row: "1rem"
+  scale: "5 10 15 20 25 30 40 60"
+  gutter: "40px (15px at 767px and below)"
+  wrap: "1240px"
+  section: "60px"
 components:
   button-primary:
-    backgroundColor: "{colors.cheese}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.plate}"
-    padding: "0.8rem 1.25rem"
-    height: "48px"
-  button-primary-hover:
-    backgroundColor: "{colors.cheese-hi}"
-  button-ghost:
-    backgroundColor: "transparent"
-    textColor: "{colors.on-night}"
-    rounded: "{rounded.plate}"
-    padding: "0.8rem 1.25rem"
-  button-ink:
-    backgroundColor: "{colors.ink}"
-    textColor: "{colors.flex-white}"
-    rounded: "{rounded.plate}"
-    padding: "0.8rem 1.25rem"
-  add-control:
-    backgroundColor: "{colors.paper}"
-    textColor: "{colors.ink}"
+    backgroundColor: "{colors.amarillo}"
+    textColor: "{colors.verde}"
     rounded: "{rounded.pill}"
-    size: "44px"
-  in-order-control:
-    backgroundColor: "{colors.sodium}"
-    textColor: "{colors.ink}"
+    padding: "20px 25px"
+    height: "56px"
+  button-primary-hover:
+    backgroundColor: "{colors.verde}"
+    textColor: "{colors.amarillo}"
+  button-inverse:
+    backgroundColor: "{colors.verde}"
+    textColor: "{colors.amarillo}"
+    rounded: "{rounded.pill}"
+    padding: "20px 25px"
+  button-cream:
+    backgroundColor: "{colors.blanco}"
+    textColor: "{colors.verde}"
+    rounded: "{rounded.pill}"
+    padding: "20px 25px"
+  add-control:
+    backgroundColor: "{colors.verde}"
+    textColor: "{colors.amarillo}"
     rounded: "{rounded.pill}"
     height: "44px"
-  section-tag:
+  in-order-control:
+    backgroundColor: "{colors.amarillo}"
+    textColor: "{colors.verde}"
+    rounded: "{rounded.pill}"
+    height: "44px"
+  section-chip:
     backgroundColor: "transparent"
-    textColor: "{colors.on-night}"
-    rounded: "{rounded.panel}"
-    padding: "0.45rem 0.85rem"
-  section-tag-current:
-    backgroundColor: "{colors.cheese}"
-    textColor: "{colors.ink}"
-  sign-off-plate:
-    backgroundColor: "{colors.chilli-plate}"
-    textColor: "{colors.paper}"
-    rounded: "{rounded.board}"
+    textColor: "{colors.amarillo}"
+    rounded: "{rounded.pill}"
+    height: "44px"
+  section-chip-current:
+    backgroundColor: "{colors.amarillo}"
+    textColor: "{colors.verde}"
 ---
 
 # Design System: The Smashery
 
 ## Overview
 
-**Creative North Star: "The Roadside Hoarding at Dusk"**
+**Creative North Star: "Pressed hard, served loud"**
 
-The Smashery is drawn as the NCR roadside hoarding: a printed board on a steel frame, lit by lamps against an ultramarine evening sky, with a high-rise skyline at its foot. Each hoarding carries one hand-drawn cartoon, one hand-lettered pun and a sign-off plate in the corner. The menu, outlets and order tray are printed from the same flex stock in the same ink. They never pretend to be billboards themselves.
+The site is built in the visual language of the Paput Menorca design kit: a stack of
+full-bleed flat colour bands, each with one job, every control a pill, and headings in
+enormous heavy capitals. The tokens (colours, type scale, radii, spacing, breakpoints and
+hover timing) come from that kit. The brand expression (name, copy, slogan, menu,
+photographs) is The Smashery's own. Nothing of Paput's logo, photography, fonts or menu is
+used.
 
-Density follows the job. The hero and the closing board are big and quiet, with one joke each. The menu is a long, dense, scannable printed sheet: every price is visible, veg and non-veg are marked, and every item has a one-tap add. Motion is spent once, on arrival. The lamps flicker on, then the press smashes the patty.
+The page is a run of bands, top to bottom:
 
-All imagery is drawn in code as flat ink-outlined vector: no photography, no stock, no imitation textures beyond a faint print grain. That is the honest material of a printed cartoon hoarding.
+| Band | Ground | Text | Job |
+|---|---|---|---|
+| Navbar (sticky) | blanco | verde | Wordmark, ORDER pill, menu button |
+| Full-screen menu | amarillo | verde | Six big links |
+| Hero | photograph under a 50% scrim | blanco | Lead, headline, ORDER and SEE THE MENU |
+| Statement and the smash | blanco | verde | DABA KE KHAO, two sentences, three steps |
+| Smash-burger slider | blanco, amarillo cards | verde | Three burger lines with photo, "from" price and link |
+| Marquee | blanco | verde | DABA KE KHAO rotated −5°, solid and outlined |
+| Menu | blanco, verde section bar | verde | Every item, every price, ADD on each |
+| Order band | rojo | blanco | ORDER HERE / OR HERE beside WhatsApp and Zomato |
+| Find us | blanco | verde | Two outlets: glyph, name, address, hours, actions |
+| Closer | amarillo | verde | The cheeseburger line and one ORDER pill |
+| Footer | verde | amarillo | Wordmark, links, addresses, contact |
+| Order dock and tray | verde bar, amarillo tray | amarillo / verde | Appears once anything is added |
 
-**Key Characteristics:**
-- Dusk-ultramarine sky owns the page; white flex boards and panels sit on it.
-- Thick brown-black ink outlines and flat poster fills, never gradients on objects.
-- Shrikhand, a hand-painted signage face, for every pun and heading; Anek Latin for reading and prices.
-- Food drawings share one scale: a double really stands taller than a single, and a momo really is small.
-- Sodium-lamp orange means "in your order" and nothing else.
+**Key characteristics:**
+- Flat colour fields. No shadows, no gradients except the hero scrim.
+- Pills everywhere: buttons, chips, the diet filter, the add control and the outlet choice.
+- Heavy capitals (Archivo 900) for headings, buttons, item names and prices. Sentence case only in body copy.
+- Hover inverts fill and text in 0.3s. Nothing else moves except the marquee.
+- One local-language slogan, **DABA KE KHAO** (Hindi: roughly "press down and eat", the way "daba ke khao" means "eat your fill"). It appears as the statement heading and in the marquee, and nowhere else.
 
 ## Colors
 
-A committed night palette with three poster colours and one reserved state colour.
+Five flat hues from the kit, two regulated food-mark colours, and one scrim.
 
-### Primary
-- **Dusk Ultramarine** (night): the page ground and sticky bars. The hero carries it as a sky gradient that warms to a sunset horizon behind the skyline.
-- **Melted Cheese** (cheese): the primary action (WhatsApp ordering), the wordmark, the current section tag, and section titles set on the night sky.
+- **Blanco** `#F4F3E6`: the page ground and navbar. A warm cream, never pure white.
+- **Verde** `#0A4635`: all ink, the add control, the section bar, the dock, the footer.
+- **Amarillo** `#FFC62D`: the primary ORDER pill, the full-screen menu, slider cards, the closer, the tray, and the in-order control.
+- **Rojo** `#E54D3A`: the order band only.
+- **Azul** `#28306C`: hover colour for full-screen menu links only.
+- **Scrim** `rgba(0,0,0,.5)`: over the hero photograph only. The kit specifies 30%. This photo is bright, so 50% is needed to hold the cream text (measured below).
+- **Food marks** `#0F7B36` and `#8B3A12`: the Indian veg (square and dot) and non-veg (square and triangle) marks, and nothing else. They are a legal convention, not brand colour.
 
-### Secondary
-- **Chilli Red** (chilli): hand-lettered headings and category titles on white flex, plus the cartoon sleeve and griddle knobs.
-- **Sign-off Red** (chilli-plate): the sign-off plate behind white and cheese lettering. It is deeper than Chilli so the yellow ₹ price still reads.
+### Contrast
 
-### Tertiary
-- **Sodium Lamp** (sodium): reserved for things in your order: the quantity pill, the tray badge, the stamped tick.
+| Pair | Ratio | Use |
+|---|---|---|
+| verde on blanco | 9.69 | Body, headings, menu |
+| verde on amarillo | 6.89 | Buttons, menu overlay, cards, closer, tray |
+| amarillo on verde | 6.89 | Footer, section bar, add control, dock |
+| blanco on verde | 9.69 | Inverse grounds |
+| azul on amarillo | 7.73 | Menu-link hover |
+| blanco on rojo | 3.45 | Order band titles at 40–50px only |
+| blanco on hero photo + scrim | worst pixel 3.59 (headline), 3.60 (lead) | Both set as large text (headline 900 caps; lead 700 at 19px or larger) |
 
-### Neutral
-- **Hoarding Ink** (ink): every outline, all text on white, primary-button text.
-- **Faded Ink** (ink-soft): descriptions and secondary text on flex.
-- **Flex White** (flex-white): boards, the menu sheet, panels, the tray.
-- **Galvanised Steel** (steel, steel-dark): board frames, legs, catwalks, panel rims.
-- **Moonlight** (on-night, on-night-soft): text on the night sky.
-- **Food marks** (veg-green, nonveg-brown): the Indian veg (square and dot) and non-veg (square and triangle) marks, and only those.
-
-### Named Rules
-**The Sodium Rule.** Sodium orange appears only on items in the order, and always beside a tick and a count. It never decorates and never stands alone as a state.
-
-**The Night Owns the Page Rule.** White appears as printed boards on the night ground, never as the page ground itself.
+**Never:** amarillo text on blanco (1.41), amarillo on rojo (2.45), rojo text on amarillo
+(2.45), verde text on rojo (2.81), or blanco text on rojo below 24px.
 
 ## Typography
 
-**Display Font:** Shrikhand (Georgia fallback), self-hosted from `fonts/`
-**Body Font:** Anek Latin variable, width 75–125 and weight 100–800 (system-ui fallback), self-hosted
+**Main face:** Archivo, variable (weight 400–900, width 75–100), self-hosted in `fonts/`.
+It stands in for the kit's Roc Grotesk. Display type is set at `font-stretch: 87%`, which
+brings Archivo closer to Roc Grotesk's proportions. **Accent face:** Fraunces 600, for the
+marquee only, standing in for Nazare. The CSS variables `--font-roc` and `--font-nazare`
+make the swap one line if the licensed faces are bought. The ₹ glyph is a separate 1.4KB
+file (`archivo-rupee.woff2`) loaded only where a price appears.
 
-**Character:** Shrikhand comes from Gujarati hand-painted signage. It is fat, italic-leaning and cheerful, and it carries every pun. Anek is a sturdy Indian-made grotesk whose width axis gives prices and labels a tighter fit than the reading text.
-
-### Hierarchy
-- **Display** (Shrikhand 400, clamp(3rem → 6rem), 0.95): section titles on the sky, such as "The menu" and "Find us". The hero pun scales with its board (5.15 container-width units on desktop, 10.4 on phones).
-- **Headline** (Shrikhand 400, clamp(1.85rem → 3.05rem), 1.02): category titles on the menu sheet, outlet names, the tray title.
-- **Title** (Anek 680, 1.1875rem, 1.25, width 96): menu item names. Signature items use Shrikhand at 1.55rem instead.
-- **Body** (Anek 450, 1.0625rem, 1.5): descriptions at 0.98rem, capped at 62ch.
-- **Price** (Anek 800, 1.3rem, width 84, tabular lining figures): every ₹ figure.
-- **Label** (Anek 700, 0.78rem, 0.08em, uppercase, width 85): small furniture such as "Est. 2024".
-
-### Named Rules
-**The One Joke Rule.** Shrikhand sets puns and headings only, never body text, buttons or prices.
-
-**The Tabular Price Rule.** Prices are always Anek 800 with tabular lining figures, so columns of ₹ line up.
+| Style | Size (desktop → ≤991 → ≤767 → ≤479) | Weight / leading |
+|---|---|---|
+| Hero | 160 → 120 → 80 → 70, capped to fit "SINCE 2024" (5.49em) | 900 / 0.8 |
+| Section title | 80 → 60 → 40 | 900 / 0.9 |
+| Category title | 50 → 44 → 34 | 900 / 0.9 |
+| Burger name, step title | 35 → 30 → 28 | 900 / 0.95 |
+| Address title | 30 → 26 | 900 / 1 |
+| Band title | 50 → 40 | 900 / 1 |
+| Hero lead | 22 → 19 | 700 / 1.15 |
+| Body | 20 → 18 → 17 | 400 / 1.25 |
+| Item name | 22 → 19 | 900 / 1 |
+| Item description | 16 | 400 / 1.35, max 52ch |
+| Price | 22 → 20, tabular lining figures | 900 |
+| Hours | 25 | 500 |
+| Button | 18 (small 16) | 900 |
+| Marquee | 100 → 70 → 50 | Fraunces 600 |
 
 ## Layout
 
-The page is a one-column stack inside a 1180px wrap with a fluid 16–40px gutter. Sections breathe at 64–112px of vertical padding.
+One column inside a 1240px wrap with a 40px gutter (15px at 767px and below). Sections are
+60px top and bottom. The kit's breakpoints are 991, 767 and 479px. At 1000px and up, menu
+items sit in two columns and option grids (momos, dips, chicken strips) span both, four
+options per row (two on phones, where each option stacks label, price and ADD).
 
-The hero board width is `min(1120px, 100vw − gutters, (viewport height − 300px) × 2)`. The board, both actions and the top of the skyline therefore stay in the first viewport from 1024×768 up. The board is a container (`container-type: inline-size`), and its lettering, sign-off and lamps are sized in container units, so the composition scales as one object.
-
-At 760px and below the board turns portrait: pun, then cartoon (a reframed viewBox), then a full-width sign-off band, all on a single unipole leg. At 1000px and up, menu items sit in two columns. Items with option grids (momos, dips, chicken strips) span both columns with four options per row, or two on phones. Below 900px a fixed dock carries Call and Order on WhatsApp, and it becomes the order bar once anything is added.
+The navbar is sticky. Inside the menu, the verde section bar sticks directly beneath it.
+The script measures both heights into `--nav-h` and `--catnav-h`, so anchors land clear of
+both bars. The order dock is hidden until something is added. It floats bottom-right on
+wide screens and becomes a full-width bar under 900px.
 
 ## Elevation & Depth
 
-Depth is physical. Boards and panels sit in a steel rim (a 10px steel ring plus a 3px ink ring) and cast a soft drop shadow onto the night. Buttons lift slightly on hover with a soft blurred shadow. Lamps cast warm pools that are multiplied onto the board and glow as halos on the sky. Nothing uses a hard offset shadow.
-
-### Shadow Vocabulary
-- **Board rim and drop** (`0 0 0 10px steel-dark, 0 0 0 13px ink, 0 30px 60px -24px rgba(3,5,25,.85)`): every printed panel and the menu sheet.
-- **Plate lift** (`0 8px 18px -10px rgba(0,0,0,.6)`, hover `0 14px 24px -12px`): primary buttons.
-- **Tray float** (`0 20px 40px -16px rgba(3,5,25,.85)`): the order tray and dock.
-
-### Named Rules
-**The Steel Rim Rule.** A printed surface is always framed by steel and ink. Floating white rectangles without a rim do not exist in this world.
+None. Depth comes from colour blocks and the photograph. There are no shadows, no
+gradients on objects, and no hairline borders as decoration. The exceptions are
+structural: a 4px verde rule above each menu category, a 2px verde border on option
+cells, and a 3px rule above the tray total.
 
 ## Shapes
 
-Shapes are nearly square: boards at 3px, panels at 6px, sign plates (buttons) at 8px, the tray at 12px. Pills (999px) are reserved for round controls: the add button and the in-order quantity pill. Borders are ink, 3–4px on surfaces and controls. Dividers inside the menu are dotted (rows) or dashed (categories). The veg and non-veg marks keep their regulated square-with-dot and square-with-triangle shapes.
+- **Pill** (100px): every button, chip, filter, add control and outlet choice.
+- **Card** (20px): menu option cells.
+- **Large** (25px): slider cards, the tray sheet, the phone dock's top corners.
+- **Sticker**: the "Burgers from ₹89" circle in the hero, amarillo, rotated −10°.
 
 ## Components
 
 ### Buttons
-- **Shape:** painted sign plate (8px radius, 3px ink border, minimum 48px tall, 56px in the hero).
-- **Primary:** melted cheese with ink text and a chat-bubble icon. It always means ordering.
-- **Hover / Focus:** lifts 2px and brightens to cheese-hi. Focus is a 3px cheese outline on night, or an ink outline on flex.
-- **Ghost (on night):** transparent with a moonlight border and text. **Ink / Line (on flex):** solid ink, or an ink outline for secondary outlet actions.
+Pill, 20px × 25px padding, 18px / 900 capitals, no icons inside the label.
+- **Primary:** verde on amarillo; hover inverts to amarillo on verde. On verde grounds and over the photo it hovers to blanco instead.
+- **Inverse:** amarillo on verde; hover inverts. On amarillo grounds it hovers to blanco.
+- **Cream:** verde on blanco, for a secondary action on a dark or red ground.
+- The primary verb is always ordering: **ORDER ON WHATSAPP** (shortened to ORDER in the navbar on phones).
 
-### Chips
-- **Section tags:** a sticky night bar of 6px-radius tags with a faint moonlight border. The current section fills with cheese.
-- **Diet filter:** a three-way segmented plate (All / Veg / Non-veg) with the food marks inside. The pressed segment turns moonlight with ink text.
+### Add and in-order control (signature)
+A verde **ADD** pill. Once added it becomes an amarillo pill: minus, a ticked count, plus.
+State is shown by shape and count as well as colour. In the amarillo tray, the same
+control is verde.
 
-### Cards / Containers
-- **Menu sheet:** one long flex-white board holding every category. The signature category is a full-bleed cheese band at its top.
-- **Panels:** the explainer and the outlets use the same flex, rim and 6px corners. No nested cards.
+### Diet filter
+An amarillo pill holding three pills (ALL / VEG / NON-VEG). The pressed one fills verde.
+The veg and non-veg marks sit inside their labels.
 
-### Navigation
-The wordmark is set in Shrikhand cheese, with text links and a primary plate on desktop. On phones only the wordmark shows, and the dock takes over the actions.
+### Section bar
+A verde strip of pill chips in amarillo. The current section fills amarillo.
 
-### Order controls (signature)
-A 44px white round add button with an ink ring. Once added, it becomes a sodium pill: minus, a ticked count, plus. Option grids use the same control inside 10px-radius white cells that take an ink border when chosen. The tray is a non-modal sheet above the dock. It holds order lines with the same pills, a tabular total, an outlet choice, and a Send on WhatsApp plate that pre-writes the message.
+### Smash-burger slider
+Three amarillo cards, each with a studio cut-out photo, name, one ingredients line,
+"From ₹…", and a link to that menu section. They sit three across on wide screens and
+scroll-snap with BACK / NEXT pills when they overflow. Each card stands for a menu
+category, never a named item.
 
-### The hoarding (signature)
-A flex board in a steel rim with lamp arms on top, a catwalk and legs below, and one cartoon, one pun and one sign-off plate. It is used exactly twice: the hero and the closing board.
+### Order band
+ORDER HERE / OR HERE in 50px blanco capitals beside the WhatsApp (amarillo) and Zomato
+(blanco) pills. It is used once.
+
+### Location block
+A single-colour glyph, the area in capitals, the address, the hours in 25px / 500, then
+GET DIRECTIONS and CALL pills.
+
+## Imagery
+
+Stock photography is in use until the restaurant supplies its own. All of it is CC0,
+listed with sources in `images/CREDITS.md`:
+- **Hero:** a double smash burger with melted cheese, under the scrim.
+- **Slider:** three studio burgers with the background cut out to transparent WebP.
+
+Rules:
+- Every photo is labelled "Picture(s) for illustration" where it appears, and in the footer.
+- Photos illustrate categories, never a specific named item.
+- No photos of other restaurants' branded products, even when freely licensed.
+- Re-encode every photo so no EXIF or GPS data ships.
+- The smash steps (BALL, SMASH, CRISP) are flat sticker drawings in verde, rojo, amarillo and blanco.
+
+## Motion
+
+One duration, `.3s`, on colour swaps only. The marquee loops in 30s. There are no
+springs, parallax or scroll reveals. `prefers-reduced-motion` stops the marquee, turns off
+smooth scrolling and removes transitions.
+
+## Accessibility
+
+- A focus ring on every control: verde on light grounds, amarillo on verde and the photo, blanco on rojo.
+- Touch targets are 44px or larger, footer links included.
+- The full-screen menu traps focus, closes on Escape, and returns focus to its button.
+- Order changes are announced in a polite live region.
+- The marquee and glyphs are `aria-hidden`. The slogan heading carries `lang="hi-Latn"`.
+- Veg and non-veg are marked by shape as well as colour, and labelled for screen readers.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** draw food in flat ink-outlined vector at one shared scale (one unit per millimetre, 130-unit-tall viewBox, baseline at 124).
-- **Do** keep every price visible as Anek 800 tabular figures beside its item.
+- **Do** give every band one job and one ground colour.
+- **Do** make every control a pill and every heading heavy capitals.
+- **Do** keep every price visible, in 900 weight with tabular figures, beside its item.
 - **Do** mark veg and non-veg with both shape and colour.
-- **Do** spend motion once, on the hero: lamps flicker on, then the smash. Respect reduced motion by showing the finished frame.
-- **Do** reserve sodium orange for the order state, always with a tick and a count.
+- **Do** check text over any new photo against the scrim before shipping it.
 
 ### Don't:
-- **Don't** use food photography or stock imagery until the restaurant supplies real photos. Never present a drawing as a photo.
-- **Don't** put white or cream behind the whole page. The night is the ground.
-- **Don't** set body copy, buttons or prices in Shrikhand.
-- **Don't** add a third hoarding. More content goes on the printed sheet, not on more billboards.
-- **Don't** use hard offset shadows, gradient text, or eyebrow labels above headings.
+- **Don't** add shadows, gradients, outlined buttons or icons inside button labels.
+- **Don't** set amarillo text on blanco or rojo, or rojo text on amarillo.
+- **Don't** use rojo anywhere but the order band.
+- **Don't** present a stock photo as a specific menu item, or drop the "for illustration" note.
+- **Don't** use Paput's logo, photographs, fonts, menu or copy. Only the tokens come from the kit.

@@ -1,5 +1,5 @@
 ---
-version: 1
+version: 2
 slug: "index-html"
 primary_target: "index.html"
 related_targets: []
@@ -7,25 +7,25 @@ related_targets: []
 
 # Home (index.html)
 
-Scope: the whole one-page site: hero, smash explainer, full menu with order builder, outlets, close.
+Scope: the whole one-page site: hero, statement and smash steps, smash-burger slider, marquee, full menu with order builder, order band, outlets, closer, footer.
 Visitor mode: Persuade.
 
-Audience and job: hungry locals near Indirapuram and Sector 76 Noida, on a phone in the evening, deciding dinner. Action: build an order from the menu and send it on WhatsApp (Zomato secondary). Proof: the full priced menu, the smash shown as a drawing, two real outlets. Constraints: static single HTML, no photos, no invented claims, veg/non-veg unambiguous.
+Audience and job: hungry locals near Indirapuram and Sector 76 Noida, on a phone in the evening, deciding dinner. Action: build an order from the menu and send it on WhatsApp (Zomato secondary). Proof: the full priced menu, the smash shown as three drawn steps, two real outlets. Constraints: static single HTML, no invented claims, veg/non-veg unambiguous, stock photos labelled for illustration.
 
-Memorable moment: hoarding lamps flick on at dusk, then the press smashes the ball flat and the edge goes lacy.
+Memorable moment: a dripping double smash burger behind UNDER PRESSURE SINCE 2024 in huge cream capitals, then DABA KE KHAO rolling past at −5°.
 
-Unresolved: Noida outlet hours; prices for two "Ask for price" sides; real logo (wordmark is set type for now).
+Unresolved: Noida outlet hours; prices for two "Ask for price" sides; real logo (wordmark is set type); real food photography to replace the CC0 stock; a native-speaker check on "Daba ke khao".
 
 ## Direction contract
 
-THESIS: The site is a run of NCR topical roadside hoardings: one hand-drawn cartoon, one hand-lettered pun, a sign-off in the corner. It refuses the burger-joint default of a dark grunge page with a food-photo hero over a card grid.
+THESIS: The site uses the Paput Menorca kit's language (a stack of flat colour bands with one job each, pill-shaped everything, enormous heavy capitals) applied to an NCR smash-burger joint. It refuses the burger-joint default of a dark grunge page over a card grid.
 
-OWN-WORLD: Dusk-ultramarine sky owns most of the page, with a high-rise skyline at its foot. Hoardings are white printed flex in thick brown-black ink outlines with flat poster fills (cheese yellow, chilli red, pickle green, patty brown) on galvanised steel frames with lamp arms. Shrikhand punchlines, Anek text and big tabular prices. Sodium-lamp orange is reserved for "in your order", always paired with a stamped tick and count.
+OWN-WORLD: Warm cream ground, deep verde ink, sunflower amarillo for ordering and anything in your order, one rojo band. Archivo 900 capitals at 87% width standing in for Roc Grotesk, Fraunces 600 for the marquee only. A Hindi slogan left untranslated.
 
-STORY: The visitor sees the smash happen, learns burgers start at ₹89 at two outlets, scans an honest menu, taps + to build an order, and sends it on WhatsApp.
+STORY: The visitor sees a real-looking smash burger, learns burgers start at ₹89 at two outlets, sees how the smash works, meets the three smash lines, scans an honest menu, taps ADD to build an order, and sends it on WhatsApp.
 
-FIRST VIEWPORT: One wide hoarding on its frame fills the stage under two lamp arms: the pun "Under pressure since 2024." lettered top-left, the cartoon (gloved hand driving a press onto a ball on the griddle) filling the right and bottom, and a red sign-off plate reading smash burgers from ₹89, Indirapuram and Noida. "Order on WhatsApp" and "See the menu" stand on the catwalk directly below. On a phone the board turns portrait, with the pun above and the cartoon below, and both actions sit above the fold. Signature interaction: lamps flick on, then the smash plays once. Raises: registered side and top views of ball to patty; fixed-scale drawings; controls on their own clean plane; state is a mark, not a hue; one reserved selection colour.
+FIRST VIEWPORT: Sticky cream navbar (stacked wordmark, ORDER pill, menu button). Below it, a full-bleed photograph under a flat 50% scrim: a bold lead line, the three-line headline, ORDER ON WHATSAPP and SEE THE MENU pills, and a rotated amarillo "Burgers from ₹89" sticker. On a phone the sticker moves into the flow above the lead, and both pills sit above the fold.
 
-FORM: Roadside topical hoardings; position 4 of the ordered list; seed key 61bcce7a.
+FORM: Paput Menorca design kit (unofficial), tokens only.
 
-FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+FINISH: verified in Chromium at 1440, 1280, 768, 375 and 320px; menu data diffed against the previous build; hero text contrast measured on photo pixels; reduced motion, keyboard and order flow scripted.
