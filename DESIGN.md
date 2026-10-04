@@ -298,6 +298,11 @@ pull the 900w file. `tools/images.mjs` (`cd tools && npm install && npm run imag
 rebuilds every variant from the largest WebP of each photo; run it after swapping in real
 photography. `npm run audit` runs Lighthouse for mobile and desktop.
 
+The site is served by Cloudflare Workers as static assets (`wrangler.jsonc`).
+`_headers` caches fonts for 30 days and images for 7; the page itself revalidates
+on every visit, so menu and price edits show at once. `.assetsignore` keeps the
+docs and `tools/` off the public site.
+
 Rules:
 - Every photo is labelled "Picture(s) for illustration" where it appears, and in the footer.
 - Photos illustrate categories, never a specific named item.

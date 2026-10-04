@@ -1,0 +1,9 @@
+# Repo files that are not part of the public site
+.git
+.gitignore
+.assetsignore
+.impeccable
+tools
+wrangler.jsonc
+.wrangler
+*.md

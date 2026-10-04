@@ -1,0 +1,10 @@
+// Cloudflare Workers: the site is static files served straight from the repo root.
+// No Worker script, no build step. .assetsignore keeps docs and dev tooling private;
+// _headers sets browser caching for fonts and images.
+{
+  "name": "the-smashery",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "."
+  }
+}

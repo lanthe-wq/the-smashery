@@ -1,5 +1,7 @@
 // Builds every responsive image variant the page references, from the largest
-// WebP of each photo. Run it after replacing a photo (keep the file names):
+// WebP of each photo. Run it after replacing a photo (keep the file names; browsers
+// cache images for a week, see _headers, so returning visitors see the new photo
+// within a week):
 //
 //   cd tools && npm install && npm run images
 //
