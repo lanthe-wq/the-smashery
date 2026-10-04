@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Smashery | Smash burgers, loaded fries and momos in Indirapuram and Noida</title>
+<meta name="description" content="The Smashery serves smash burgers (chicken, mutton, paneer and veg), loaded fries, onion rings and momos. Outlets in Vaibhav Khand, Indirapuram and Sector 76, Noida.">
+<meta name="theme-color" content="#F8C629">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "The Smashery",
+  "servesCuisine": ["Burgers", "Fast food", "Momos"],
+  "telephone": "+917895099420",
+  "foundingDate": "2024",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Lotus Pond Market, Vaibhav Khand",
+    "addressLocality": "Indirapuram, Ghaziabad",
+    "addressCountry": "IN"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 28.6363203, "longitude": 77.363811 }
+}
+</script>
+<style>
+:root{
+  --yellow:#F8C629;
+  --yellow-deep:#E9B410;
+  --ink:#2A170B;
+  --red:#D2271D;
+  --red-dark:#A81B13;
+  --paper:#FFFDF7;
+  --line:#E4D6B0;
+  --muted:#6B5640;
+  --on-dark:#FFF3C8;
+  --veg:#13803B;
+  --nonveg:#A8321C;
+  --display:'Bricolage Grotesque','Arial Narrow','Helvetica Neue',Arial,sans-serif;
+  --radius:14px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font-family:var(--display);
+  font-size:1.0625rem;
+  line-height:1.5;
+  color:var(--ink);
+  background:var(--yellow);
+  color-scheme:light;
+}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:4px}
+.sig :focus-visible,.outlets :focus-visible,.foot :focus-visible{outline-color:var(--yellow)}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--on-dark);padding:8px 14px;border-radius:8px;z-index:50}
+.skip:focus{left:12px}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  font:inherit;font-weight:700;font-size:1.0625rem;text-decoration:none;cursor:pointer;
+  padding:.8rem 1.4rem;border-radius:999px;border:3px solid var(--ink);
+  transition:transform .12s ease, background-color .12s ease;
+}
+.btn:active{transform:translateY(2px)}
+.btn-ink{background:var(--ink);color:var(--on-dark)}
+.btn-ink:hover{background:#43260F}
+.btn-red{background:var(--red);color:#fff;border-color:var(--ink)}
+.btn-red:hover{background:var(--red-dark)}
+.btn-line{background:transparent;color:var(--ink)}
+.btn-line:hover{background:rgba(42,23,11,.08)}
+.btn-yellow{background:var(--yellow);color:var(--ink);border-color:var(--yellow)}
+.btn-yellow:hover{background:#FFD54A;border-color:#FFD54A}
+.btn-ghost-dark{background:transparent;color:var(--on-dark);border-color:var(--on-dark)}
+.btn-ghost-dark:hover{background:rgba(255,243,200,.12)}
+
+/* Header */
+.top{padding:18px 0}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{
+  font-weight:800;font-stretch:75%;font-size:1.65rem;letter-spacing:-.01em;text-decoration:none;line-height:1;
+  display:flex;align-items:baseline;gap:.5rem;
+}
+.brand small{font-size:.8rem;font-weight:600;font-stretch:100%;color:var(--muted);letter-spacing:0}
+.top nav{display:flex;align-items:center;gap:22px}
+.top nav a:not(.btn){font-weight:600;text-decoration:none;padding:6px 2px;border-bottom:3px solid transparent}
+.top nav a:not(.btn):hover{border-bottom-color:var(--ink)}
+.top .btn{padding:.55rem 1.1rem;font-size:1rem}
+
+/* Hero */
+.hero{padding:clamp(24px,5vw,56px) 0 clamp(48px,7vw,88px)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,5vw,64px);align-items:center}
+.hero h1{
+  margin:0;font-weight:800;font-stretch:75%;
+  font-size:clamp(3.4rem,10.5vw,8.6rem);line-height:.88;letter-spacing:-.03em;
+}
+.hero h1 span{display:block}
+.hero .lede{max-width:30rem;font-size:clamp(1.1rem,2vw,1.3rem);margin:1.4rem 0 1.8rem}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px}
+.facts{
+  list-style:none;margin:2.2rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px 22px;
+  font-weight:600;font-size:.98rem;
+}
+.facts li{display:flex;align-items:center;gap:.5rem}
+.facts li::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--red);flex:none}
+.hero-art{position:relative;justify-self:center;width:min(100%,520px)}
+.hero-art svg{width:100%;height:auto;overflow:visible}
+.badge{
+  position:absolute;right:2%;top:2%;width:128px;height:128px;border-radius:50%;
+  background:var(--yellow);border:4px solid var(--ink);display:grid;place-content:center;text-align:center;
+  transform:rotate(10deg);line-height:1.05;box-shadow:4px 5px 0 var(--ink);
+}
+.badge b{display:block;font-size:2.1rem;font-weight:800;font-stretch:75%}
+.badge span{font-size:.82rem;font-weight:700}
+
+/* Hero burger: one drop, one smash */
+.b-top{animation:drop .75s cubic-bezier(.55,0,.9,.55) .25s both}
+.b-patty{transform-box:fill-box;transform-origin:50% 60%;animation:smash .55s cubic-bezier(.2,.8,.3,1) .95s both}
+@keyframes drop{from{transform:translateY(-150px)}to{transform:translateY(0)}}
+@keyframes smash{0%{transform:scale(.88,1.55)}55%{transform:scale(1.1,.8)}100%{transform:scale(1,1)}}
+@media (prefers-reduced-motion:reduce){
+  .b-top,.b-patty{animation:none}
+  html{scroll-behavior:auto}
+}
+
+/* Menu */
+#menu{background:var(--paper);border-top:4px solid var(--ink)}
+.menu-head{padding:clamp(36px,6vw,72px) 0 28px}
+.menu-head .wrap{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px 40px}
+.menu-head h2{
+  margin:0;font-weight:800;font-stretch:75%;font-size:clamp(2.8rem,8vw,5.6rem);line-height:.9;letter-spacing:-.025em;
+}
+.menu-tools{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.legend{display:flex;gap:18px;font-size:.95rem;color:var(--muted);align-items:center;flex-wrap:wrap}
+.legend span{display:inline-flex;align-items:center;gap:.45rem}
+.seg{display:inline-flex;border:3px solid var(--ink);border-radius:999px;overflow:hidden;background:var(--paper)}
+.seg button{
+  font:inherit;font-weight:700;font-size:.98rem;padding:.5rem 1.05rem;border:0;background:transparent;color:var(--ink);cursor:pointer;
+}
+.seg button+button{border-left:3px solid var(--ink)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--on-dark)}
+
+.catnav{
+  position:sticky;top:0;z-index:20;background:var(--paper);border-block:3px solid var(--ink);
+}
+.catnav ul{
+  list-style:none;margin:0 auto;padding:10px 0;width:min(1120px,100% - 40px);
+  display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;
+}
+.catnav ul::-webkit-scrollbar{display:none}
+.catnav a{
+  display:block;white-space:nowrap;text-decoration:none;font-weight:700;font-size:.95rem;
+  padding:.4rem .95rem;border-radius:999px;border:2px solid var(--line);background:var(--paper);
+}
+.catnav a:hover{border-color:var(--ink)}
+.catnav a[aria-current="true"]{background:var(--yellow);border-color:var(--ink)}
+
+.cat{scroll-margin-top:64px;padding:clamp(32px,5vw,56px) 0}
+.cat+.cat:not(.sig){border-top:2px dashed var(--line)}
+.cat-grid{display:grid;grid-template-columns:minmax(190px,280px) 1fr;gap:clamp(20px,4vw,56px);align-items:start}
+.cat h2{
+  margin:0;font-weight:800;font-stretch:75%;color:var(--red);
+  font-size:clamp(2rem,4.4vw,3rem);line-height:.95;letter-spacing:-.02em;
+}
+.cat .note{margin:.7rem 0 0;color:var(--muted);font-size:.98rem;max-width:20rem}
+.items{list-style:none;margin:0;padding:0}
+.item{
+  display:grid;grid-template-columns:22px 1fr auto;gap:0 14px;align-items:start;
+  padding:15px 0;border-bottom:1px dotted #B9A67A;
+}
+.item:first-child{padding-top:0}
+.item:last-child{border-bottom:0;padding-bottom:0}
+.item h3{margin:0;font-size:1.18rem;font-weight:700;line-height:1.25}
+.item p{margin:.2rem 0 0;color:var(--muted);font-size:.98rem;max-width:44rem}
+.price{font-weight:800;font-size:1.25rem;font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right;line-height:1.25}
+.price small{font-size:.82rem;font-weight:600;color:var(--muted)}
+.price.ask{font-size:.95rem;font-weight:700;color:var(--muted)}
+.price.multi{display:flex;flex-direction:column;gap:2px}
+.price.multi span small{margin-right:.4rem}
+.mark{
+  width:18px;height:18px;margin-top:4px;border:2px solid var(--c);border-radius:3px;display:grid;place-items:center;
+}
+.mark::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
+.mark.veg{--c:var(--veg)}
+.mark.nonveg{--c:var(--nonveg)}
+.item.plain{grid-template-columns:22px 1fr auto}
+.item.nomark{grid-template-columns:1fr auto}
+
+.mprices{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:.7rem 0 0;max-width:30rem}
+.mprices div{border:2px solid var(--line);border-radius:10px;padding:.35rem .6rem;background:#FFF9E4}
+.mprices dt{font-size:.78rem;font-weight:600;color:var(--muted);line-height:1.2}
+.mprices dd{margin:0;font-weight:800;font-size:1.1rem;font-variant-numeric:tabular-nums}
+.mprices.one{grid-template-columns:minmax(0,7.5rem)}
+.item.momo{grid-template-columns:22px 1fr}
+
+/* Signatures */
+.sig{background:var(--ink);color:var(--on-dark);padding:clamp(40px,6vw,76px) 0;border-top:0}
+.sig h2{color:var(--yellow)}
+.sig .note{color:#DCC896}
+.sig .items{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.sig .item{
+  grid-template-columns:22px 1fr;padding:22px;border:3px solid var(--yellow);border-radius:var(--radius);border-bottom:3px solid var(--yellow);
+  background:#3A2112;position:relative;
+}
+.sig .item:first-child,.sig .item:last-child{padding:22px}
+.sig .item h3{font-size:1.5rem;font-stretch:75%;font-weight:800}
+.sig .item p{color:#E8D6A6;grid-column:2}
+.sig .item .price{grid-column:2;text-align:left;font-size:2rem;font-weight:800;font-stretch:75%;color:var(--yellow);margin-top:.9rem}
+.sig .mark{background:var(--paper);border-color:var(--c);outline:3px solid var(--paper);outline-offset:0}
+.sig .mark{outline:none;border-width:2px;box-shadow:0 0 0 3px var(--paper);margin:6px 0 0 3px;width:16px;height:16px}
+
+/* Outlets + footer */
+.outlets{background:var(--ink);color:var(--on-dark);padding:clamp(40px,6vw,80px) 0;border-top:4px solid var(--yellow)}
+.outlets h2{
+  margin:0 0 28px;font-weight:800;font-stretch:75%;font-size:clamp(2.8rem,8vw,5.6rem);line-height:.9;letter-spacing:-.025em;color:var(--yellow);
+}
+.outlet-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.outlet{border:3px solid var(--on-dark);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:6px}
+.outlet h3{margin:0;font-size:1.5rem;font-weight:800;font-stretch:75%}
+.outlet address{font-style:normal;color:#E8D6A6}
+.outlet .when{margin:.4rem 0 0;font-weight:600}
+.outlet .row{margin-top:auto;padding-top:18px;display:flex;flex-wrap:wrap;gap:10px}
+.outlets .order{margin-top:36px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.outlets .order p{margin:0 6px 0 0;font-weight:600;color:#E8D6A6}
+.foot{background:var(--ink);color:#DCC896;padding:0 0 34px;font-size:.95rem}
+.foot .wrap{border-top:2px solid #5A3A22;padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px}
+.foot q{font-weight:700;font-style:normal;color:var(--on-dark);quotes:none}
+.foot p{margin:0}
+
+/* Mobile order bar */
+.dock{display:none}
+
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-art{width:min(100%,400px);order:-1;margin-bottom:-8px}
+  .badge{width:104px;height:104px}
+  .badge b{font-size:1.7rem}
+  .cat-grid{grid-template-columns:1fr;gap:18px}
+  .cat .note{max-width:none}
+  .sig .items{grid-template-columns:1fr}
+  .outlet-grid{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  body{padding-bottom:78px}
+  .top nav a:not(.btn){display:none}
+  .brand small{display:none}
+  .top .btn{display:none}
+  .menu-head .wrap{align-items:start}
+  .mprices{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .dock{
+    display:grid;grid-template-columns:1fr 1.4fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:30;
+    padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:var(--yellow);border-top:3px solid var(--ink);
+  }
+  .dock .btn{padding:.7rem 1rem}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#menu">Skip to the menu</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">The Smashery <small>Est. 2024</small></a>
+    <nav aria-label="Main">
+      <a href="#menu">Menu</a>
+      <a href="#find-us">Find us</a>
+      <a class="btn btn-ink" href="https://wa.me/917895099420?text=Hi%20The%20Smashery%2C%20I%27d%20like%20to%20place%20an%20order.">Order on WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div>
+        <h1 id="hero-title"><span>Smashed flat.</span><span>Stacked high.</span></h1>
+        <p class="lede">Smash burgers, loaded fries and momos from our two outlets in Indirapuram and Sector 76, Noida.</p>
+        <div class="actions">
+          <a class="btn btn-ink" href="#menu">See the menu</a>
+          <a class="btn btn-line" href="https://wa.me/917895099420?text=Hi%20The%20Smashery%2C%20I%27d%20like%20to%20place%20an%20order.">Order on WhatsApp</a>
+        </div>
+        <ul class="facts">
+          <li>Chicken, mutton, paneer and veg patties</li>
+          <li>Momos four ways</li>
+          <li>Two outlets</li>
+        </ul>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="0 0 520 480" role="img" aria-label="Illustration of a smash burger with a wide, crispy-edged patty">
+          <circle cx="260" cy="236" r="226" fill="#D2271D" stroke="#2A170B" stroke-width="5"/>
+          <ellipse cx="260" cy="402" rx="176" ry="14" fill="#2A170B" opacity=".28"/>
+          <g stroke="#2A170B" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+            <!-- bottom bun -->
+            <path d="M108 348 H412 Q412 394 368 394 H152 Q108 394 108 348 Z" fill="#E39A33"/>
+            <!-- smashed patty: wider than the bun, ragged crisp edges -->
+            <g class="b-patty">
+              <path d="M78 322 Q92 308 116 318 Q140 306 166 316 Q192 304 218 314 Q244 305 264 314 Q292 304 316 314 Q342 306 364 316 Q390 306 408 318 Q432 308 444 322 Q456 338 440 348 Q410 356 260 356 Q112 356 80 348 Q64 338 78 322 Z" fill="#6B3418"/>
+            </g>
+            <g class="b-top">
+              <!-- melted cheese -->
+              <path d="M112 310 H408 L436 342 L406 334 L394 360 L376 332 H152 L138 354 L120 330 L86 342 Z" fill="#FFD23F"/>
+              <!-- lettuce -->
+              <path d="M92 298 Q108 280 128 298 T164 298 T200 298 T236 298 T272 298 T308 298 T344 298 T380 298 T424 298 L430 316 H88 Z" fill="#5FAE3E"/>
+              <!-- tomato -->
+              <rect x="124" y="274" width="272" height="26" rx="13" fill="#F0503F"/>
+              <!-- top bun -->
+              <path d="M90 270 Q90 150 260 150 Q430 150 430 270 Q430 286 410 286 H110 Q90 286 90 270 Z" fill="#E39A33"/>
+              <g stroke="none" fill="#FFF1C2">
+                <ellipse cx="200" cy="196" rx="11" ry="6" transform="rotate(-25 200 196)"/>
+                <ellipse cx="262" cy="178" rx="11" ry="6" transform="rotate(10 262 178)"/>
+                <ellipse cx="322" cy="200" rx="11" ry="6" transform="rotate(30 322 200)"/>
+                <ellipse cx="160" cy="238" rx="11" ry="6" transform="rotate(-40 160 238)"/>
+                <ellipse cx="362" cy="240" rx="11" ry="6" transform="rotate(40 362 240)"/>
+                <ellipse cx="262" cy="228" rx="11" ry="6" transform="rotate(-10 262 228)"/>
+                <ellipse cx="210" cy="256" rx="11" ry="6" transform="rotate(15 210 256)"/>
+                <ellipse cx="318" cy="258" rx="11" ry="6" transform="rotate(-15 318 258)"/>
+              </g>
+            </g>
+          </g>
+        </svg>
+        <div class="badge" aria-label="Burgers from 89 rupees"><div><span>Burgers from</span><b>₹89</b></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" aria-labelledby="menu-title">
+    <div class="menu-head">
+      <div class="wrap">
+        <h2 id="menu-title">The menu</h2>
+        <div class="menu-tools">
+          <div class="legend" aria-hidden="true">
+            <span><i class="mark veg"></i> Veg</span>
+            <span><i class="mark nonveg"></i> Non-veg</span>
+          </div>
+          <div class="seg" role="group" aria-label="Filter the menu">
+            <button type="button" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" data-filter="veg" aria-pressed="false">Veg</button>
+            <button type="button" data-filter="nonveg" aria-pressed="false">Non-veg</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="catnav" aria-label="Menu sections">
+      <ul>
+        <li><a href="#signatures">OG Smashery</a></li>
+        <li><a href="#chicken">Chicken burgers</a></li>
+        <li><a href="#mutton">Mutton burgers</a></li>
+        <li><a href="#fried-chicken">Fried chicken burgers</a></li>
+        <li><a href="#paneer">Paneer burgers</a></li>
+        <li><a href="#veg-burgers">Veg burgers</a></li>
+        <li><a href="#fries">Fries</a></li>
+        <li><a href="#onion-rings">Onion rings</a></li>
+        <li><a href="#sides">Sides</a></li>
+        <li><a href="#momos">Momos</a></li>
+        <li><a href="#dips-addons">Dips and add-ons</a></li>
+      </ul>
+    </nav>
+    <section class="cat sig" id="signatures" aria-labelledby="signatures-h">
+      <div class="wrap cat-grid">
+        <header><h2 id="signatures-h">OG Smashery</h2><p class="note">Our signature burgers.</p></header>
+        <ul class="items">
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Smashery Veg Lover</h3><p>Our signature burger, an exquisite blend of two distinct veg patties and butter garlic mushrooms with in-house sauces.</p></div><span class="price">₹259</span></li>
+          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Smashery Meat Lover</h3><p>An exquisite blend of two distinct meat patties with egg, tandoori &amp; cheesy sauces.</p></div><span class="price">₹399</span></li>
+        </ul>
+      </div>
+    </section>
+    <section class="cat" id="chicken" aria-labelledby="chicken-h">
+      <div class="wrap cat-grid">
+        <header><h2 id="chicken-h">Chicken smash burgers</h2></header>
+        <ul class="items">
+          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Classic Chicken Smash</h3><p>Succulent smashed chicken burger with melted cheese, caramelized onions, crisp lettuce, pickles, jalapeños, and our signature house sauces, all nestled in a toasted bun.</p></div><span class="price">₹169</span></li>
+          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Slam-Chic Smash</h3><p>Succulent smashed chicken burger with toasted salami, chipotle flavour melted cheese, caramelized onions, crisp lettuce, and our signature house sauce, all nestled in a toasted bun.</p></div><span class="price">₹199</span></li>
+          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Smokey Chicken Egg Smash</h3><p>Juicy smashed chicken burger with melted cheese, tandoori flavour, fried egg, caramelized onions, crisp lettuce, pickles, jalapeños, and our signature house sauce wrapped in toasted bun.</p></div><span class="price">₹219</span></li>
+          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Melto Chicken Cheese Smash</h3><p>A succulent smashed chicken burger with mozzarella cheese layer, caramelized onions, crisp lettuce, pickles, jalapeños, and our signature house sauces, all nestled in a toasted bun.</p></div><span class="price">₹239</span></li>
+          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Double Chicken Smash</h3><p>Succulent double smashed chicken burger with double melted cheese, caramelized onions, crisp lettuce, pickles, jalapeños, and our signature house sauces, all nestled in a toasted bun.</p></div><span class="price">₹269</span></li>
+        </ul>
+      </div>
+    </section>
+    <section class="cat" id="mutton" aria-labelledby="mutton-h">
+      <div class="wrap cat-grid">
+        <header><h2 id="mutton-h">Mutton smash burgers</h2></header>
+        <ul class="items">
+          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Classic Mutton Smash</h3><p>Juicy mutton patty, crispy edges, melted cheddar, caramelised onion, fresh lettuce and our signature sauces on a toasted bun.</p></div><span class="price">₹239</span></li>
+          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Mutton-Cheesy Smash</h3><p>Mozzarella cheese layered on juicy mutton patty with chipotle, caramelized onions, crisp lettuce, pickles, jalapeños, and our signature house sauce, all nestled in a toasted bun.</p></div><span class="price">₹299</span></li>
+          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Double Mutton Smash</h3><p>Double mutton patty with double melted cheese, caramelised onion, crispy edges, fresh lettuce and our signature sauces on a toasted bun.</p></div><span class="price">₹339</span></li>
+        </ul>
+      </div>
+    </section>
+    <section class="cat" id="fried-chicken" aria-labelledby="fried-chicken-h">
+      <div class="wrap cat-grid">
+        <header><h2 id="fried-chicken-h">Fried zing burgers</h2><p class="note">Fried chicken breast burgers.</p></header>
+        <ul class="items">
+          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Kentucky Pollo Zing</h3><p>Crispy spice-infused chicken breast layered with fresh lettuce, tomato, onion and a tangy house sauces, all embraced by a perfectly toasted bun.</p></div><span class="price">₹169</span></li>
+          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Kentucky Tandoori Pollo Zing</h3><p>Fried chicken breast, artfully paired with crisp lettuce, tomato, onion and a tandoori sauce, all encased in a delicately toasted charcoal infused bun.</p></div><span class="price">₹179</span></li>
+          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Kentucky Hot Pollo Zing</h3><p>Crispy spiced chicken breast coated with in-house hot sauce, crisp lettuce, juicy tomato, onion all served in a toasted bun.</p></div><span class="price">₹219</span></li>
+          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Kentucky Korean Pollo Zing</h3><p>Marinated fried chicken breast coated with in-house Korean sauce, crisp lettuce, juicy tomato, onion, all served in a toasted bun.</p></div><span class="price">₹219</span></li>
+        </ul>
+      </div>
+    </section>
+    <section class="cat" id="paneer" aria-labelledby="paneer-h">
+      <div class="wrap cat-grid">
+        <header><h2 id="paneer-h">Cottage cheese burgers</h2><p class="note">Fried paneer patty burgers.</p></header>
+        <ul class="items">
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Classic Paneer Zing</h3><p>Crispy, spice-infused paneer patty elegantly layered with fresh tomato, onion, lettuce and a tangy house sauce, all embraced by a perfectly toasted bun.</p></div><span class="price">₹149</span></li>
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Tandoori Paneer Zing</h3><p>Fried paneer patty with crisp lettuce, tomato, onion and a tandoori sauce, all encased in a delicately toasted charcoal infused bun.</p></div><span class="price">₹169</span></li>
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Korean Paneer Zing</h3><p>Crispy fried paneer patty coated with in-house Korean sauce, fresh lettuce, juicy tomato, onion all served in a toasted bun.</p></div><span class="price">₹199</span></li>
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Hot Paneer Zing</h3><p>Crispy fried paneer patty coated with in-house hot sauce, fresh lettuce, juicy tomato, onion all served in a toasted bun.</p></div><span class="price">₹199</span></li>
+        </ul>
+      </div>
+    </section>
+    <section class="cat" id="veg-burgers" aria-labelledby="veg-burgers-h">
+      <div class="wrap cat-grid">
+        <header><h2 id="veg-burgers-h">Veg burgers</h2></header>
+        <ul class="items">
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Indiana Classic</h3><p>Classic crisp aloo patty, melted cheddar, fresh tomato, onion, fresh lettuce and our signature sauces on a toasted soft bun.</p></div><span class="price">₹89</span></li>
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Indiana Double Classic</h3><p>Double crisp aloo patty with double melted cheddar, fresh tomato, onion, fresh lettuce and our signature sauces on a toasted soft bun.</p></div><span class="price">₹139</span></li>
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Mexican Veg Burger</h3><p>Rajma filled patty with in-house Ranch.</p></div><span class="price">₹149</span></li>
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Supreme Veggie</h3><p>Exquisite crunchy savoury veg patty with melted cheddar, chipotle sauce, fresh tomato, onion, fresh lettuce and our signature sauce on a toasted soft bun.</p></div><span class="price">₹129</span></li>
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Supreme Double Veggie</h3><p>Double crisp veg patty with double melted cheddar, chipotle sauce, fresh tomato, onion, fresh lettuce and our signature sauce on a toasted soft bun.</p></div><span class="price">₹179</span></li>
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Cheesy Stretch Veg</h3><p>Succulent veg patty burger with mozzarella cheese patty, tandoori sauce, fresh tomato, onion, crisp lettuce, and our signature house sauce, all nestled in a toasted soft bun.</p></div><span class="price">₹219</span></li>
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Fongo Veg</h3><p>Succulent veg patty burger stuffed with butter garlic mushrooms, layered with fresh tomato, onion, crisp lettuce, and our signature house sauces, all nestled in a toasted soft bun.</p></div><span class="price">₹219</span></li>
+        </ul>
+      </div>
+    </section>
+    <section class="cat" id="fries" aria-labelledby="fries-h">
+      <div class="wrap cat-grid">
+        <header><h2 id="fries-h">Fries</h2></header>
+        <ul class="items">
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Classic Fries</h3></div><span class="price">₹59</span></li>
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Peri-Peri Fries</h3></div><span class="price">₹99</span></li>
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Cheesebuster Fries</h3><p>Crispy fries topped with two types of melted cheese and flamed to perfection.</p></div><span class="price">₹149</span></li>
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Butter Garlic Mushroom Loaded</h3><p>Crispy fries topped with butter garlic mushroom and a drizzle of creamy in-house sauces.</p></div><span class="price">₹159</span></li>
+          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Smashed Chicken Loaded</h3><p>Crispy fries topped with smashed juicy chicken pieces and a drizzle of creamy in-house sauces.</p></div><span class="price">₹199</span></li>
+          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Smashed Mutton Loaded</h3><p>Crispy fries topped with smashed mutton pieces and a drizzle of creamy in-house sauces.</p></div><span class="price">₹249</span></li>
+        </ul>
+      </div>
+    </section>
+    <section class="cat" id="onion-rings" aria-labelledby="onion-rings-h">
+      <div class="wrap cat-grid">
+        <header><h2 id="onion-rings-h">Onion rings</h2><p class="note">4 pieces.</p></header>
+        <ul class="items">
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Classic</h3></div><span class="price">₹79</span></li>
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Peri-Peri</h3></div><span class="price">₹99</span></li>
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Italian Cheese</h3></div><span class="price">₹119</span></li>
+        </ul>
+      </div>
+    </section>
+    <section class="cat" id="sides" aria-labelledby="sides-h">
+      <div class="wrap cat-grid">
+        <header><h2 id="sides-h">Sides</h2><p class="note">Each portion is 4 pieces, except chicken strips.</p></header>
+        <ul class="items">
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Cheese Jalapeno Triangle (4 pc)</h3></div><span class="price">₹99</span></li>
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Veggie Cigar Roll (4 pc)</h3><p>Crispy roll filled with a savoury blend of seasoned vegetables, offering a perfect bite-sized treat.</p></div><span class="price">₹99</span></li>
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Cheese Corn Cigar Roll (4 pc)</h3></div><span class="price ask">Ask for price</span></li>
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Cheese Corn Nugget (4 pc)</h3></div><span class="price ask">Ask for price</span></li>
+          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Chicken Nugget (4 pc)</h3></div><span class="price">₹99</span></li>
+          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Cheese Chicken Cigar Roll (4 pc)</h3><p>Crispy roll filled with cheesy savoury blend of chicken with cheese, offering a perfect bite-sized treat.</p></div><span class="price">₹149</span></li>
+          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Chicken Strips</h3></div><span class="price multi"><span><small>2 pc</small>₹80</span><span><small>4 pc</small>₹120</span></span></li>
+        </ul>
+      </div>
+    </section>
+    <section class="cat" id="momos" aria-labelledby="momos-h">
+      <div class="wrap cat-grid">
+        <header><h2 id="momos-h">Momos</h2><p class="note">6 pieces per plate. Pick steamed, fried, kurkure or pan fried.</p></header>
+        <ul class="items">
+          <li class="item momo" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Veg Momo</h3><p>A blend of freshly chopped vegetables carrot, onion, cabbage, beans and coriander, herbs and a tiny pinch of our signature spices.</p><dl class="mprices"><div><dt>Steamed</dt><dd>₹89</dd></div><div><dt>Fried</dt><dd>₹109</dd></div><div><dt>Kurkure</dt><dd>₹119</dd></div><div><dt>Pan fried</dt><dd>₹119</dd></div></dl></div></li>
+          <li class="item momo" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Wheat Veg Momo</h3><p>A blend of freshly chopped vegetables carrot, onion, cabbage, beans and coriander, herbs and a tiny pinch of our signature spices.</p><dl class="mprices"><div><dt>Steamed</dt><dd>₹99</dd></div><div><dt>Fried</dt><dd>₹119</dd></div><div><dt>Kurkure</dt><dd>₹129</dd></div><div><dt>Pan fried</dt><dd>₹129</dd></div></dl></div></li>
+          <li class="item momo" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Paneer Momo</h3><p>A blend of freshly juicy paneer filling inside and a paper like outer covering to fulfill your taste buds.</p><dl class="mprices"><div><dt>Steamed</dt><dd>₹99</dd></div><div><dt>Fried</dt><dd>₹119</dd></div><div><dt>Kurkure</dt><dd>₹129</dd></div><div><dt>Pan fried</dt><dd>₹129</dd></div></dl></div></li>
+          <li class="item momo" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Cheese Corn Momo</h3><p>Momo loaded with sweet corn and shredded cheese and enhanced with the deep flavours of Indian spices.</p><dl class="mprices"><div><dt>Steamed</dt><dd>₹119</dd></div><div><dt>Fried</dt><dd>₹139</dd></div><div><dt>Kurkure</dt><dd>₹149</dd></div><div><dt>Pan fried</dt><dd>₹149</dd></div></dl></div></li>
+          <li class="item momo" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Veg Cheese Baked Momo</h3><p>Momo loaded with sweet corn and shredded cheese and enhanced with the deep flavours of Indian spices.</p><dl class="mprices one"><div><dt>Baked</dt><dd>₹169</dd></div></dl></div></li>
+        </ul>
+      </div>
+    </section>
+    <section class="cat" id="dips-addons" aria-labelledby="dips-addons-h">
+      <div class="wrap cat-grid">
+        <header><h2 id="dips-addons-h">Dips and add-ons</h2></header>
+        <ul class="items">
+          <li class="item nomark" data-diet="any"><div><h3>Dips</h3><p>House Hot Sauce, Cheese Sauce, Sweet Chilli Sauce, Chipotle Sauce.</p></div><span class="price">₹40 <small>each</small></span></li>
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Cheese Slice</h3></div><span class="price">₹15</span></li>
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Caramelized Onion</h3></div><span class="price">₹30</span></li>
+          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Fried Egg</h3></div><span class="price">₹30</span></li>
+          <li class="item nomark" data-diet="any"><div><h3>Coleslaw Salad</h3></div><span class="price">₹20</span></li>
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Melted Cheese</h3></div><span class="price">₹50</span></li>
+          <li class="item" data-diet="veg"><i class="mark veg" role="img" aria-label="Vegetarian"></i><div><h3>Butter Garlic Mushroom</h3></div><span class="price">₹50</span></li>
+          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Chicken Patty</h3></div><span class="price">₹100</span></li>
+          <li class="item" data-diet="nonveg"><i class="mark nonveg" role="img" aria-label="Non-vegetarian"></i><div><h3>Mutton Patty</h3></div><span class="price">₹180</span></li>
+        </ul>
+      </div>
+    </section>
+  </section>
+
+  <section class="outlets" id="find-us" aria-labelledby="find-title">
+    <div class="wrap">
+      <h2 id="find-title">Find us</h2>
+      <div class="outlet-grid">
+        <article class="outlet">
+          <h3>Indirapuram</h3>
+          <address>Lotus Pond Market, Vaibhav Khand,<br>Indirapuram, Ghaziabad</address>
+          <p class="when">Opens at 5 PM</p>
+          <div class="row">
+            <a class="btn btn-yellow" href="https://maps.app.goo.gl/pe6csEpJZryvv2on6" target="_blank" rel="noopener">Get directions</a>
+            <a class="btn btn-ghost-dark" href="tel:+917895099420">Call 78950 99420</a>
+          </div>
+        </article>
+        <article class="outlet">
+          <h3>Noida, Sector 76</h3>
+          <address>76 Complex Street, Sector-76,<br>Noida</address>
+          <p class="when">Call for timings</p>
+          <div class="row">
+            <a class="btn btn-yellow" href="https://www.google.com/maps/search/?api=1&amp;query=The+Smashery+76+Complex+Street+Sector+76+Noida" target="_blank" rel="noopener">Get directions</a>
+            <a class="btn btn-ghost-dark" href="tel:+917895099420">Call 78950 99420</a>
+          </div>
+        </article>
+      </div>
+      <div class="order">
+        <p>Order ahead:</p>
+        <a class="btn btn-red" href="https://wa.me/917895099420?text=Hi%20The%20Smashery%2C%20I%27d%20like%20to%20place%20an%20order.">Order on WhatsApp</a>
+        <a class="btn btn-ghost-dark" href="https://www.zomato.com/ncr/the-smashery-indirapuram-ghaziabad/order" target="_blank" rel="noopener">Order on Zomato</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p><q>I may look like I'm listening, but I'm thinking cheeseburgers.</q></p>
+    <p>© 2026 The Smashery. Prices as on our current menu and may change.</p>
+  </div>
+</footer>
+
+<div class="dock">
+  <a class="btn btn-ink" href="tel:+917895099420">Call</a>
+  <a class="btn btn-red" href="https://wa.me/917895099420?text=Hi%20The%20Smashery%2C%20I%27d%20like%20to%20place%20an%20order.">Order on WhatsApp</a>
+</div>
+
+<script>
+(function () {
+  var buttons = document.querySelectorAll('[data-filter]');
+  var items = document.querySelectorAll('.item');
+  var blocks = document.querySelectorAll('.cat');
+  var navList = document.querySelector('.catnav ul');
+
+  function apply(filter) {
+    buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.filter === filter)); });
+    items.forEach(function (li) {
+      var d = li.dataset.diet;
+      li.hidden = !(filter === 'all' || d === 'any' || d === filter);
+    });
+    blocks.forEach(function (b) {
+      var anyShown = Array.prototype.some.call(b.querySelectorAll('.item'), function (li) { return !li.hidden; });
+      b.hidden = !anyShown;
+      var chip = navList.querySelector('a[href="#' + b.id + '"]');
+      if (chip && chip.parentNode) chip.parentNode.hidden = !anyShown;
+    });
+  }
+  buttons.forEach(function (b) { b.addEventListener('click', function () { apply(b.dataset.filter); }); });
+
+  /* Highlight the chip for the section being read */
+  if ('IntersectionObserver' in window) {
+    var chips = navList.querySelectorAll('a');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        chips.forEach(function (c) {
+          var on = c.getAttribute('href') === '#' + e.target.id;
+          if (on) { c.setAttribute('aria-current', 'true'); } else { c.removeAttribute('aria-current'); }
+          if (on) {
+            var left = c.offsetLeft - (navList.clientWidth - c.offsetWidth) / 2;
+            navList.scrollTo({ left: left, behavior: 'auto' });
+          }
+        });
+      });
+    }, { rootMargin: '-35% 0px -60% 0px' });
+    blocks.forEach(function (b) { io.observe(b); });
+  }
+})();
+</script>
+</body>
+</html>
