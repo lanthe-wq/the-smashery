@@ -12,9 +12,9 @@ Visitor mode: Persuade.
 
 Audience and job: hungry locals near Indirapuram and Sector 76 Noida, on a phone in the evening, deciding dinner. Action: build an order from the menu and send it on WhatsApp (Zomato secondary). Proof: the full priced menu, the smash shown as three drawn steps, two real outlets. Constraints: static single HTML, no invented claims, veg/non-veg unambiguous, stock photos labelled for illustration.
 
-Memorable moment: a dripping double smash burger behind UNDER PRESSURE SINCE 2024 in huge cream capitals, then DABA KE KHAO rolling past at −5°.
+Memorable moment: patties pressed and flipped on a flat-top behind UNDER PRESSURE SINCE 2024 in huge cream capitals, which is itself pressed flat as the cream band rises over it; then the smash drawn step by step as you scroll, and DABA KE KHAO rolling past, speeding up with the scroll.
 
-Unresolved: Noida outlet hours; prices for two "Ask for price" sides; real logo (wordmark is set type); real food photography to replace the CC0 stock; a native-speaker check on "Daba ke khao".
+Unresolved: Noida outlet hours; prices for two "Ask for price" sides; real logo (wordmark is set type); real food photography and footage to replace the stock (above all, a patty being smashed on the outlet's griddle for the hero); a native-speaker check on "Daba ke khao".
 
 ## Direction contract
 
@@ -24,8 +24,8 @@ OWN-WORLD: Warm cream ground, deep verde ink, sunflower amarillo for ordering an
 
 STORY: The visitor sees a real-looking smash burger, learns burgers start at ₹89 at two outlets, sees how the smash works, meets the three smash lines, scans an honest menu, taps ADD to build an order, and sends it on WhatsApp.
 
-FIRST VIEWPORT: Sticky cream navbar (stacked wordmark, ORDER pill, menu button). Below it, a full-bleed photograph under a flat 50% scrim: a bold lead line, the three-line headline, ORDER ON WHATSAPP and SEE THE MENU pills, and a rotated amarillo "Burgers from ₹89" sticker. On a phone the sticker moves into the flow above the lead, and both pills sit above the fold.
+FIRST VIEWPORT: Sticky cream navbar (stacked wordmark, ORDER pill, menu button). Below it, a full-bleed looping video (poster first) under a flat 50% scrim: a bold lead line, the three-line headline, ORDER ON WHATSAPP and SEE THE MENU pills, and a rotated amarillo "Burgers from ₹89" sticker. On a phone the sticker moves into the flow above the lead, and both pills sit above the fold.
 
 FORM: Paput Menorca design kit (unofficial), tokens only.
 
-FINISH: verified in Chromium at 1440, 1280, 768, 375 and 320px; menu data diffed against the previous build; hero text contrast measured on photo pixels; reduced motion, keyboard and order flow scripted.
+FINISH: verified in Chromium at 1440, 1280, 768, 375 and 320px; menu data diffed against the previous build; hero text contrast measured on photo pixels; reduced motion, keyboard and order flow scripted. Video hero and scroll motion: contrast measured over every video frame; wheel scrolling (Lenis) and touch scrolling recorded frame by frame (effects ease in and decay to rest, under 2ms of script a frame); anchors, menu overlay, filter, dock, reduced motion and no-script re-scripted; Lighthouse mobile 99/100/100/100, desktop 100/100/100/100.

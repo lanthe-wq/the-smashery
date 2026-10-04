@@ -45,7 +45,7 @@ Also on the menu but not a stated differentiator: momos (steamed, fried, kurkure
 
 - Full menu with prices (in `index.html`).
 - Two outlet addresses, one phone number, a Zomato listing, geo coordinates for Indirapuram.
-- No own food or outlet photography yet. The site uses CC0 stock photos of burgers (sources in `images/CREDITS.md`), each labelled "for illustration", illustrating a category rather than a named item. Replace them with real photos as soon as they exist.
+- No own food or outlet photography or footage yet. The site uses CC0 stock photos of burgers and a Pexels-licensed stock video of patties pressed on a flat-top in the hero (sources in `images/CREDITS.md`), each labelled "for illustration", illustrating a category rather than a named item. Replace them with real photos and footage as soon as they exist; a steady close-up of a patty being smashed on the outlet's griddle is the most valuable shot.
 - No logo, reviews, ratings, press, or customer counts. Do not fabricate any of these.
 
 ## Product Principles

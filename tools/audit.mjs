@@ -19,8 +19,9 @@ const TYPES = {
   '.html': 'text/html; charset=utf-8', '.webmanifest': 'application/manifest+json',
   '.svg': 'image/svg+xml', '.ico': 'image/x-icon', '.png': 'image/png', '.jpg': 'image/jpeg',
   '.webp': 'image/webp', '.avif': 'image/avif', '.woff2': 'font/woff2',
+  '.js': 'text/javascript; charset=utf-8', '.mp4': 'video/mp4',
 };
-const TEXT = /^(text\/|application\/manifest|image\/svg)/;
+const TEXT = /^(text\/|application\/manifest|image\/svg)/;   // gzip these; video is already compressed
 
 const server = http.createServer((req, res) => {
   let path = normalize(decodeURIComponent(new URL(req.url, 'http://x').pathname));
